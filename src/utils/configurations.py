@@ -1,11 +1,11 @@
 
 from common.modules import os, imut, dt, Dict, List, Any
-from src.utils.system_logging import get_logger
+from src.utils.logging import get_logger
 
-PARENT_DIR = "experiment-configs"
+PARENT_DIR = "experiments"
 
 
-def load_experiment_config(experiment_name: str) -> Dict[str, Any]:
+def load_config(experiment_name: str) -> Dict[str, Any]:
     """Load the configuration file for a specificied experiment"""
     
     logger = get_logger(experiment_name)

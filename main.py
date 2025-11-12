@@ -4,13 +4,10 @@ from common.modules import sys, traceback
 from gui.experiment_launcher import ExperimentLauncher
 
 def main():
-    
     """Main Entry Point for Application"""
-    
     try:
         launcher = ExperimentLauncher()
         launcher.run()
-        
     except Exception as e:
         print(f"Error starting application: {e}")
         traceback.print_exc()

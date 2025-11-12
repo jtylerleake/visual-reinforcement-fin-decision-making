@@ -3,16 +3,24 @@ from common.modules import np, pd
 from common.modules import List
 from common.modules import GramianAngularField, MinMaxScaler
 from common.modules import StocksEnv, DummyVecEnv, Monitor, spaces
-from src.utils.system_logging import get_logger
+from src.utils.logging import get_logger
 
 
 # Global functions for multiprocessing compatibility
 
-def make_single_stock_env(ticker: str,  gaf_data: pd.DataFrame, 
-                         gaf_features: List, gaf_timeseries_periods: int, 
-                         lookback_window: int) -> Monitor:
-    """Global function to create a single stock trading environment. This 
-    function is outside the class to avoid pickle issues with multiprocessing"""
+def make_single_stock_env(
+        ticker: str,  
+        gaf_data: pd.DataFrame, 
+        gaf_features: List, 
+        gaf_timeseries_periods: int, 
+        lookback_window: int, 
+        logger = None
+    ) -> Monitor:
+    
+    """
+    Global function to create a single stock trading environment. This function 
+    is outside the class to avoid pickle issues with multiprocessing
+    """
     
     try:
         
@@ -38,14 +46,14 @@ def make_single_stock_env(ticker: str,  gaf_data: pd.DataFrame,
                 super().__init__(dummy_df, lookback_window, frame_bound)
             
                 self_inner.observation_space = spaces.Box(
-                    low=0.0,
-                    high=1.0, # min/max normalized
-                    shape=(c, h, w),  # one GAF image per observation
-                    dtype=np.float32
+                    low = 0.0,
+                    high = 1.0, # min/max normalized
+                    shape=(c, h, w),  # cnn expects (channels, height, width) format
+                    dtype = np.float32
                 )
                 
             def _get_observation(self_inner):
-                """Return observation as a single GAF image"""
+                """Return observation as a single GAF image in CNN-compatible format"""
                 current_gaf = self_inner.signal_features[self_inner._current_tick]
                 return current_gaf
                 
@@ -62,12 +70,12 @@ def make_single_stock_env(ticker: str,  gaf_data: pd.DataFrame,
                 return prices, gaf_sequences
 
         # create and return monitored environment
-        x = SingleStockEnv()
         env = Monitor(SingleStockEnv())
         return env
         
     except Exception as e:
-        logger.error(f"Error creating environment for {ticker}: {e}")
+        if logger:
+            logger.error(f"Error creating environment for {ticker}: {e}")
         raise
 
 
@@ -78,12 +86,20 @@ class EnvironmentPipeline:
     vectorized GAF environments from timeseries data and experiment configs.
     """
     
-    def __init__(self, experiment_name: str, tickers: List[str], 
-                 gaf_timeseries_periods: int, gaf_features: List[str], 
-                 gaf_target: str, lookback_window: int): 
+    def __init__(
+            self, 
+            experiment_name: str, 
+            tickers: List[str], 
+            gaf_timeseries_periods: int, 
+            gaf_features: List[str], 
+            gaf_target: str, 
+            lookback_window: int, 
+            run_id=None
+        ): 
         
-        global logger
-        logger = get_logger(experiment_name)
+        self.experiment_name = experiment_name
+        self.run_id = run_id
+        self.logger = get_logger(experiment_name, run_id=run_id)
         
         # required items
         self.tickers = tickers
@@ -101,29 +117,29 @@ class EnvironmentPipeline:
         self.vec_environment = None
         self.num_vec_environments = 0
         
-        logger.info(f"Initialized GAF Pipeline with {len(self.tickers)} tickers")
+        self.logger.info(f"Initialized GAF Pipeline with {len(self.tickers)} tickers")
     
     def build_gaf_dataset(self) -> bool:
         """Transform the pre-loaded timeseries dataset into GAF dataset"""
         
         try:
-            logger.info("Building GAF dataset")
+            self.logger.info("Building GAF dataset")
 
             # pre-fit the GAF transformer once with sample data
-            logger.info("Pre-fitting GAF transformer...")
+            self.logger.info("Pre-fitting GAF transformer...")
             sample_data = np.random.rand(1,self.gaf_timeseries_periods)
             transformer = GramianAngularField(
                 image_size = self.gaf_timeseries_periods,
                 method = 'summation'
             )
             transformer.fit(sample_data)
-            logger.info("GAF transformer pre-fitted successfully")
+            self.logger.info("GAF transformer pre-fitted successfully")
             
             # assemble the GAF sequences and append to gaf_data
             self.gaf_data = {}
             for ticker, data in self.timeseries_data.items():
                 
-                logger.info(f"Processing GAF transformation for {ticker}")
+                self.logger.info(f"Processing GAF transformation for {ticker}")
                 
                 # prepare features for GAF transformation
                 scaler = MinMaxScaler()
@@ -140,21 +156,21 @@ class EnvironmentPipeline:
                     self.gaf_data[ticker] = {
                         'sequences': gaf_sequences,
                         'targets': data[self.gaf_target].iloc \
-                        [self.gaf_timeseries_periods:].values.tolist()
+                        [self.gaf_timeseries_periods-1:].values.tolist()
                     }
-                    logger.info(f"Created {len(gaf_sequences)} GAF sequences for {ticker}")
+                    self.logger.info(f"Created {len(gaf_sequences)} GAF sequences for {ticker}")
                 else:
-                    logger.warning(f"No GAF sequences created for {ticker}")
+                    self.logger.warning(f"No GAF sequences created for {ticker}")
             
             if not self.gaf_data:
-                logger.error("No GAF data created")
+                self.logger.error("No GAF data created")
                 return False
             
-            logger.info(f"Successfully created GAF data for {len(self.gaf_data)} tickers")
+            self.logger.info(f"Successfully created GAF data for {len(self.gaf_data)} tickers")
             return True
             
         except Exception as e:
-            logger.error(f"Error building GAF dataset: {e}")
+            self.logger.error(f"Error building GAF dataset: {e}")
             return False
     
     def build_gaf_sequences(self, scaled_features: np.ndarray, gaf_transformer: 
@@ -165,10 +181,8 @@ class EnvironmentPipeline:
         gaf_periods = self.gaf_timeseries_periods
         n_features = len(self.gaf_features)
         
-        logger.info(f"Building {n_samples - gaf_periods} GAF sequences with {n_features} features")
-        
         # create all sliding window indices; extract all sliding windows
-        indices = np.arange(gaf_periods, n_samples)
+        indices = np.arange(gaf_periods-1, n_samples)
         windows = np.array([scaled_features[i-gaf_periods+1:i+1] for i in indices])
         # > shape = (n_windows, gaf_periods, n_features)
         
@@ -177,7 +191,7 @@ class EnvironmentPipeline:
         # > shape = (n_windows * n_features, gaf_periods)
         
         # batch processing: transform all windows
-        logger.info(f"Performing GAF transformation on {len(windows_reshaped)} windows...")
+        self.logger.info(f"Performing GAF transformation on {len(windows_reshaped)} windows...")
         all_gaf = gaf_transformer.transform(windows_reshaped)
         # shape = (n_windows * n_features, gaf_periods, gaf_periods)
         
@@ -192,36 +206,36 @@ class EnvironmentPipeline:
             stacked_gaf = np.stack([all_gaf[i, j] for j in range(n_features)], axis=0)
             gaf_sequences.append(stacked_gaf)
         
-        logger.info(f"Created {len(gaf_sequences)} optimized GAF sequences")
+        self.logger.info(f"Created {len(gaf_sequences)} GAF sequences")
         return gaf_sequences
     
     def build_individual_environments(self) -> bool:
         """Create individual 'SingleStockEnv' environments for each ticker"""
         
         try:
-            logger.info("Creating individual trading environments")
+            self.logger.info("Creating individual trading environments")
             self.environments = {}
             
             for ticker, gaf_data in self.gaf_data.items():
-                logger.info(f"Creating environment for {ticker}")
+                self.logger.info(f"Creating environment for {ticker}")
                 
                 # use the global function to create environment
                 env = make_single_stock_env(
                     ticker, gaf_data, self.gaf_features, \
-                    self.gaf_timeseries_periods, self.lookback_window
+                    self.gaf_timeseries_periods, self.lookback_window, logger=self.logger
                 )
                 self.environments[ticker] = env
-                logger.info(f"Created environment for {ticker}")
+                self.logger.info(f"Created environment for {ticker}")
             
             if not self.environments:
-                logger.error("No environments created")
+                self.logger.error("No environments created")
                 return False
             
-            logger.info(f"Successfully created {len(self.environments)} environments")
+            self.logger.info(f"Successfully created {len(self.environments)} environments")
             return True
             
         except Exception as e:
-            logger.error(f"Error creating environments: {e}")
+            self.logger.error(f"Error creating environments: {e}")
             return False
     
     def build_vectorized_environment(self) -> bool:
@@ -229,11 +243,11 @@ class EnvironmentPipeline:
         stock environments using 'SubprocVecEnv' """
         
         if not self.gaf_data:
-            logger.error("No GAF data available. Call build_gaf_dataset() first.")
+            self.logger.error("No GAF data available. Call build_gaf_dataset() first.")
             return False
         
         try:
-            logger.info(f"""Creating vectorized environment with
+            self.logger.info(f"""Creating vectorized environment with
                         {len(self.tickers)} single stock environments""")
             
             # create environment factory functions using existing environments
@@ -243,52 +257,54 @@ class EnvironmentPipeline:
                     env_fns.append(lambda env=self.environments[ticker]: env)
 
             if not env_fns:
-                logger.error("No valid environment functions created")
+                self.logger.error("No valid environment functions created")
                 return False
             
             # create SubprocVecEnv
             self.vec_environment = DummyVecEnv(env_fns)
             self.num_vec_environments = len(env_fns)
             
-            logger.info(f"""Successfully created vectorized environment with
+            self.logger.info(f"""Successfully created vectorized environment with
                         {self.num_vec_environments} environments""")
                         
             return True
             
         except Exception as e:
-            logger.error(f"Error creating vectorized environment: {e}")
+            self.logger.error(f"Error creating vectorized environment: {e}")
             return False
     
-    def exe_gaf_pipeline(self) -> bool:
-        """Build the multi-process vectorized GAF environment by creating the
+    def exe_env_pipeline(self) -> bool:
+        """
+        Build the multi-process vectorized GAF environment by creating the
         individual gaf datasets and environments. The pipeline assumes that all 
-        data is already preprocessed and stored in the data directory"""
+        data is already preprocessed and stored in the data directory
+        """
         
         try:
             
-            logger.info("Building GAF pipeline (data already loaded)...")
+            self.logger.info("Building GAF pipeline (data already loaded)...")
             
             # Step 1: Build the GAF dataset
-            logger.info("Step 1: Building GAF dataset...")
+            self.logger.info("Step 1: Building GAF dataset...")
             if not self.build_gaf_dataset():
-                logger.error("Failed to build GAF dataset")
+                self.logger.error("Failed to build GAF dataset")
                 return False
 
             # Step 2: Create the individual GAF environments
-            logger.info("Step 2: Creating trading environments...")
+            self.logger.info("Step 2: Creating trading environments...")
             if not self.build_individual_environments():
-                logger.error("Failed to build GAF environments")
+                self.logger.error("Failed to build GAF environments")
                 return False
         
             # Step 3: Create the multi-process vectorized environment
-            logger.info("Step 3: Creating vectorized environment...")
+            self.logger.info("Step 3: Creating vectorized environment...")
             if not self.build_vectorized_environment():
-                logger.error("Failed to build vectorized GAF environment")
+                self.logger.error("Failed to build vectorized GAF environment")
                 return False
             
-            logger.info("GAF pipeline built successfully")
+            self.logger.info("GAF pipeline built successfully")
             return True
         
         except Exception as e:
-            logger.error(f"Error building GAF pipeline: {e}")
+            self.logger.error(f"Error building GAF pipeline: {e}")
             return False

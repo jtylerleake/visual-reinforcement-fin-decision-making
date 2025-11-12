@@ -2,7 +2,6 @@
 from common.modules import os, sys, dt, time, Optional, logging, handlers
 
 PARENT_DIR = "experiment-configs"
-EXPERIMENT_LOGGER_REGISTRY = {}
 
 
 class ExperimentLogger:
@@ -10,13 +9,28 @@ class ExperimentLogger:
     """
     Centralized logging system for experiments. Log files are saved to their 
     relevant experiment directories under experiment-configs/[experiment-name]
+    Each experiment run gets its own unique log file.
     """
     
-    def __init__(self, name: str, save_log_file: Optional[bool] = True):
+    def __init__(self, name: str, run_id: Optional[str] = None, save_log_file: Optional[bool] = True):
 
         self.name = name
+        self.run_id = run_id
         self.save_log_file = save_log_file
-        self.logger = logging.getLogger(name)
+        
+        # Create unique logger name with run_id if provided
+        if run_id:
+            logger_name = f"{name}__run_{run_id}"
+        else:
+            logger_name = name
+        
+        self.logger = logging.getLogger(logger_name)
+        
+        # Clear any existing handlers to avoid duplicates
+        self.logger.handlers = []
+        
+        # Prevent propagation to root logger
+        self.logger.propagate = False
         
         # set log level and setup handlers
         log_level = 'INFO'
@@ -39,12 +53,17 @@ class ExperimentLogger:
         if self.save_log_file:
             
             # create experiment-specific log file path
+            # Ensure logs are saved in experiment-logs subdirectory within experiment folder
             log_dir = os.path.join(PARENT_DIR, self.name, "experiment-logs")
+            log_dir = os.path.normpath(log_dir)  # normalize path for cross-platform compatibility
             os.makedirs(log_dir, exist_ok=True)  # ensure directory exists
             
-            # timestamp log file
+            # timestamp log file with run_id if provided
             timestamp = dt.now().strftime("%Y-%m-%d__%H.%M.%S")
-            log_file = os.path.join(log_dir, f"{timestamp}-execution-log.txt")
+            if self.run_id:
+                log_file = os.path.join(log_dir, f"run_{self.run_id}__{timestamp}-execution-log.txt")
+            else:
+                log_file = os.path.join(log_dir, f"{timestamp}-execution-log.txt")
             
             # Rotating file handler
             file_handler = handlers.RotatingFileHandler(
@@ -60,7 +79,7 @@ class ExperimentLogger:
             self.logger.addHandler(file_handler)
         
     def clean_message(self, message:str):
-        message.replace('\n', ' ')
+        message = message.replace('\n', ' ')
         message = ' '.join(message.split())
         return message
     
@@ -90,14 +109,21 @@ class ExperimentLogger:
         self.logger.info("-"*35)
 
 
-def get_logger(experiment_name, save_log_file = True):
-    """Returns the ExperimentLogger instance for the given experiment_name.
-    If it does not exist, creates and stores a new one"""
-    if experiment_name not in EXPERIMENT_LOGGER_REGISTRY:
-        from src.utils.system_logging import ExperimentLogger
-        EXPERIMENT_LOGGER_REGISTRY[experiment_name] = \
-            ExperimentLogger(experiment_name, save_log_file=save_log_file)
-    return EXPERIMENT_LOGGER_REGISTRY[experiment_name]
+def get_logger(experiment_name, run_id: Optional[str] = None, save_log_file: bool = True):
+    """
+    Creates and returns a new ExperimentLogger instance for the given experiment_name.
+    Each call creates a new logger instance, ensuring each experiment run gets its own log file.
+    
+    Args:
+        experiment_name: Name of the experiment
+        run_id: Optional unique identifier for this run (e.g., "001", "002"). 
+                If provided, creates a unique log file for each run.
+        save_log_file: Whether to save log to file (default: True)
+    
+    Returns:
+        ExperimentLogger instance
+    """
+    return ExperimentLogger(experiment_name, run_id=run_id, save_log_file=save_log_file)
 
 
 def log_function_call(func):

@@ -2,7 +2,7 @@
 from common.modules import tk, ttk, messagebox, filedialog, threading
 from common.modules import FigureCanvasTkAgg, Figure
 from gui.experiment_runner import ExperimentRunner
-from src.utils.system_logging import ExperimentLogger
+from src.utils.logging import ExperimentLogger
 
 
 class ExperimentLauncher:
@@ -12,7 +12,6 @@ class ExperimentLauncher:
     """
     
     def __init__(self):
-        
         self.runner = ExperimentRunner()
         self.results = None
         self._setup_gui()

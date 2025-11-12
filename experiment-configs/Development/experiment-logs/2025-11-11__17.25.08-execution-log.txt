@@ -1,0 +1,97 @@
+2025-11-11 17:25:08,978 - Development - INFO - Initialized GAF Pipeline with 4 tickers
+2025-11-11 17:25:08,987 - Development - INFO - Initialized GAF Pipeline with 1 tickers
+2025-11-11 17:25:08,990 - Development - INFO - Building GAF pipeline (data already loaded)...
+2025-11-11 17:25:08,993 - Development - INFO - Step 1: Building GAF dataset...
+2025-11-11 17:25:08,996 - Development - INFO - Building GAF dataset
+2025-11-11 17:25:08,998 - Development - INFO - Pre-fitting GAF transformer...
+2025-11-11 17:25:09,002 - Development - INFO - GAF transformer pre-fitted successfully
+2025-11-11 17:25:09,015 - Development - INFO - Processing GAF transformation for AMZN
+2025-11-11 17:25:09,036 - Development - INFO - Performing GAF transformation on 11976 windows...
+2025-11-11 17:25:09,244 - Development - INFO - Created 1497 GAF sequences
+2025-11-11 17:25:09,250 - Development - INFO - Created 1497 GAF sequences for AMZN
+2025-11-11 17:25:09,250 - Development - INFO - Processing GAF transformation for AAPL
+2025-11-11 17:25:09,264 - Development - INFO - Performing GAF transformation on 11976 windows...
+2025-11-11 17:25:09,427 - Development - INFO - Created 1497 GAF sequences
+2025-11-11 17:25:09,431 - Development - INFO - Created 1497 GAF sequences for AAPL
+2025-11-11 17:25:09,439 - Development - INFO - Processing GAF transformation for MSFT
+2025-11-11 17:25:09,455 - Development - INFO - Performing GAF transformation on 11976 windows...
+2025-11-11 17:25:09,616 - Development - INFO - Created 1497 GAF sequences
+2025-11-11 17:25:09,629 - Development - INFO - Created 1497 GAF sequences for MSFT
+2025-11-11 17:25:09,631 - Development - INFO - Processing GAF transformation for AVGO
+2025-11-11 17:25:09,645 - Development - INFO - Performing GAF transformation on 11968 windows...
+2025-11-11 17:25:09,804 - Development - INFO - Created 1496 GAF sequences
+2025-11-11 17:25:09,822 - Development - INFO - Created 1496 GAF sequences for AVGO
+2025-11-11 17:25:09,825 - Development - INFO - Successfully created GAF data for 4 tickers
+2025-11-11 17:25:09,829 - Development - INFO - Step 2: Creating trading environments...
+2025-11-11 17:25:09,833 - Development - INFO - Creating individual trading environments
+2025-11-11 17:25:09,836 - Development - INFO - Creating environment for AMZN
+2025-11-11 17:25:09,852 - Development - INFO - Created environment for AMZN
+2025-11-11 17:25:09,858 - Development - INFO - Creating environment for AAPL
+2025-11-11 17:25:09,868 - Development - INFO - Created environment for AAPL
+2025-11-11 17:25:09,885 - Development - INFO - Creating environment for MSFT
+2025-11-11 17:25:09,917 - Development - INFO - Created environment for MSFT
+2025-11-11 17:25:09,921 - Development - INFO - Creating environment for AVGO
+2025-11-11 17:25:09,957 - Development - INFO - Created environment for AVGO
+2025-11-11 17:25:09,962 - Development - INFO - Successfully created 4 environments
+2025-11-11 17:25:09,965 - Development - INFO - Step 3: Creating vectorized environment...
+2025-11-11 17:25:09,970 - Development - INFO - Creating vectorized environment with 4 single stock environments
+2025-11-11 17:25:09,979 - Development - INFO - Successfully created vectorized environment with 4 environments
+2025-11-11 17:25:09,982 - Development - INFO - GAF pipeline built successfully
+2025-11-11 17:25:09,988 - Development - INFO - Successfully created training environment with 4 environments
+2025-11-11 17:25:09,995 - Development - INFO - Building GAF pipeline (data already loaded)...
+2025-11-11 17:25:09,995 - Development - INFO - Step 1: Building GAF dataset...
+2025-11-11 17:25:10,007 - Development - INFO - Building GAF dataset
+2025-11-11 17:25:10,013 - Development - INFO - Pre-fitting GAF transformer...
+2025-11-11 17:25:10,015 - Development - INFO - GAF transformer pre-fitted successfully
+2025-11-11 17:25:10,025 - Development - INFO - Processing GAF transformation for NVDA
+2025-11-11 17:25:10,044 - Development - INFO - Performing GAF transformation on 11976 windows...
+2025-11-11 17:25:10,215 - Development - INFO - Created 1497 GAF sequences
+2025-11-11 17:25:10,222 - Development - INFO - Created 1497 GAF sequences for NVDA
+2025-11-11 17:25:10,226 - Development - INFO - Successfully created GAF data for 1 tickers
+2025-11-11 17:25:10,229 - Development - INFO - Step 2: Creating trading environments...
+2025-11-11 17:25:10,232 - Development - INFO - Creating individual trading environments
+2025-11-11 17:25:10,234 - Development - INFO - Creating environment for NVDA
+2025-11-11 17:25:10,250 - Development - INFO - Created environment for NVDA
+2025-11-11 17:25:10,260 - Development - INFO - Successfully created 1 environments
+2025-11-11 17:25:10,260 - Development - INFO - Step 3: Creating vectorized environment...
+2025-11-11 17:25:10,267 - Development - INFO - Creating vectorized environment with 1 single stock environments
+2025-11-11 17:25:10,271 - Development - INFO - Successfully created vectorized environment with 1 environments
+2025-11-11 17:25:10,275 - Development - INFO - GAF pipeline built successfully
+2025-11-11 17:25:10,278 - Development - INFO - Successfully created training environment with 1 environments
+2025-11-11 17:25:10,282 - Development - INFO - Training window 1 in fold 5
+2025-11-11 17:25:10,288 - Development - INFO - Training model for fold 5, window 1
+2025-11-11 17:25:10,298 - Development - INFO - Training the model...
+2025-11-11 17:25:17,927 - Development - INFO - Evaluating the model...
+2025-11-11 17:25:26,145 - Development - INFO - Evaluation complete with performance metrics
+2025-11-11 17:25:26,154 - Development - INFO - Completed training/validation/test for fold 5, window 1
+2025-11-11 17:25:26,162 - Development - INFO - Completed fold 5, window 1
+2025-11-11 17:25:26,166 - Development - INFO - Training window 2 in fold 5
+2025-11-11 17:25:26,170 - Development - INFO - Training model for fold 5, window 2
+2025-11-11 17:25:26,186 - Development - INFO - Training the model...
+2025-11-11 17:25:33,617 - Development - INFO - Evaluating the model...
+2025-11-11 17:25:41,072 - Development - INFO - Evaluation complete with performance metrics
+2025-11-11 17:25:41,079 - Development - INFO - Completed training/validation/test for fold 5, window 2
+2025-11-11 17:25:41,083 - Development - INFO - Completed fold 5, window 2
+2025-11-11 17:25:41,087 - Development - INFO - Training window 3 in fold 5
+2025-11-11 17:25:41,091 - Development - INFO - Training model for fold 5, window 3
+2025-11-11 17:25:41,105 - Development - INFO - Training the model...
+2025-11-11 17:25:48,191 - Development - INFO - Evaluating the model...
+2025-11-11 17:25:55,781 - Development - INFO - Evaluation complete with performance metrics
+2025-11-11 17:25:55,787 - Development - INFO - Completed training/validation/test for fold 5, window 3
+2025-11-11 17:25:55,793 - Development - INFO - Completed fold 5, window 3
+2025-11-11 17:25:55,795 - Development - INFO - Training window 4 in fold 5
+2025-11-11 17:25:55,799 - Development - INFO - Training model for fold 5, window 4
+2025-11-11 17:25:55,813 - Development - INFO - Training the model...
+2025-11-11 17:26:04,253 - Development - INFO - Evaluating the model...
+2025-11-11 17:26:12,145 - Development - INFO - Evaluation complete with performance metrics
+2025-11-11 17:26:12,151 - Development - INFO - Completed training/validation/test for fold 5, window 4
+2025-11-11 17:26:12,156 - Development - INFO - Completed fold 5, window 4
+2025-11-11 17:26:12,156 - Development - INFO - Training window 5 in fold 5
+2025-11-11 17:26:12,163 - Development - INFO - Training model for fold 5, window 5
+2025-11-11 17:26:12,173 - Development - INFO - Training the model...
+2025-11-11 17:26:19,459 - Development - INFO - Evaluating the model...
+2025-11-11 17:26:27,069 - Development - INFO - Evaluation complete with performance metrics
+2025-11-11 17:26:27,076 - Development - INFO - Completed training/validation/test for fold 5, window 5
+2025-11-11 17:26:27,082 - Development - INFO - Completed fold 5, window 5
+2025-11-11 17:29:08,338 - Development - INFO - Step 5: Aggregating results...
+2025-11-11 17:30:41,648 - Development - ERROR - Error executing cross-validation:

@@ -2,43 +2,50 @@
 from common.modules import os, pd, np, List, Dict, Tuple
 from common.modules import YF, TA
 from common.modules import USFederalHolidayCalendar
-from src.utils.system_logging import log_function_call, log_execution_time, get_logger
+from src.utils.logging import log_function_call, log_execution_time, get_logger
 
 REQUIRED_COLUMNS = ['Open', 'High', 'Low', 'Close', 'Volume']
 DATA_DIR = ".\\dataset-cache"
 
 
-class ExtractionPipeline: 
+class DataPipeline: 
     
     """
     Pipeline for managing all tabular timeseries data preparation. Using an 
     experiment config file, data is retrieved, preprocessed, validated, and saved. 
     """
     
-    def __init__(self, experiment_name):
+    def __init__(
+        self, 
+        experiment_name, 
+        run_id = None
+    ) -> None:
         
-        global logger
-        logger = get_logger(experiment_name)
-        
+        self.experiment_name = experiment_name
+        self.run_id = run_id
+        self.logger = get_logger(experiment_name, run_id=run_id)
         self.data_dir = DATA_DIR
         os.makedirs(DATA_DIR, exist_ok = True)
-        
-        logger = get_logger(experiment_name)
-        logger.info(f"Data manager initialized with directory: {DATA_DIR}")
+        self.logger.info(f"Data manager initialized with directory: {DATA_DIR}")
     
     @log_function_call
-    def fetch_price_data(self, ticker: str, start_date: str, end_date: str, 
-                        interval: str) -> pd.DataFrame:
+    def fetch_price_data(
+        self, 
+        ticker: str, 
+        start_date: str, 
+        end_date: str, 
+        interval: str
+    ) -> pd.DataFrame:
         """Fetch a single stock's timeseries data from Yahoo Finance API"""
         
         try:
             # fetch data from yahoo finance api
-            logger.info(f"Fetching {ticker} data [{start_date} - {end_date}]")
+            self.logger.info(f"Fetching {ticker} data [{start_date} - {end_date}]")
             stock = YF.Ticker(ticker)
             data = stock.history(start=start_date, end=end_date, interval=interval)
             
             if data.empty:
-                logger.warning(f"No data found for {ticker}")
+                self.logger.warning(f"No data found for {ticker}")
                 return pd.DataFrame()
             
             # remove optional columns if they exist 
@@ -46,8 +53,7 @@ class ExtractionPipeline:
             cols_to_remove = [col for col in optional_cols if col in data.columns]
             if cols_to_remove:
                 data = data.drop(columns=cols_to_remove)
-                logger.debug(f"Removed optional columns: {cols_to_remove}")
-            
+                
             # clean column names (remove spaces)
             data.columns = data.columns.str.replace(' ', '')
             
@@ -58,23 +64,27 @@ class ExtractionPipeline:
             # validate that we have the required price columns
             missing_cols = [col for col in REQUIRED_COLUMNS if col not in data.columns]
             if missing_cols:
-                logger.error(f"Missing required columns for {ticker}: {missing_cols}")
+                self.logger.error(f"Missing required columns for {ticker}: {missing_cols}")
                 return pd.DataFrame()
             
-            logger.info(f"Successfully fetched {len(data)} records for {ticker}")
+            self.logger.info(f"Successfully fetched {len(data)} records for {ticker}")
             return data
             
         except Exception as e:
-            logger.error(f"Error fetching data for {ticker}: {e}")
+            self.logger.error(f"Error fetching data for {ticker}: {e}")
             return pd.DataFrame()
     
     @log_function_call
-    def fetch_technical_data(self, data: pd.DataFrame, config: Dict) -> pd.DataFrame:
+    def fetch_technical_data(
+        self, 
+        data: pd.DataFrame, 
+        config: Dict
+    ) -> pd.DataFrame:
         """Fetch technical indicators for stocks in the dataset"""
         
         try:
             if data.empty:
-                logger.warning("Empty data provided for technical indicators")
+                self.logger.warning("Empty data provided for technical indicators")
                 return data
             
             df = data.copy() # create a copy to avoid modifying original
@@ -82,7 +92,7 @@ class ExtractionPipeline:
             # validate required columns exist
             missing_cols = [col for col in REQUIRED_COLUMNS if col not in df.columns]
             if missing_cols:
-                logger.error(f"Missing required columns for technical indicators: {missing_cols}")
+                self.logger.error(f"Missing required columns for technical indicators: {missing_cols}")
                 return data
             
             # Current technical features configured for fetching 
@@ -96,64 +106,72 @@ class ExtractionPipeline:
             if 'SMA' in gaf_features:
                 sma_periods = config.get('SMA periods')
                 df['SMA'] = TA.SMA(df, period=sma_periods, column='close')
-                logger.debug(f"Calculated SMA with {sma_periods} periods")
             
             # calculate RSI if requested
             if 'RSI' in gaf_features:
                 rsi_periods = config.get('RSI periods')
                 df['RSI'] = TA.RSI(df, period=rsi_periods, column='close')
-                logger.debug(f"Calculated RSI with {rsi_periods} periods")
-            
+
             # calculate OBV if requested
             if 'OBV' in gaf_features:
                 df['OBV'] = TA.OBV(df, column='close')
-                logger.debug("Calculated OBV")
             
             # fill NaN values
             df = df.ffill().bfill()
             
-            logger.info(f"Calculated technical indicators for {len(df)} records")
+            self.logger.info(f"Calculated technical indicators for {len(df)} records")
             return df
             
         except Exception as e:
-            logger.error(f"Error calculating technical indicators: {e}")
+            self.logger.error(f"Error calculating technical indicators: {e}")
             return data
     
     @log_function_call
-    def save_data(self, data: pd.DataFrame, filename: str) -> bool:
+    def save_data(
+        self, 
+        data: pd.DataFrame, 
+        filename: str
+    ) -> bool:
         """Save a stock's data to a csv file in the data directory"""
         
         try:
             filepath = os.path.join(self.data_dir, filename)
             data.to_csv(filepath, index=True)
-            logger.info(f"Data saved to {filepath}")
+            self.logger.info(f"Data saved to {filepath}")
             return True
 
         except Exception as e:
-            logger.error(f"Error saving data: {e}")
+            self.logger.error(f"Error saving data: {e}")
             return False
     
     @log_function_call
-    def load_data(self, filename: str) -> pd.DataFrame:
+    def load_data(
+        self, 
+        filename: str
+    ) -> pd.DataFrame:
         """Load a stock's data from a csv file in the data directory"""
         
         try:
             filepath = os.path.join(self.data_dir, filename)
             
             if not os.path.exists(filepath):
-                logger.error(f"File not found: {filepath}")
+                self.logger.error(f"File not found: {filepath}")
                 return pd.DataFrame()
             
             data = pd.read_csv(filepath, index_col=0, parse_dates=True)            
-            logger.info(f"Data loaded from {filepath}: {len(data)} records")
+            self.logger.info(f"Data loaded from {filepath}: {len(data)} records")
             return data
             
         except Exception as e:
-            logger.error(f"Error loading data: {e}")
+            self.logger.error(f"Error loading data: {e}")
             return pd.DataFrame()
     
     @log_function_call
-    def check_cache(self, ticker: str, required_features: List[str] = None) -> Dict:
+    def check_cache(
+        self, 
+        ticker: str, 
+        required_features: List[str] = None
+    ) -> Dict:
         """Check what date range and features are covered in the existing data 
         file for a given stock. Return status message about file contents"""
         
@@ -195,13 +213,18 @@ class ExtractionPipeline:
             }
             
         except Exception as e:
-            logger.error(f"Error checking existing data for {ticker}: {e}")
+            self.logger.error(f"Error checking existing data for {ticker}: {e}")
             bad_status['file_path'] = csv_path
             return bad_status
             
     @log_function_call
-    def check_data_gaps(self, ticker: str, required_start: str, required_end: str, 
-                        required_features: List[str]) -> Dict:
+    def check_data_gaps(
+        self, 
+        ticker: str, 
+        required_start: str, 
+        required_end: str, 
+        required_features: List[str]
+    ) -> Dict:
         """Determine if gaps exist in a stock's existing data: check if start/end 
         dates match required range, check if required features are present"""
         
@@ -255,7 +278,7 @@ class ExtractionPipeline:
             }
             
         except Exception as e:
-            logger.error(f"Error identifying data gaps for {ticker}: {e}")
+            self.logger.error(f"Error identifying data gaps for {ticker}: {e}")
             # return status for full fetch if error encountered
             return {
                 'needs_full_fetch': True,
@@ -265,14 +288,19 @@ class ExtractionPipeline:
             }
     
     @log_function_call
-    def fetch_incremental_data(self, config: Dict, ticker: str, missing_dates: Dict, 
-                              missing_features: List[str]) -> pd.DataFrame:
+    def fetch_incremental_data(
+        self, 
+        config: Dict, 
+        ticker: str, 
+        missing_dates: Dict, 
+        missing_features: List[str]
+    ) -> pd.DataFrame:
         """Fetch missing data values for a single stock"""
 
         try:
             # early return if no incremental fetch is needed
             if not missing_dates and not missing_features:
-                logger.info(f"No missing dates or features for {ticker}")
+                self.logger.info(f"No missing dates or features for {ticker}")
                 return pd.DataFrame()
 
             # determine what date ranges need to be fetched
@@ -292,7 +320,7 @@ class ExtractionPipeline:
                             'type': 'post_period'
                         }
                     ])
-                    logger.info(f"""Fetching incremental data for {ticker}:
+                    self.logger.info(f"""Fetching incremental data for {ticker}:
                               ({missing_dates['start']} to 
                                {missing_dates['existing_start']}) and 
                               ({missing_dates['existing_end']} to 
@@ -305,7 +333,7 @@ class ExtractionPipeline:
                         'end': missing_dates['existing_start'],
                         'type': 'pre_period'
                     })
-                    logger.info(f""""Fetching incremental data for {ticker}:
+                    self.logger.info(f""""Fetching incremental data for {ticker}:
                                ({missing_dates['start']} to 
                                 {missing_dates['existing_start']})""")
                 
@@ -316,7 +344,7 @@ class ExtractionPipeline:
                         'end': missing_dates['end'],
                         'type': 'post_period'
                     })
-                    logger.info(f"""Fetching incremental data for {ticker}: 
+                    self.logger.info(f"""Fetching incremental data for {ticker}: 
                                ({missing_dates['existing_end']} to 
                                 {missing_dates['end']})""")
             
@@ -330,11 +358,11 @@ class ExtractionPipeline:
                     # calculate technical indicators if we have price data
                     price_data = self.fetch_technical_data(price_data, config)
                     fetched_dataframes.append(price_data)
-                    logger.info(f"""Fetched {len(price_data)} records for 
+                    self.logger.info(f"""Fetched {len(price_data)} records for 
                                 {ticker}{period['type']} ({period['start']} to 
                                 {period['end']})""")
                 else:
-                    logger.warning(f"""No price data fetched for {ticker} 
+                    self.logger.warning(f"""No price data fetched for {ticker} 
                                    {period['type']} ({period['start']} 
                                    to {period['end']})""")
 
@@ -347,30 +375,33 @@ class ExtractionPipeline:
 
             # if we have missing features but no new price data, handle features
             if missing_features and new_data.empty:
-                logger.info(f"""No new price data for {ticker}, but missing 
+                self.logger.info(f"""No new price data for {ticker}, but missing 
                             features need to be calculated""")
                 return pd.DataFrame()  # features will be calculated on existing data
             
             # if we have new data but missing features, recalculate indicators
             if missing_features and not new_data.empty:
-                logger.info(f"""Recalculating technical indicators for {ticker}
+                self.logger.info(f"""Recalculating technical indicators for {ticker}
                             to include missing features""")
                 new_data = self.fetch_technical_data(new_data, config)
             
             if new_data.empty:
-                logger.warning(f"No new data fetched for {ticker}")
+                self.logger.warning(f"No new data fetched for {ticker}")
             else:
-                logger.info(f"Successfully fetched {len(new_data)} records for {ticker}")
+                self.logger.info(f"Successfully fetched {len(new_data)} records for {ticker}")
             
             return new_data
             
         except Exception as e:
-            logger.error(f"Error fetching incremental data for {ticker}: {e}")
+            self.logger.error(f"Error fetching incremental data for {ticker}: {e}")
             return pd.DataFrame()
     
     @log_function_call
-    def merge_incremental_data(self, existing_data: pd.DataFrame, 
-                               new_data: pd.DataFrame) -> pd.DataFrame:
+    def merge_incremental_data(
+        self, 
+        existing_data: pd.DataFrame, 
+        new_data: pd.DataFrame
+    ) -> pd.DataFrame:
         """Merge newly fetched data with existing data"""
         
         try:
@@ -383,15 +414,18 @@ class ExtractionPipeline:
             combined = combined[~combined.index.duplicated(keep='last')]
             combined = combined.sort_index()
 
-            logger.info(f"Merged data: {len(combined)} total records")
+            self.logger.info(f"Merged data: {len(combined)} total records")
             return combined
             
         except Exception as e:
-            logger.error(f"Error merging data: {e}")
+            self.logger.error(f"Error merging data: {e}")
             return existing_data
     
     @log_function_call
-    def exe_data_pipeline(self, config: Dict) -> Dict[str, pd.DataFrame]:
+    def exe_data_pipeline(
+        self, 
+        config: Dict
+    ) -> Dict[str, pd.DataFrame]:
         """Prepare and return all tabular timeseries data needed for a given
         experiment. Retrieve price and technical data; preprocess price and 
         technical data; and load/save datasets in project data directory"""
@@ -413,14 +447,14 @@ class ExtractionPipeline:
             adjust_days = config.get('GAF timeseries periods', 0) + max_adj
             
             fetch_start = self.business_date_adjust(start_date, adjust_days)
-            logger.info(f"Adjusted fetch date to {fetch_start}")
+            self.logger.info(f"Adjusted fetch date to {fetch_start}")
             
             required_features = config.get('GAF features', [])
             
             # Process each ticker
             stock_data = {}
             for ticker in tickers:
-                logger.info(f"Processing {ticker} with smart caching...")
+                self.logger.info(f"Processing {ticker} with smart caching...")
                 
                 # check what data we already have
                 gap_info = self.check_data_gaps(ticker, fetch_start, end_date, required_features)
@@ -428,7 +462,7 @@ class ExtractionPipeline:
                 # Process based on what's needed
                 if gap_info['needs_full_fetch']:
                     # fetch all data from scratch
-                    logger.info(f"Fetching all data for {ticker} (none existing)")
+                    self.logger.info(f"Fetching all data for {ticker} (none existing)")
                     data = self.fetch_price_data(ticker, fetch_start, end_date, \
                                             interval = config['Update frequency'])
                     
@@ -440,19 +474,18 @@ class ExtractionPipeline:
                         is_valid, issues = self.validate_data(data, config)
                         if is_valid: # save
                             self.save_data(data, f"{ticker}_data.csv")
-                            logger.info(f"Fetched and saved data for {ticker}")
+                            self.logger.info(f"Fetched and saved data for {ticker}")
                         else:
-                            logger.warning(f"Data validation failed for {ticker}: {issues}")
+                            self.logger.warning(f"Data validation failed for {ticker}: {issues}")
                             data = pd.DataFrame()
                     else:
-                        logger.error(f"Failed to fetch data for {ticker}")
+                        self.logger.error(f"Failed to fetch data for {ticker}")
                         
                 elif gap_info['needs_incremental_fetch']:
                     # fetch only missing data
-                    logger.info(f"Fetching incremental data for {ticker}")
+                    self.logger.info(f"Fetching incremental data for {ticker}")
                     
-                    existing_info = self.check_cache(ticker, required_features)
-                    existing_data = existing_info['data']
+                    existing_data = gap_info['existing_info']['data']
                     
                     new_data = self.fetch_incremental_data(
                         config,
@@ -462,7 +495,7 @@ class ExtractionPipeline:
                     )
                     
                     if not new_data.empty:
-                        logger.info(f"Fetched {len(new_data)} new records for {ticker}")
+                        self.logger.info(f"Fetched {len(new_data)} new records for {ticker}")
                         # merge with existing data
                         data = self.merge_incremental_data(existing_data, new_data)
                     else:
@@ -472,13 +505,13 @@ class ExtractionPipeline:
                     # save updated data
                     if not data.empty:
                         self.save_data(data, f"{ticker}_data.csv")
-                        logger.info(f"Updated and saved data for {ticker}")
+                        self.logger.info(f"Updated and saved data for {ticker}")
                         
                 else:
                     # use existing data
-                    logger.info(f"Using existing data for {ticker}")
+                    self.logger.info(f"Using existing data for {ticker}")
                     data = gap_info['existing_info']['data']
-                    logger.info(f"Loaded existing data for {ticker}")
+                    self.logger.info(f"Loaded existing data for {ticker}")
                 
                 # trim data to experiment date range and add to results
                 if not data.empty:
@@ -494,20 +527,24 @@ class ExtractionPipeline:
                         data = self.trim_features(data, excess_features)
                     
                     stock_data[ticker] = data
-                    logger.info(f"Successfully prepared data for {ticker}")
+
                 else:
-                    logger.error(f"Failed to prepare data for {ticker}")
+                    self.logger.error(f"Failed to prepare data for {ticker}")
             
-            logger.info(f"Successfully prepared data for {len(stock_data)} tickers")
+            self.logger.info(f"Successfully prepared data for {len(stock_data)} tickers")
             
             return stock_data
             
         except Exception as e:
-            logger.error(f"Error preparing data for experiment: {e}")
+            self.logger.error(f"Error preparing data for experiment: {e}")
             return {}
 
     @log_function_call
-    def validate_data(self, data: pd.DataFrame, config: Dict) -> Tuple[bool, List[str]]:
+    def validate_data(
+        self, 
+        data: pd.DataFrame, 
+        config: Dict
+    ) -> Tuple[bool, List[str]]:
         """Validate data quality. Return list of issues encountered if needed"""
         
         issues = []
@@ -538,12 +575,16 @@ class ExtractionPipeline:
         
         is_valid = len(issues) == 0
         
-        if is_valid: logger.info("Data validation passed")
-        else: logger.warning(f"Data validation failed: {issues}")
+        if is_valid: self.logger.info("Data validation passed")
+        else: self.logger.warning(f"Data validation failed: {issues}")
         
         return is_valid, issues
     
-    def business_date_adjust(self, date: str, n_days: int) -> str:
+    def business_date_adjust(
+        self, 
+        date: str, 
+        n_days: int
+    ) -> str:
         """Adjust date by subtracting business days"""
         
         current_date = pd.to_datetime(date)
@@ -562,8 +603,12 @@ class ExtractionPipeline:
             
         return current_date.strftime('%Y-%m-%d')
     
-    def trim_dates(self, data: pd.DataFrame, start_date_dt: pd.Timestamp, 
-             end_date_dt: pd.Timestamp) -> pd.DataFrame:
+    def trim_dates(
+        self, 
+        data: pd.DataFrame, 
+        start_date_dt: pd.Timestamp, 
+        end_date_dt: pd.Timestamp
+    ) -> pd.DataFrame:
         """Trim data to experiment date range with proper timezone handling"""
         if data.empty:
             return data
@@ -585,20 +630,24 @@ class ExtractionPipeline:
         
         # trim to experiment range
         trimmed_data = data.loc[(data.index >= start_dt) & (data.index <= end_dt)]
-        logger.debug(f"Trimmed data to experiment range: {len(trimmed_data)} records")
+        self.logger.debug(f"Trimmed data to experiment range: {len(trimmed_data)} records")
         
         return trimmed_data
     
-    def trim_features(self, data: pd.DataFrame, features_to_remove: List[str]) -> pd.DataFrame:
+    def trim_features(
+        self, 
+        data: pd.DataFrame, 
+        features_to_remove: List[str]
+    ) -> pd.DataFrame:
         """Trim specified features from the dataframe"""
 
         # early exits
         if data.empty:
-            logger.warning("Cannot trim features from empty dataframe")
+            self.logger.warning("Cannot trim features from empty dataframe")
             return data
         
         if not features_to_remove:
-            logger.debug("No features specified for removal")
+            self.logger.debug("No features specified for removal")
             return data
         
         # check which features actually exist in the dataframe
@@ -607,17 +656,17 @@ class ExtractionPipeline:
         features_not_found = [feat for feat in features_to_remove if feat not in existing_features]
         
         if features_not_found:
-            logger.warning(f"Features not found in dataframe: {features_not_found}")
+            self.logger.warning(f"Features not found in dataframe: {features_not_found}")
         
         if not features_to_remove_existing:
-            logger.info("No specified features found in dataframe to remove")
+            self.logger.info("No specified features found in dataframe to remove")
             return data
         
         # remove the features
         trimmed_data = data.drop(columns=features_to_remove_existing)
         
-        logger.info(f"Removed features from dataframe: {features_to_remove_existing}")
-        logger.debug(f"Dataframe now has {len(trimmed_data.columns)} columns: {list(trimmed_data.columns)}")
+        self.logger.info(f"Removed features from dataframe: {features_to_remove_existing}")
+        self.logger.debug(f"Dataframe now has {len(trimmed_data.columns)} columns: {list(trimmed_data.columns)}")
         
         return trimmed_data
 
