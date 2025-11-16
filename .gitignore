@@ -133,6 +133,7 @@ logs/
 results/
 runs/
 dataset/
+dataset-cache/
 *.csv
 *.parquet
 *.pickle
