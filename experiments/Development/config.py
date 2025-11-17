@@ -7,21 +7,21 @@ experiment_name = os.path.basename(current_directory)
 EXPERIMENT_CONFIG = {
     
     'Experiment name': experiment_name,
+    'Random seed': 42,
     
     # ----------------------------------------------------------------
     # MODEL CONFIGURATION
     # ----------------------------------------------------------------
     
-    # Reinforcement Learning Model
+    # Visual Reinforcement Learning Model
     'RL model': 'PPO', 
     'RL policy': 'CnnPolicy', 
-    'Lookback window': 7, # observation space lookback period
-    'Rollout steps' : 2048, # trajectory collection size
+    'Lookback window': 7,   # observation space lookback period
+    'Rollout steps' : 2048,
     'Batch size': 64,
     'Deterministic' : True,
     'Training epochs': 1000, # total timesteps for training
-    'Actor learning rate': 0.001,
-    'Critic learning rate': 0.001,
+    'Learning rate': 0.001,
     
     'Checkpoint frequency': 100,
     'Model save path': f".\experiments\{experiment_name}\models", # model storage
@@ -32,11 +32,10 @@ EXPERIMENT_CONFIG = {
     
     # Time Series Date and Frequency Attributes
     'Start date': '2010-01-01',
-    'End date': '2022-12-30',
+    'End date': '2020-12-30',
     'Update frequency': '1d',
     
     # K-Fold Cross Validation Parameters
-    'Random seed': 42,
     'K folds': 5,
     'Stratification type': 'random',
     
