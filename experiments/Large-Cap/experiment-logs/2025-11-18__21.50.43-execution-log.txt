@@ -1,0 +1,40 @@
+2025-11-18 21:50:43,412 - Large-Cap - INFO - Loaded configuration for experiment: Large-Cap
+2025-11-18 21:50:43,433 - Large-Cap - INFO - Data manager initialized with directory: .\dataset-cache
+2025-11-18 21:50:43,439 - Large-Cap - INFO - Using Alpha Vantage API for data fetching
+2025-11-18 21:50:43,808 - Large-Cap - INFO - Adjusted fetch date to 1993-11-16
+2025-11-18 21:50:43,810 - Large-Cap - INFO - Processing AEP with smart caching...
+2025-11-18 21:50:43,827 - Large-Cap - ERROR - Error checking existing data for AEP: [Errno 2] No such file or directory: '.\\dataset-cache\\AEP_data.csv'
+2025-11-18 21:50:43,830 - Large-Cap - INFO - Fetching all data for AEP (none existing)
+2025-11-18 21:50:43,832 - Large-Cap - INFO - Fetching AEP data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 21:50:44,233 - Large-Cap - ERROR - Error fetching data for AEP: We have detected your API key as Y9EJACE06U0N9CNV and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.
+2025-11-18 21:50:44,265 - Large-Cap - ERROR - Failed to fetch data for AEP
+2025-11-18 21:50:44,270 - Large-Cap - ERROR - Failed to prepare data for AEP
+2025-11-18 21:50:44,276 - Large-Cap - INFO - Processing RCL with smart caching...
+2025-11-18 21:50:44,282 - Large-Cap - ERROR - Error checking existing data for RCL: [Errno 2] No such file or directory: '.\\dataset-cache\\RCL_data.csv'
+2025-11-18 21:50:44,286 - Large-Cap - INFO - Fetching all data for RCL (none existing)
+2025-11-18 21:50:44,291 - Large-Cap - INFO - Fetching RCL data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 21:50:44,460 - Large-Cap - ERROR - Error fetching data for RCL: We have detected your API key as Y9EJACE06U0N9CNV and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.
+2025-11-18 21:50:44,474 - Large-Cap - ERROR - Failed to fetch data for RCL
+2025-11-18 21:50:44,479 - Large-Cap - ERROR - Failed to prepare data for RCL
+2025-11-18 21:50:44,483 - Large-Cap - INFO - Processing RSG with smart caching...
+2025-11-18 21:50:44,488 - Large-Cap - ERROR - Error checking existing data for RSG: [Errno 2] No such file or directory: '.\\dataset-cache\\RSG_data.csv'
+2025-11-18 21:50:44,493 - Large-Cap - INFO - Fetching all data for RSG (none existing)
+2025-11-18 21:50:44,498 - Large-Cap - INFO - Fetching RSG data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 21:50:44,665 - Large-Cap - ERROR - Error fetching data for RSG: We have detected your API key as Y9EJACE06U0N9CNV and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.
+2025-11-18 21:50:44,675 - Large-Cap - ERROR - Failed to fetch data for RSG
+2025-11-18 21:50:44,680 - Large-Cap - ERROR - Failed to prepare data for RSG
+2025-11-18 21:50:44,685 - Large-Cap - INFO - Processing SNPS with smart caching...
+2025-11-18 21:50:45,765 - Large-Cap - INFO - Fetching incremental data for SNPS
+2025-11-18 21:50:45,768 - Large-Cap - INFO - Fetching incremental data for SNPS: (1993-11-16 to 2003-10-31) and (2024-12-30 to 2025-09-30)
+2025-11-18 21:50:45,770 - Large-Cap - INFO - Fetching SNPS data [1993-11-16 - 2003-10-31] from Alpha Vantage
+2025-11-18 21:50:45,939 - Large-Cap - ERROR - Error fetching data for SNPS: We have detected your API key as Y9EJACE06U0N9CNV and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.
+2025-11-18 21:50:45,943 - Large-Cap - WARNING - No price data fetched for SNPS pre_period (1993-11-16 to 2003-10-31)
+2025-11-18 21:50:45,947 - Large-Cap - INFO - Fetching SNPS data [2024-12-30 - 2025-09-30] from Alpha Vantage
+2025-11-18 21:50:46,124 - Large-Cap - ERROR - Error fetching data for SNPS: We have detected your API key as Y9EJACE06U0N9CNV and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.
+2025-11-18 21:50:46,137 - Large-Cap - WARNING - No price data fetched for SNPS post_period (2024-12-30 to 2025-09-30)
+2025-11-18 21:50:46,140 - Large-Cap - WARNING - No new data fetched for SNPS
+2025-11-18 21:50:46,532 - Large-Cap - INFO - Data saved to .\dataset-cache\SNPS_data.csv
+2025-11-18 21:50:46,532 - Large-Cap - INFO - Updated and saved data for SNPS
+2025-11-18 21:50:46,548 - Large-Cap - INFO - Processing AZO with smart caching...
+2025-11-18 21:50:46,795 - Large-Cap - INFO - Fetching incremental data for AZO
+2025-11-18 21:50:46,795 - Large-Cap - INFO - Fetching incremental data for AZO: (1993-11-16 to 1999-11-01)

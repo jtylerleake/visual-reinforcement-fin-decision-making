@@ -1,0 +1,75 @@
+2025-11-18 19:36:38,183 - Development - INFO - Loaded configuration for experiment: Development
+2025-11-18 19:36:38,189 - Development - INFO - Experiment Manager initialized
+2025-11-18 19:36:38,190 - Development - INFO - ----------------------------------------------------------------------
+2025-11-18 19:36:38,192 - Development - INFO - Executing Temporal Walk-Forward RL Performance Experiment
+2025-11-18 19:36:38,193 - Development - INFO - ----------------------------------------------------------------------
+2025-11-18 19:36:38,194 - Development - INFO - Step 1: Preparing timeseries data pipeline...
+2025-11-18 19:36:38,197 - Development - INFO - Data manager initialized with directory: .\dataset-cache
+2025-11-18 19:36:38,216 - Development - INFO - Adjusted fetch date to 2014-11-14
+2025-11-18 19:36:38,218 - Development - INFO - Processing A with smart caching...
+2025-11-18 19:36:38,219 - Development - ERROR - Error checking existing data for A: [Errno 2] No such file or directory: '.\\dataset-cache\\A_data.csv'
+2025-11-18 19:36:38,220 - Development - INFO - Fetching all data for A (none existing)
+2025-11-18 19:36:38,222 - Development - INFO - Fetching A data [2014-11-14 - 2020-12-30]
+2025-11-18 19:36:39,682 - Development - ERROR - Error fetching data for A: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 19:36:39,685 - Development - ERROR - Failed to fetch data for A
+2025-11-18 19:36:39,688 - Development - ERROR - Failed to prepare data for A
+2025-11-18 19:36:39,690 - Development - INFO - Processing AAPL with smart caching...
+2025-11-18 19:36:39,696 - Development - ERROR - Error checking existing data for AAPL: [Errno 2] No such file or directory: '.\\dataset-cache\\AAPL_data.csv'
+2025-11-18 19:36:39,698 - Development - INFO - Fetching all data for AAPL (none existing)
+2025-11-18 19:36:39,699 - Development - INFO - Fetching AAPL data [2014-11-14 - 2020-12-30]
+2025-11-18 19:36:40,461 - Development - ERROR - Error fetching data for AAPL: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 19:36:40,470 - Development - ERROR - Failed to fetch data for AAPL
+2025-11-18 19:36:40,476 - Development - ERROR - Failed to prepare data for AAPL
+2025-11-18 19:36:40,481 - Development - INFO - Processing ABBV with smart caching...
+2025-11-18 19:36:40,488 - Development - ERROR - Error checking existing data for ABBV: [Errno 2] No such file or directory: '.\\dataset-cache\\ABBV_data.csv'
+2025-11-18 19:36:40,493 - Development - INFO - Fetching all data for ABBV (none existing)
+2025-11-18 19:36:40,498 - Development - INFO - Fetching ABBV data [2014-11-14 - 2020-12-30]
+2025-11-18 19:36:41,186 - Development - ERROR - Error fetching data for ABBV: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 19:36:41,196 - Development - ERROR - Failed to fetch data for ABBV
+2025-11-18 19:36:41,202 - Development - ERROR - Failed to prepare data for ABBV
+2025-11-18 19:36:41,209 - Development - INFO - Processing AMZN with smart caching...
+2025-11-18 19:36:41,215 - Development - ERROR - Error checking existing data for AMZN: [Errno 2] No such file or directory: '.\\dataset-cache\\AMZN_data.csv'
+2025-11-18 19:36:41,221 - Development - INFO - Fetching all data for AMZN (none existing)
+2025-11-18 19:36:41,228 - Development - INFO - Fetching AMZN data [2014-11-14 - 2020-12-30]
+2025-11-18 19:36:41,954 - Development - ERROR - Error fetching data for AMZN: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 19:36:41,963 - Development - ERROR - Failed to fetch data for AMZN
+2025-11-18 19:36:41,968 - Development - ERROR - Failed to prepare data for AMZN
+2025-11-18 19:36:41,974 - Development - INFO - Processing ABT with smart caching...
+2025-11-18 19:36:41,980 - Development - ERROR - Error checking existing data for ABT: [Errno 2] No such file or directory: '.\\dataset-cache\\ABT_data.csv'
+2025-11-18 19:36:41,986 - Development - INFO - Fetching all data for ABT (none existing)
+2025-11-18 19:36:41,989 - Development - INFO - Fetching ABT data [2014-11-14 - 2020-12-30]
+2025-11-18 19:36:43,159 - Development - ERROR - Error fetching data for ABT: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 19:36:43,168 - Development - ERROR - Failed to fetch data for ABT
+2025-11-18 19:36:43,174 - Development - ERROR - Failed to prepare data for ABT
+2025-11-18 19:36:43,179 - Development - INFO - Processing ACN with smart caching...
+2025-11-18 19:36:43,186 - Development - ERROR - Error checking existing data for ACN: [Errno 2] No such file or directory: '.\\dataset-cache\\ACN_data.csv'
+2025-11-18 19:36:43,193 - Development - INFO - Fetching all data for ACN (none existing)
+2025-11-18 19:36:43,198 - Development - INFO - Fetching ACN data [2014-11-14 - 2020-12-30]
+2025-11-18 19:36:44,757 - Development - ERROR - Error fetching data for ACN: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 19:36:44,760 - Development - ERROR - Failed to fetch data for ACN
+2025-11-18 19:36:44,761 - Development - ERROR - Failed to prepare data for ACN
+2025-11-18 19:36:44,763 - Development - INFO - Processing ADBE with smart caching...
+2025-11-18 19:36:44,765 - Development - ERROR - Error checking existing data for ADBE: [Errno 2] No such file or directory: '.\\dataset-cache\\ADBE_data.csv'
+2025-11-18 19:36:44,767 - Development - INFO - Fetching all data for ADBE (none existing)
+2025-11-18 19:36:44,768 - Development - INFO - Fetching ADBE data [2014-11-14 - 2020-12-30]
+2025-11-18 19:36:46,210 - Development - ERROR - Error fetching data for ADBE: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 19:36:46,220 - Development - ERROR - Failed to fetch data for ADBE
+2025-11-18 19:36:46,225 - Development - ERROR - Failed to prepare data for ADBE
+2025-11-18 19:36:46,231 - Development - INFO - Processing ADI with smart caching...
+2025-11-18 19:36:46,237 - Development - ERROR - Error checking existing data for ADI: [Errno 2] No such file or directory: '.\\dataset-cache\\ADI_data.csv'
+2025-11-18 19:36:46,244 - Development - INFO - Fetching all data for ADI (none existing)
+2025-11-18 19:36:46,249 - Development - INFO - Fetching ADI data [2014-11-14 - 2020-12-30]
+2025-11-18 19:36:47,044 - Development - ERROR - Error fetching data for ADI: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 19:36:47,047 - Development - ERROR - Failed to fetch data for ADI
+2025-11-18 19:36:47,048 - Development - ERROR - Failed to prepare data for ADI
+2025-11-18 19:36:47,048 - Development - INFO - Processing ADP with smart caching...
+2025-11-18 19:36:47,051 - Development - ERROR - Error checking existing data for ADP: [Errno 2] No such file or directory: '.\\dataset-cache\\ADP_data.csv'
+2025-11-18 19:36:47,052 - Development - INFO - Fetching all data for ADP (none existing)
+2025-11-18 19:36:47,053 - Development - INFO - Fetching ADP data [2014-11-14 - 2020-12-30]
+2025-11-18 19:36:47,742 - Development - ERROR - Error fetching data for ADP: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 19:36:47,749 - Development - ERROR - Failed to fetch data for ADP
+2025-11-18 19:36:47,754 - Development - ERROR - Failed to prepare data for ADP
+2025-11-18 19:36:47,759 - Development - INFO - Processing AMAT with smart caching...
+2025-11-18 19:36:47,766 - Development - ERROR - Error checking existing data for AMAT: [Errno 2] No such file or directory: '.\\dataset-cache\\AMAT_data.csv'
+2025-11-18 19:36:47,771 - Development - INFO - Fetching all data for AMAT (none existing)
+2025-11-18 19:36:47,777 - Development - INFO - Fetching AMAT data [2014-11-14 - 2020-12-30]

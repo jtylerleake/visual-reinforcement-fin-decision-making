@@ -1,0 +1,105 @@
+2025-11-18 19:10:10,104 - Development - INFO - Initialized GAF Pipeline with 8 tickers
+2025-11-18 19:10:10,106 - Development - INFO - Initialized GAF Pipeline with 2 tickers
+2025-11-18 19:10:10,108 - Development - INFO - Building GAF pipeline (data already loaded)...
+2025-11-18 19:10:10,110 - Development - INFO - Step 1: Building GAF dataset...
+2025-11-18 19:10:10,111 - Development - INFO - Building GAF dataset
+2025-11-18 19:10:10,112 - Development - INFO - Pre-fitting GAF transformer...
+2025-11-18 19:10:10,113 - Development - INFO - GAF transformer pre-fitted successfully
+2025-11-18 19:10:10,115 - Development - INFO - Processing GAF transformation for ADI
+2025-11-18 19:10:10,121 - Development - INFO - Performing GAF transformation on 11976 windows...
+2025-11-18 19:10:10,177 - Development - INFO - Created 1497 GAF sequences
+2025-11-18 19:10:10,181 - Development - INFO - Created 1497 GAF sequences for ADI
+2025-11-18 19:10:10,182 - Development - INFO - Processing GAF transformation for AMZN
+2025-11-18 19:10:10,188 - Development - INFO - Performing GAF transformation on 11976 windows...
+2025-11-18 19:10:10,242 - Development - INFO - Created 1497 GAF sequences
+2025-11-18 19:10:10,245 - Development - INFO - Created 1497 GAF sequences for AMZN
+2025-11-18 19:10:10,246 - Development - INFO - Processing GAF transformation for ACN
+2025-11-18 19:10:10,252 - Development - INFO - Performing GAF transformation on 11976 windows...
+2025-11-18 19:10:10,311 - Development - INFO - Created 1497 GAF sequences
+2025-11-18 19:10:10,314 - Development - INFO - Created 1497 GAF sequences for ACN
+2025-11-18 19:10:10,316 - Development - INFO - Processing GAF transformation for ADBE
+2025-11-18 19:10:10,322 - Development - INFO - Performing GAF transformation on 11976 windows...
+2025-11-18 19:10:10,381 - Development - INFO - Created 1497 GAF sequences
+2025-11-18 19:10:10,385 - Development - INFO - Created 1497 GAF sequences for ADBE
+2025-11-18 19:10:10,386 - Development - INFO - Processing GAF transformation for AMAT
+2025-11-18 19:10:10,391 - Development - INFO - Performing GAF transformation on 11976 windows...
+2025-11-18 19:10:10,451 - Development - INFO - Created 1497 GAF sequences
+2025-11-18 19:10:10,454 - Development - INFO - Created 1497 GAF sequences for AMAT
+2025-11-18 19:10:10,455 - Development - INFO - Processing GAF transformation for ABT
+2025-11-18 19:10:10,461 - Development - INFO - Performing GAF transformation on 11976 windows...
+2025-11-18 19:10:10,520 - Development - INFO - Created 1497 GAF sequences
+2025-11-18 19:10:10,524 - Development - INFO - Created 1497 GAF sequences for ABT
+2025-11-18 19:10:10,525 - Development - INFO - Processing GAF transformation for A
+2025-11-18 19:10:10,531 - Development - INFO - Performing GAF transformation on 11976 windows...
+2025-11-18 19:10:10,588 - Development - INFO - Created 1497 GAF sequences
+2025-11-18 19:10:10,593 - Development - INFO - Created 1497 GAF sequences for A
+2025-11-18 19:10:10,594 - Development - INFO - Processing GAF transformation for AAPL
+2025-11-18 19:10:10,600 - Development - INFO - Performing GAF transformation on 11976 windows...
+2025-11-18 19:10:10,661 - Development - INFO - Created 1497 GAF sequences
+2025-11-18 19:10:10,665 - Development - INFO - Created 1497 GAF sequences for AAPL
+2025-11-18 19:10:10,666 - Development - INFO - Successfully created GAF data for 8 tickers
+2025-11-18 19:10:10,667 - Development - INFO - Step 2: Creating trading environments...
+2025-11-18 19:10:10,668 - Development - INFO - Creating individual trading environments
+2025-11-18 19:10:10,670 - Development - INFO - Creating environment for ADI
+2025-11-18 19:10:10,682 - Development - INFO - Created environment for ADI
+2025-11-18 19:10:10,683 - Development - INFO - Creating environment for AMZN
+2025-11-18 19:10:10,694 - Development - INFO - Created environment for AMZN
+2025-11-18 19:10:10,696 - Development - INFO - Creating environment for ACN
+2025-11-18 19:10:10,706 - Development - INFO - Created environment for ACN
+2025-11-18 19:10:10,708 - Development - INFO - Creating environment for ADBE
+2025-11-18 19:10:10,718 - Development - INFO - Created environment for ADBE
+2025-11-18 19:10:10,720 - Development - INFO - Creating environment for AMAT
+2025-11-18 19:10:10,730 - Development - INFO - Created environment for AMAT
+2025-11-18 19:10:10,732 - Development - INFO - Creating environment for ABT
+2025-11-18 19:10:10,743 - Development - INFO - Created environment for ABT
+2025-11-18 19:10:10,744 - Development - INFO - Creating environment for A
+2025-11-18 19:10:10,755 - Development - INFO - Created environment for A
+2025-11-18 19:10:10,756 - Development - INFO - Creating environment for AAPL
+2025-11-18 19:10:10,768 - Development - INFO - Created environment for AAPL
+2025-11-18 19:10:10,770 - Development - INFO - Successfully created 8 environments
+2025-11-18 19:10:10,771 - Development - INFO - Step 3: Creating vectorized environment...
+2025-11-18 19:10:10,773 - Development - INFO - Creating vectorized environment with 8 single stock environments
+2025-11-18 19:10:10,774 - Development - INFO - Successfully created vectorized environment with 8 environments
+2025-11-18 19:10:10,775 - Development - INFO - GAF pipeline built successfully
+2025-11-18 19:10:10,776 - Development - INFO - Successfully created training environment with 8 environments
+2025-11-18 19:10:10,778 - Development - INFO - Building GAF pipeline (data already loaded)...
+2025-11-18 19:10:10,779 - Development - INFO - Step 1: Building GAF dataset...
+2025-11-18 19:10:10,780 - Development - INFO - Building GAF dataset
+2025-11-18 19:10:10,781 - Development - INFO - Pre-fitting GAF transformer...
+2025-11-18 19:10:10,783 - Development - INFO - GAF transformer pre-fitted successfully
+2025-11-18 19:10:10,783 - Development - INFO - Processing GAF transformation for ABBV
+2025-11-18 19:10:10,790 - Development - INFO - Performing GAF transformation on 11976 windows...
+2025-11-18 19:10:10,855 - Development - INFO - Created 1497 GAF sequences
+2025-11-18 19:10:10,858 - Development - INFO - Created 1497 GAF sequences for ABBV
+2025-11-18 19:10:10,860 - Development - INFO - Processing GAF transformation for ADP
+2025-11-18 19:10:10,865 - Development - INFO - Performing GAF transformation on 11976 windows...
+2025-11-18 19:10:10,932 - Development - INFO - Created 1497 GAF sequences
+2025-11-18 19:10:10,935 - Development - INFO - Created 1497 GAF sequences for ADP
+2025-11-18 19:10:10,937 - Development - INFO - Successfully created GAF data for 2 tickers
+2025-11-18 19:10:10,938 - Development - INFO - Step 2: Creating trading environments...
+2025-11-18 19:10:10,939 - Development - INFO - Creating individual trading environments
+2025-11-18 19:10:10,940 - Development - INFO - Creating environment for ABBV
+2025-11-18 19:10:10,950 - Development - INFO - Created environment for ABBV
+2025-11-18 19:10:10,953 - Development - INFO - Creating environment for ADP
+2025-11-18 19:10:10,964 - Development - INFO - Created environment for ADP
+2025-11-18 19:10:11,001 - Development - INFO - Successfully created 2 environments
+2025-11-18 19:10:11,003 - Development - INFO - Step 3: Creating vectorized environment...
+2025-11-18 19:10:11,005 - Development - INFO - Creating vectorized environment with 2 single stock environments
+2025-11-18 19:10:11,006 - Development - INFO - Successfully created vectorized environment with 2 environments
+2025-11-18 19:10:11,008 - Development - INFO - GAF pipeline built successfully
+2025-11-18 19:10:11,010 - Development - INFO - Successfully created training environment with 2 environments
+2025-11-18 19:10:11,023 - Development - INFO - Training window 1 in fold 2
+2025-11-18 19:10:11,025 - Development - INFO - Training model for fold 2, window 1
+2025-11-18 19:10:11,026 - Development - INFO - Searching for model checkpoints
+2025-11-18 19:10:11,031 - Development - ERROR - Error during Train/Validate/Test: cannot access local variable 'agent' where it is not associated with a value
+2025-11-18 19:10:11,032 - Development - WARNING - Failed fold 2, window 1
+2025-11-18 19:10:11,033 - Development - INFO - Training window 2 in fold 2
+2025-11-18 19:10:11,036 - Development - INFO - Training model for fold 2, window 2
+2025-11-18 19:10:11,036 - Development - INFO - Searching for model checkpoints
+2025-11-18 19:10:11,073 - Development - ERROR - Error during Train/Validate/Test: cannot access local variable 'agent' where it is not associated with a value
+2025-11-18 19:10:11,075 - Development - WARNING - Failed fold 2, window 2
+2025-11-18 19:10:11,076 - Development - INFO - Training window 3 in fold 2
+2025-11-18 19:10:11,077 - Development - INFO - Training model for fold 2, window 3
+2025-11-18 19:10:11,078 - Development - INFO - Searching for model checkpoints
+2025-11-18 19:10:11,110 - Development - ERROR - Error during Train/Validate/Test: cannot access local variable 'agent' where it is not associated with a value
+2025-11-18 19:10:11,112 - Development - WARNING - Failed fold 2, window 3

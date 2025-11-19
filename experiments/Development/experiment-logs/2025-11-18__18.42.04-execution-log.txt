@@ -1,0 +1,119 @@
+2025-11-18 18:42:04,856 - Development - INFO - Initialized GAF Pipeline with 8 tickers
+2025-11-18 18:42:04,862 - Development - INFO - Initialized GAF Pipeline with 2 tickers
+2025-11-18 18:42:04,865 - Development - INFO - Building GAF pipeline (data already loaded)...
+2025-11-18 18:42:04,869 - Development - INFO - Step 1: Building GAF dataset...
+2025-11-18 18:42:04,872 - Development - INFO - Building GAF dataset
+2025-11-18 18:42:04,876 - Development - INFO - Pre-fitting GAF transformer...
+2025-11-18 18:42:04,879 - Development - INFO - GAF transformer pre-fitted successfully
+2025-11-18 18:42:04,883 - Development - INFO - Processing GAF transformation for ADI
+2025-11-18 18:42:04,897 - Development - INFO - Performing GAF transformation on 11976 windows...
+2025-11-18 18:42:05,086 - Development - INFO - Created 1497 GAF sequences
+2025-11-18 18:42:05,093 - Development - INFO - Created 1497 GAF sequences for ADI
+2025-11-18 18:42:05,097 - Development - INFO - Processing GAF transformation for AMZN
+2025-11-18 18:42:05,114 - Development - INFO - Performing GAF transformation on 11976 windows...
+2025-11-18 18:42:05,312 - Development - INFO - Created 1497 GAF sequences
+2025-11-18 18:42:05,319 - Development - INFO - Created 1497 GAF sequences for AMZN
+2025-11-18 18:42:05,323 - Development - INFO - Processing GAF transformation for ABBV
+2025-11-18 18:42:05,341 - Development - INFO - Performing GAF transformation on 11976 windows...
+2025-11-18 18:42:05,526 - Development - INFO - Created 1497 GAF sequences
+2025-11-18 18:42:05,533 - Development - INFO - Created 1497 GAF sequences for ABBV
+2025-11-18 18:42:05,540 - Development - INFO - Processing GAF transformation for ADP
+2025-11-18 18:42:05,567 - Development - INFO - Performing GAF transformation on 11976 windows...
+2025-11-18 18:42:05,800 - Development - INFO - Created 1497 GAF sequences
+2025-11-18 18:42:05,807 - Development - INFO - Created 1497 GAF sequences for ADP
+2025-11-18 18:42:05,810 - Development - INFO - Processing GAF transformation for ACN
+2025-11-18 18:42:05,829 - Development - INFO - Performing GAF transformation on 11976 windows...
+2025-11-18 18:42:06,023 - Development - INFO - Created 1497 GAF sequences
+2025-11-18 18:42:06,030 - Development - INFO - Created 1497 GAF sequences for ACN
+2025-11-18 18:42:06,033 - Development - INFO - Processing GAF transformation for ADBE
+2025-11-18 18:42:06,051 - Development - INFO - Performing GAF transformation on 11976 windows...
+2025-11-18 18:42:06,221 - Development - INFO - Created 1497 GAF sequences
+2025-11-18 18:42:06,229 - Development - INFO - Created 1497 GAF sequences for ADBE
+2025-11-18 18:42:06,232 - Development - INFO - Processing GAF transformation for AMAT
+2025-11-18 18:42:06,249 - Development - INFO - Performing GAF transformation on 11976 windows...
+2025-11-18 18:42:06,443 - Development - INFO - Created 1497 GAF sequences
+2025-11-18 18:42:06,449 - Development - INFO - Created 1497 GAF sequences for AMAT
+2025-11-18 18:42:06,453 - Development - INFO - Processing GAF transformation for ABT
+2025-11-18 18:42:06,470 - Development - INFO - Performing GAF transformation on 11976 windows...
+2025-11-18 18:42:06,645 - Development - INFO - Created 1497 GAF sequences
+2025-11-18 18:42:06,651 - Development - INFO - Created 1497 GAF sequences for ABT
+2025-11-18 18:42:06,655 - Development - INFO - Successfully created GAF data for 8 tickers
+2025-11-18 18:42:06,659 - Development - INFO - Step 2: Creating trading environments...
+2025-11-18 18:42:06,662 - Development - INFO - Creating individual trading environments
+2025-11-18 18:42:06,665 - Development - INFO - Creating environment for ADI
+2025-11-18 18:42:06,684 - Development - INFO - Created environment for ADI
+2025-11-18 18:42:06,687 - Development - INFO - Creating environment for AMZN
+2025-11-18 18:42:06,705 - Development - INFO - Created environment for AMZN
+2025-11-18 18:42:06,709 - Development - INFO - Creating environment for ABBV
+2025-11-18 18:42:06,728 - Development - INFO - Created environment for ABBV
+2025-11-18 18:42:06,732 - Development - INFO - Creating environment for ADP
+2025-11-18 18:42:06,750 - Development - INFO - Created environment for ADP
+2025-11-18 18:42:06,753 - Development - INFO - Creating environment for ACN
+2025-11-18 18:42:06,771 - Development - INFO - Created environment for ACN
+2025-11-18 18:42:06,775 - Development - INFO - Creating environment for ADBE
+2025-11-18 18:42:06,793 - Development - INFO - Created environment for ADBE
+2025-11-18 18:42:06,797 - Development - INFO - Creating environment for AMAT
+2025-11-18 18:42:06,813 - Development - INFO - Created environment for AMAT
+2025-11-18 18:42:06,817 - Development - INFO - Creating environment for ABT
+2025-11-18 18:42:06,835 - Development - INFO - Created environment for ABT
+2025-11-18 18:42:06,839 - Development - INFO - Successfully created 8 environments
+2025-11-18 18:42:06,843 - Development - INFO - Step 3: Creating vectorized environment...
+2025-11-18 18:42:06,848 - Development - INFO - Creating vectorized environment with 8 single stock environments
+2025-11-18 18:42:06,852 - Development - INFO - Successfully created vectorized environment with 8 environments
+2025-11-18 18:42:06,859 - Development - INFO - GAF pipeline built successfully
+2025-11-18 18:42:06,863 - Development - INFO - Successfully created training environment with 8 environments
+2025-11-18 18:42:06,866 - Development - INFO - Building GAF pipeline (data already loaded)...
+2025-11-18 18:42:06,872 - Development - INFO - Step 1: Building GAF dataset...
+2025-11-18 18:42:06,876 - Development - INFO - Building GAF dataset
+2025-11-18 18:42:06,882 - Development - INFO - Pre-fitting GAF transformer...
+2025-11-18 18:42:06,886 - Development - INFO - GAF transformer pre-fitted successfully
+2025-11-18 18:42:06,892 - Development - INFO - Processing GAF transformation for A
+2025-11-18 18:42:06,913 - Development - INFO - Performing GAF transformation on 11976 windows...
+2025-11-18 18:42:07,136 - Development - INFO - Created 1497 GAF sequences
+2025-11-18 18:42:07,143 - Development - INFO - Created 1497 GAF sequences for A
+2025-11-18 18:42:07,147 - Development - INFO - Processing GAF transformation for AAPL
+2025-11-18 18:42:07,165 - Development - INFO - Performing GAF transformation on 11976 windows...
+2025-11-18 18:42:07,346 - Development - INFO - Created 1497 GAF sequences
+2025-11-18 18:42:07,355 - Development - INFO - Created 1497 GAF sequences for AAPL
+2025-11-18 18:42:07,359 - Development - INFO - Successfully created GAF data for 2 tickers
+2025-11-18 18:42:07,362 - Development - INFO - Step 2: Creating trading environments...
+2025-11-18 18:42:07,366 - Development - INFO - Creating individual trading environments
+2025-11-18 18:42:07,371 - Development - INFO - Creating environment for A
+2025-11-18 18:42:07,391 - Development - INFO - Created environment for A
+2025-11-18 18:42:07,394 - Development - INFO - Creating environment for AAPL
+2025-11-18 18:42:07,418 - Development - INFO - Created environment for AAPL
+2025-11-18 18:42:07,422 - Development - INFO - Successfully created 2 environments
+2025-11-18 18:42:07,426 - Development - INFO - Step 3: Creating vectorized environment...
+2025-11-18 18:42:07,430 - Development - INFO - Creating vectorized environment with 2 single stock environments
+2025-11-18 18:42:07,434 - Development - INFO - Successfully created vectorized environment with 2 environments
+2025-11-18 18:42:07,438 - Development - INFO - GAF pipeline built successfully
+2025-11-18 18:42:07,441 - Development - INFO - Successfully created training environment with 2 environments
+2025-11-18 18:42:07,477 - Development - INFO - Training window 1 in fold 5
+2025-11-18 18:42:07,483 - Development - INFO - Training model for fold 5, window 1
+2025-11-18 18:42:07,496 - Development - INFO - Training the model...
+2025-11-18 18:42:07,597 - Development - ERROR - Error during Train/Validate/Test: [WinError 123] The filename, directory name, or volume label syntax is incorrect: '"'
+2025-11-18 18:42:07,604 - Development - WARNING - Failed fold 5, window 1
+2025-11-18 18:42:07,608 - Development - INFO - Training window 2 in fold 5
+2025-11-18 18:42:07,614 - Development - INFO - Training model for fold 5, window 2
+2025-11-18 18:42:07,648 - Development - INFO - Training the model...
+2025-11-18 18:42:07,746 - Development - ERROR - Error during Train/Validate/Test: [WinError 123] The filename, directory name, or volume label syntax is incorrect: '"'
+2025-11-18 18:42:07,752 - Development - WARNING - Failed fold 5, window 2
+2025-11-18 18:42:07,757 - Development - INFO - Training window 3 in fold 5
+2025-11-18 18:42:07,762 - Development - INFO - Training model for fold 5, window 3
+2025-11-18 18:42:07,793 - Development - INFO - Training the model...
+2025-11-18 18:42:07,885 - Development - ERROR - Error during Train/Validate/Test: [WinError 123] The filename, directory name, or volume label syntax is incorrect: '"'
+2025-11-18 18:42:07,890 - Development - WARNING - Failed fold 5, window 3
+2025-11-18 18:42:07,895 - Development - INFO - Training window 4 in fold 5
+2025-11-18 18:42:07,900 - Development - INFO - Training model for fold 5, window 4
+2025-11-18 18:42:07,930 - Development - INFO - Training the model...
+2025-11-18 18:42:08,005 - Development - ERROR - Error during Train/Validate/Test: [WinError 123] The filename, directory name, or volume label syntax is incorrect: '"'
+2025-11-18 18:42:08,009 - Development - WARNING - Failed fold 5, window 4
+2025-11-18 18:42:08,013 - Development - INFO - Training window 5 in fold 5
+2025-11-18 18:42:08,018 - Development - INFO - Training model for fold 5, window 5
+2025-11-18 18:42:08,043 - Development - INFO - Training the model...
+2025-11-18 18:42:08,121 - Development - ERROR - Error during Train/Validate/Test: [WinError 123] The filename, directory name, or volume label syntax is incorrect: '"'
+2025-11-18 18:42:08,126 - Development - WARNING - Failed fold 5, window 5
+2025-11-18 18:42:08,151 - Development - INFO - Step 5: Aggregating results...
+2025-11-18 18:42:08,157 - Development - INFO - ----------------------------------------------------------------------
+2025-11-18 18:42:08,161 - Development - INFO - Cross-Validation Experiment Completed
+2025-11-18 18:42:08,166 - Development - INFO - ----------------------------------------------------------------------

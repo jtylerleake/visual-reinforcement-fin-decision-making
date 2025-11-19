@@ -1,0 +1,25 @@
+2025-11-18 18:10:07,048 - Large-Cap - INFO - Loaded configuration for experiment: Large-Cap
+2025-11-18 18:10:07,050 - Large-Cap - INFO - Data manager initialized with directory: .\dataset-cache
+2025-11-18 18:10:07,069 - Large-Cap - INFO - Adjusted fetch date to 2022-11-15
+2025-11-18 18:10:07,070 - Large-Cap - INFO - Processing AEP with smart caching...
+2025-11-18 18:10:07,071 - Large-Cap - ERROR - Error checking existing data for AEP: [Errno 2] No such file or directory: '.\\dataset-cache\\AEP_data.csv'
+2025-11-18 18:10:07,073 - Large-Cap - INFO - Fetching all data for AEP (none existing)
+2025-11-18 18:10:07,074 - Large-Cap - INFO - Fetching AEP data [2022-11-15 - 2025-09-30]
+2025-11-18 18:10:08,985 - Large-Cap - ERROR - Error fetching data for AEP: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 18:10:08,993 - Large-Cap - ERROR - Failed to fetch data for AEP
+2025-11-18 18:10:08,999 - Large-Cap - ERROR - Failed to prepare data for AEP
+2025-11-18 18:10:09,004 - Large-Cap - INFO - Processing RCL with smart caching...
+2025-11-18 18:10:09,010 - Large-Cap - ERROR - Error checking existing data for RCL: [Errno 2] No such file or directory: '.\\dataset-cache\\RCL_data.csv'
+2025-11-18 18:10:09,015 - Large-Cap - INFO - Fetching all data for RCL (none existing)
+2025-11-18 18:10:09,021 - Large-Cap - INFO - Fetching RCL data [2022-11-15 - 2025-09-30]
+2025-11-18 18:10:10,012 - Large-Cap - ERROR - Error fetching data for RCL: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 18:10:10,022 - Large-Cap - ERROR - Failed to fetch data for RCL
+2025-11-18 18:10:10,027 - Large-Cap - ERROR - Failed to prepare data for RCL
+2025-11-18 18:10:10,031 - Large-Cap - INFO - Processing RSG with smart caching...
+2025-11-18 18:10:10,037 - Large-Cap - ERROR - Error checking existing data for RSG: [Errno 2] No such file or directory: '.\\dataset-cache\\RSG_data.csv'
+2025-11-18 18:10:10,042 - Large-Cap - INFO - Fetching all data for RSG (none existing)
+2025-11-18 18:10:10,047 - Large-Cap - INFO - Fetching RSG data [2022-11-15 - 2025-09-30]
+2025-11-18 18:10:11,063 - Large-Cap - ERROR - Error fetching data for RSG: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 18:10:11,072 - Large-Cap - ERROR - Failed to fetch data for RSG
+2025-11-18 18:10:11,077 - Large-Cap - ERROR - Failed to prepare data for RSG
+2025-11-18 18:10:11,082 - Large-Cap - INFO - Successfully prepared data for 0 tickers

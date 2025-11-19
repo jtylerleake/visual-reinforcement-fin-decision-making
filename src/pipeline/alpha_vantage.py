@@ -1,32 +1,109 @@
 
 from common.modules import os, pd, np, List, Dict, Tuple
-from common.modules import YF, TA
+from common.modules import TA
 from common.modules import USFederalHolidayCalendar
 from src.utils.logging import log_function_call, log_execution_time, get_logger
+import time
+from datetime import datetime
+
+try:
+    from alpha_vantage.timeseries import TimeSeries
+    ALPHA_VANTAGE_AVAILABLE = True
+except ImportError:
+    ALPHA_VANTAGE_AVAILABLE = False
+    print("Warning: alpha_vantage library not installed. Install with: pip install alpha_vantage")
 
 REQUIRED_COLUMNS = ['Open', 'High', 'Low', 'Close', 'Volume']
 DATA_DIR = ".\\dataset-cache"
+
+# Alpha Vantage rate limiting: 5 calls per minute for free tier
+RATE_LIMIT_CALLS = 5
+RATE_LIMIT_WINDOW = 60  # seconds
+
+
+class RateLimiter:
+    """Simple rate limiter for Alpha Vantage API calls"""
+    
+    def __init__(self, max_calls: int = RATE_LIMIT_CALLS, window: int = RATE_LIMIT_WINDOW):
+        self.max_calls = max_calls
+        self.window = window
+        self.call_times = []
+    
+    def wait_if_needed(self):
+        """Wait if we've exceeded the rate limit"""
+        now = time.time()
+        # Remove calls outside the current window
+        self.call_times = [t for t in self.call_times if now - t < self.window]
+        
+        if len(self.call_times) >= self.max_calls:
+            # Calculate how long to wait
+            oldest_call = min(self.call_times)
+            wait_time = self.window - (now - oldest_call) + 1  # Add 1 second buffer
+            if wait_time > 0:
+                time.sleep(wait_time)
+                # Update call times after waiting
+                now = time.time()
+                self.call_times = [t for t in self.call_times if now - t < self.window]
+        
+        # Record this call
+        self.call_times.append(time.time())
 
 
 class DataPipeline: 
     
     """
-    Pipeline for managing all tabular timeseries data preparation. Using an 
-    experiment config file, data is retrieved, preprocessed, validated, and saved. 
+    Pipeline for managing all tabular timeseries data preparation using Alpha Vantage API.
+    Using an experiment config file, data is retrieved, preprocessed, validated, and saved.
     """
     
     def __init__(
         self, 
         experiment_name, 
-        run_id = None
+        run_id = None,
+        api_key: str = None
     ) -> None:
+        
+        if not ALPHA_VANTAGE_AVAILABLE:
+            raise ImportError("alpha_vantage library is required. Install with: pip install alpha_vantage")
         
         self.experiment_name = experiment_name
         self.run_id = run_id
         self.logger = get_logger(experiment_name, run_id=run_id)
         self.data_dir = DATA_DIR
         os.makedirs(DATA_DIR, exist_ok = True)
+        
+        # Initialize Alpha Vantage API
+        if api_key is None:
+            # Try to get from environment variable
+            api_key = os.environ.get('ALPHA_VANTAGE_API_KEY')
+            if api_key is None:
+                raise ValueError("Alpha Vantage API key required. Provide via api_key parameter or ALPHA_VANTAGE_API_KEY environment variable")
+        
+        self.api_key = api_key
+        self.ts = TimeSeries(key=api_key, output_format='pandas')
+        self.rate_limiter = RateLimiter()
+        
         self.logger.info(f"Data manager initialized with directory: {DATA_DIR}")
+        self.logger.info("Using Alpha Vantage API for data fetching")
+    
+    def _map_interval(self, interval: str) -> str:
+        """Map interval from config format to Alpha Vantage format"""
+        interval_map = {
+            '1d': 'daily',
+            '1day': 'daily',
+            'daily': 'daily',
+            '1m': '1min',
+            '1min': '1min',
+            '5m': '5min',
+            '5min': '5min',
+            '15m': '15min',
+            '15min': '15min',
+            '30m': '30min',
+            '30min': '30min',
+            '60m': '60min',
+            '60min': '60min'
+        }
+        return interval_map.get(interval.lower(), 'daily')
     
     @log_function_call
     def fetch_price_data(
@@ -36,32 +113,66 @@ class DataPipeline:
         end_date: str, 
         interval: str
     ) -> pd.DataFrame:
-        """Fetch a single stock's timeseries data from Yahoo Finance API"""
+        """Fetch a single stock's timeseries data from Alpha Vantage API"""
         
         try:
-            # fetch data from yahoo finance api
-            self.logger.info(f"Fetching {ticker} data [{start_date} - {end_date}]")
-            stock = YF.Ticker(ticker)
-            data = stock.history(start=start_date, end=end_date, interval=interval)
+            # Apply rate limiting
+            self.rate_limiter.wait_if_needed()
+            
+            # Map interval to Alpha Vantage format
+            av_interval = self._map_interval(interval)
+            
+            # fetch data from alpha vantage api
+            self.logger.info(f"Fetching {ticker} data [{start_date} - {end_date}] from Alpha Vantage")
+            
+            if av_interval == 'daily':
+                # Use daily endpoint
+                data, meta_data = self.ts.get_daily(symbol=ticker, outputsize='full')
+            else:
+                # Use intraday endpoint
+                data, meta_data = self.ts.get_intraday(symbol=ticker, interval=av_interval, outputsize='full')
             
             if data.empty:
                 self.logger.warning(f"No data found for {ticker}")
                 return pd.DataFrame()
             
-            # remove optional columns if they exist 
-            optional_cols = ["Dividends", "Stock Splits"]
-            cols_to_remove = [col for col in optional_cols if col in data.columns]
-            if cols_to_remove:
-                data = data.drop(columns=cols_to_remove)
-                
-            # clean column names (remove spaces)
-            data.columns = data.columns.str.replace(' ', '')
+            # Alpha Vantage returns columns as: '1. open', '2. high', '3. low', '4. close', '5. volume'
+            # Rename to standard format
+            column_mapping = {
+                '1. open': 'Open',
+                '2. high': 'High',
+                '3. low': 'Low',
+                '4. close': 'Close',
+                '5. volume': 'Volume'
+            }
             
-            # ensure index is datetime
+            # Rename columns
+            for old_col, new_col in column_mapping.items():
+                if old_col in data.columns:
+                    data = data.rename(columns={old_col: new_col})
+            
+            # Ensure we have the required columns
+            missing_cols = [col for col in REQUIRED_COLUMNS if col not in data.columns]
+            if missing_cols:
+                self.logger.error(f"Missing required columns for {ticker}: {missing_cols}")
+                return pd.DataFrame()
+            
+            # Filter data by date range
+            data.index = pd.to_datetime(data.index)
+            start_dt = pd.to_datetime(start_date)
+            end_dt = pd.to_datetime(end_date)
+            
+            # Filter to requested date range
+            data = data[(data.index >= start_dt) & (data.index <= end_dt)]
+            
+            # Sort by date (ascending)
+            data = data.sort_index()
+            
+            # Ensure index is datetime
             if not isinstance(data.index, pd.DatetimeIndex):
                 data.index = pd.to_datetime(data.index)
             
-            # validate that we have the required price columns
+            # Validate that we have the required price columns
             missing_cols = [col for col in REQUIRED_COLUMNS if col not in data.columns]
             if missing_cols:
                 self.logger.error(f"Missing required columns for {ticker}: {missing_cols}")
@@ -333,7 +444,7 @@ class DataPipeline:
                         'end': missing_dates['existing_start'],
                         'type': 'pre_period'
                     })
-                    self.logger.info(f""""Fetching incremental data for {ticker}:
+                    self.logger.info(f"""Fetching incremental data for {ticker}:
                                ({missing_dates['start']} to 
                                 {missing_dates['existing_start']})""")
                 
@@ -669,9 +780,9 @@ class DataPipeline:
         self.logger.debug(f"Dataframe now has {len(trimmed_data.columns)} columns: {list(trimmed_data.columns)}")
         
         return trimmed_data
-    
-    
-    
+
+
+
 if __name__ == "__main__":
     
     my_api_key = 'Y9EJACE06U0N9CNV'
@@ -688,7 +799,7 @@ if __name__ == "__main__":
     
     
     # Initialize with API key (or set ALPHA_VANTAGE_API_KEY environment variable)
-    inst = DataPipeline(large_cap_experiment)
+    inst = DataPipeline(large_cap_experiment, api_key=my_api_key )
     inst.exe_data_pipeline(large_cap_config)
     
     # inst = DataPipeline(medium_cap_experiment, api_key='YOUR_API_KEY_HERE')

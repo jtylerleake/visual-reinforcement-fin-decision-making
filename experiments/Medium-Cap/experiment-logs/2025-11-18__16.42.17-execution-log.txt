@@ -1,0 +1,353 @@
+2025-11-18 16:42:17,161 - Medium-Cap - INFO - Data manager initialized with directory: .\dataset-cache
+2025-11-18 16:42:17,184 - Medium-Cap - INFO - Adjusted fetch date to 1993-11-16
+2025-11-18 16:42:17,195 - Medium-Cap - INFO - Processing FOX with smart caching...
+2025-11-18 16:42:17,195 - Medium-Cap - ERROR - Error checking existing data for FOX: [Errno 2] No such file or directory: '.\\dataset-cache\\FOX_data.csv'
+2025-11-18 16:42:17,201 - Medium-Cap - INFO - Fetching all data for FOX (none existing)
+2025-11-18 16:42:17,203 - Medium-Cap - INFO - Fetching FOX data [1993-11-16 - 2025-09-30]
+2025-11-18 16:42:17,919 - Medium-Cap - ERROR - Error fetching data for FOX: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:42:17,926 - Medium-Cap - ERROR - Failed to fetch data for FOX
+2025-11-18 16:42:17,930 - Medium-Cap - ERROR - Failed to prepare data for FOX
+2025-11-18 16:42:17,935 - Medium-Cap - INFO - Processing EXE with smart caching...
+2025-11-18 16:42:17,939 - Medium-Cap - ERROR - Error checking existing data for EXE: [Errno 2] No such file or directory: '.\\dataset-cache\\EXE_data.csv'
+2025-11-18 16:42:17,939 - Medium-Cap - INFO - Fetching all data for EXE (none existing)
+2025-11-18 16:42:17,947 - Medium-Cap - INFO - Fetching EXE data [1993-11-16 - 2025-09-30]
+2025-11-18 16:42:18,849 - Medium-Cap - ERROR - Error fetching data for EXE: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:42:18,852 - Medium-Cap - ERROR - Failed to fetch data for EXE
+2025-11-18 16:42:18,859 - Medium-Cap - ERROR - Failed to prepare data for EXE
+2025-11-18 16:42:18,861 - Medium-Cap - INFO - Processing PPL with smart caching...
+2025-11-18 16:42:18,869 - Medium-Cap - ERROR - Error checking existing data for PPL: [Errno 2] No such file or directory: '.\\dataset-cache\\PPL_data.csv'
+2025-11-18 16:42:18,869 - Medium-Cap - INFO - Fetching all data for PPL (none existing)
+2025-11-18 16:42:18,879 - Medium-Cap - INFO - Fetching PPL data [1993-11-16 - 2025-09-30]
+2025-11-18 16:42:19,682 - Medium-Cap - ERROR - Error fetching data for PPL: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:42:19,688 - Medium-Cap - ERROR - Failed to fetch data for PPL
+2025-11-18 16:42:19,688 - Medium-Cap - ERROR - Failed to prepare data for PPL
+2025-11-18 16:42:19,695 - Medium-Cap - INFO - Processing BR with smart caching...
+2025-11-18 16:42:19,700 - Medium-Cap - ERROR - Error checking existing data for BR: [Errno 2] No such file or directory: '.\\dataset-cache\\BR_data.csv'
+2025-11-18 16:42:19,701 - Medium-Cap - INFO - Fetching all data for BR (none existing)
+2025-11-18 16:42:19,707 - Medium-Cap - INFO - Fetching BR data [1993-11-16 - 2025-09-30]
+2025-11-18 16:42:20,509 - Medium-Cap - ERROR - Error fetching data for BR: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:42:20,518 - Medium-Cap - ERROR - Failed to fetch data for BR
+2025-11-18 16:42:20,524 - Medium-Cap - ERROR - Failed to prepare data for BR
+2025-11-18 16:42:20,531 - Medium-Cap - INFO - Processing FE with smart caching...
+2025-11-18 16:42:20,536 - Medium-Cap - ERROR - Error checking existing data for FE: [Errno 2] No such file or directory: '.\\dataset-cache\\FE_data.csv'
+2025-11-18 16:42:20,543 - Medium-Cap - INFO - Fetching all data for FE (none existing)
+2025-11-18 16:42:20,547 - Medium-Cap - INFO - Fetching FE data [1993-11-16 - 2025-09-30]
+2025-11-18 16:42:21,607 - Medium-Cap - ERROR - Error fetching data for FE: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:42:21,613 - Medium-Cap - ERROR - Failed to fetch data for FE
+2025-11-18 16:42:21,617 - Medium-Cap - ERROR - Failed to prepare data for FE
+2025-11-18 16:42:21,618 - Medium-Cap - INFO - Processing FSLR with smart caching...
+2025-11-18 16:42:21,627 - Medium-Cap - ERROR - Error checking existing data for FSLR: [Errno 2] No such file or directory: '.\\dataset-cache\\FSLR_data.csv'
+2025-11-18 16:42:21,630 - Medium-Cap - INFO - Fetching all data for FSLR (none existing)
+2025-11-18 16:42:21,635 - Medium-Cap - INFO - Fetching FSLR data [1993-11-16 - 2025-09-30]
+2025-11-18 16:42:22,495 - Medium-Cap - ERROR - Error fetching data for FSLR: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:42:22,503 - Medium-Cap - ERROR - Failed to fetch data for FSLR
+2025-11-18 16:42:22,511 - Medium-Cap - ERROR - Failed to prepare data for FSLR
+2025-11-18 16:42:22,511 - Medium-Cap - INFO - Processing BRO with smart caching...
+2025-11-18 16:42:22,519 - Medium-Cap - ERROR - Error checking existing data for BRO: [Errno 2] No such file or directory: '.\\dataset-cache\\BRO_data.csv'
+2025-11-18 16:42:22,519 - Medium-Cap - INFO - Fetching all data for BRO (none existing)
+2025-11-18 16:42:22,532 - Medium-Cap - INFO - Fetching BRO data [1993-11-16 - 2025-09-30]
+2025-11-18 16:42:23,537 - Medium-Cap - ERROR - Error fetching data for BRO: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:42:23,542 - Medium-Cap - ERROR - Failed to fetch data for BRO
+2025-11-18 16:42:23,549 - Medium-Cap - ERROR - Failed to prepare data for BRO
+2025-11-18 16:42:23,551 - Medium-Cap - INFO - Processing BIIB with smart caching...
+2025-11-18 16:42:23,561 - Medium-Cap - ERROR - Error checking existing data for BIIB: [Errno 2] No such file or directory: '.\\dataset-cache\\BIIB_data.csv'
+2025-11-18 16:42:23,561 - Medium-Cap - INFO - Fetching all data for BIIB (none existing)
+2025-11-18 16:42:23,570 - Medium-Cap - INFO - Fetching BIIB data [1993-11-16 - 2025-09-30]
+2025-11-18 16:42:24,691 - Medium-Cap - ERROR - Error fetching data for BIIB: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:42:24,697 - Medium-Cap - ERROR - Failed to fetch data for BIIB
+2025-11-18 16:42:24,704 - Medium-Cap - ERROR - Failed to prepare data for BIIB
+2025-11-18 16:42:24,708 - Medium-Cap - INFO - Processing CBOE with smart caching...
+2025-11-18 16:42:24,713 - Medium-Cap - ERROR - Error checking existing data for CBOE: [Errno 2] No such file or directory: '.\\dataset-cache\\CBOE_data.csv'
+2025-11-18 16:42:24,720 - Medium-Cap - INFO - Fetching all data for CBOE (none existing)
+2025-11-18 16:42:24,725 - Medium-Cap - INFO - Fetching CBOE data [1993-11-16 - 2025-09-30]
+2025-11-18 16:42:25,572 - Medium-Cap - ERROR - Error fetching data for CBOE: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:42:25,572 - Medium-Cap - ERROR - Failed to fetch data for CBOE
+2025-11-18 16:42:25,572 - Medium-Cap - ERROR - Failed to prepare data for CBOE
+2025-11-18 16:42:25,580 - Medium-Cap - INFO - Processing STE with smart caching...
+2025-11-18 16:42:25,580 - Medium-Cap - ERROR - Error checking existing data for STE: [Errno 2] No such file or directory: '.\\dataset-cache\\STE_data.csv'
+2025-11-18 16:42:25,589 - Medium-Cap - INFO - Fetching all data for STE (none existing)
+2025-11-18 16:42:25,589 - Medium-Cap - INFO - Fetching STE data [1993-11-16 - 2025-09-30]
+2025-11-18 16:42:26,428 - Medium-Cap - ERROR - Error fetching data for STE: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:42:26,436 - Medium-Cap - ERROR - Failed to fetch data for STE
+2025-11-18 16:42:26,442 - Medium-Cap - ERROR - Failed to prepare data for STE
+2025-11-18 16:42:26,447 - Medium-Cap - INFO - Processing NRG with smart caching...
+2025-11-18 16:42:26,453 - Medium-Cap - ERROR - Error checking existing data for NRG: [Errno 2] No such file or directory: '.\\dataset-cache\\NRG_data.csv'
+2025-11-18 16:42:26,458 - Medium-Cap - INFO - Fetching all data for NRG (none existing)
+2025-11-18 16:42:26,463 - Medium-Cap - INFO - Fetching NRG data [1993-11-16 - 2025-09-30]
+2025-11-18 16:42:27,413 - Medium-Cap - ERROR - Error fetching data for NRG: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:42:27,421 - Medium-Cap - ERROR - Failed to fetch data for NRG
+2025-11-18 16:42:27,421 - Medium-Cap - ERROR - Failed to prepare data for NRG
+2025-11-18 16:42:27,429 - Medium-Cap - INFO - Processing VRSK with smart caching...
+2025-11-18 16:42:27,436 - Medium-Cap - ERROR - Error checking existing data for VRSK: [Errno 2] No such file or directory: '.\\dataset-cache\\VRSK_data.csv'
+2025-11-18 16:42:27,442 - Medium-Cap - INFO - Fetching all data for VRSK (none existing)
+2025-11-18 16:42:27,444 - Medium-Cap - INFO - Fetching VRSK data [1993-11-16 - 2025-09-30]
+2025-11-18 16:42:28,453 - Medium-Cap - ERROR - Error fetching data for VRSK: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:42:28,458 - Medium-Cap - ERROR - Failed to fetch data for VRSK
+2025-11-18 16:42:28,463 - Medium-Cap - ERROR - Failed to prepare data for VRSK
+2025-11-18 16:42:28,471 - Medium-Cap - INFO - Processing NUE with smart caching...
+2025-11-18 16:42:28,475 - Medium-Cap - ERROR - Error checking existing data for NUE: [Errno 2] No such file or directory: '.\\dataset-cache\\NUE_data.csv'
+2025-11-18 16:42:28,481 - Medium-Cap - INFO - Fetching all data for NUE (none existing)
+2025-11-18 16:42:28,487 - Medium-Cap - INFO - Fetching NUE data [1993-11-16 - 2025-09-30]
+2025-11-18 16:42:29,374 - Medium-Cap - ERROR - Error fetching data for NUE: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:42:29,381 - Medium-Cap - ERROR - Failed to fetch data for NUE
+2025-11-18 16:42:29,387 - Medium-Cap - ERROR - Failed to prepare data for NUE
+2025-11-18 16:42:29,391 - Medium-Cap - INFO - Processing RJF with smart caching...
+2025-11-18 16:42:29,397 - Medium-Cap - ERROR - Error checking existing data for RJF: [Errno 2] No such file or directory: '.\\dataset-cache\\RJF_data.csv'
+2025-11-18 16:42:29,402 - Medium-Cap - INFO - Fetching all data for RJF (none existing)
+2025-11-18 16:42:29,407 - Medium-Cap - INFO - Fetching RJF data [1993-11-16 - 2025-09-30]
+2025-11-18 16:42:30,501 - Medium-Cap - ERROR - Error fetching data for RJF: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:42:30,506 - Medium-Cap - ERROR - Failed to fetch data for RJF
+2025-11-18 16:42:30,513 - Medium-Cap - ERROR - Failed to prepare data for RJF
+2025-11-18 16:42:30,519 - Medium-Cap - INFO - Processing GEHC with smart caching...
+2025-11-18 16:42:30,524 - Medium-Cap - ERROR - Error checking existing data for GEHC: [Errno 2] No such file or directory: '.\\dataset-cache\\GEHC_data.csv'
+2025-11-18 16:42:30,530 - Medium-Cap - INFO - Fetching all data for GEHC (none existing)
+2025-11-18 16:42:30,534 - Medium-Cap - INFO - Fetching GEHC data [1993-11-16 - 2025-09-30]
+2025-11-18 16:42:31,363 - Medium-Cap - ERROR - Error fetching data for GEHC: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:42:31,371 - Medium-Cap - ERROR - Failed to fetch data for GEHC
+2025-11-18 16:42:31,377 - Medium-Cap - ERROR - Failed to prepare data for GEHC
+2025-11-18 16:42:31,381 - Medium-Cap - INFO - Processing CSGP with smart caching...
+2025-11-18 16:42:31,387 - Medium-Cap - ERROR - Error checking existing data for CSGP: [Errno 2] No such file or directory: '.\\dataset-cache\\CSGP_data.csv'
+2025-11-18 16:42:31,391 - Medium-Cap - INFO - Fetching all data for CSGP (none existing)
+2025-11-18 16:42:31,395 - Medium-Cap - INFO - Fetching CSGP data [1993-11-16 - 2025-09-30]
+2025-11-18 16:42:32,230 - Medium-Cap - ERROR - Error fetching data for CSGP: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:42:32,239 - Medium-Cap - ERROR - Failed to fetch data for CSGP
+2025-11-18 16:42:32,243 - Medium-Cap - ERROR - Failed to prepare data for CSGP
+2025-11-18 16:42:32,246 - Medium-Cap - INFO - Processing EL with smart caching...
+2025-11-18 16:42:32,256 - Medium-Cap - ERROR - Error checking existing data for EL: [Errno 2] No such file or directory: '.\\dataset-cache\\EL_data.csv'
+2025-11-18 16:42:32,261 - Medium-Cap - INFO - Fetching all data for EL (none existing)
+2025-11-18 16:42:32,266 - Medium-Cap - INFO - Fetching EL data [1993-11-16 - 2025-09-30]
+2025-11-18 16:42:32,996 - Medium-Cap - ERROR - Error fetching data for EL: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:42:33,001 - Medium-Cap - ERROR - Failed to fetch data for EL
+2025-11-18 16:42:33,009 - Medium-Cap - ERROR - Failed to prepare data for EL
+2025-11-18 16:42:33,011 - Medium-Cap - INFO - Processing ADM with smart caching...
+2025-11-18 16:42:33,020 - Medium-Cap - ERROR - Error checking existing data for ADM: [Errno 2] No such file or directory: '.\\dataset-cache\\ADM_data.csv'
+2025-11-18 16:42:33,026 - Medium-Cap - INFO - Fetching all data for ADM (none existing)
+2025-11-18 16:42:33,026 - Medium-Cap - INFO - Fetching ADM data [1993-11-16 - 2025-09-30]
+2025-11-18 16:42:34,110 - Medium-Cap - ERROR - Error fetching data for ADM: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:42:34,120 - Medium-Cap - ERROR - Failed to fetch data for ADM
+2025-11-18 16:42:34,127 - Medium-Cap - ERROR - Failed to prepare data for ADM
+2025-11-18 16:42:34,127 - Medium-Cap - INFO - Processing VICI with smart caching...
+2025-11-18 16:42:34,138 - Medium-Cap - ERROR - Error checking existing data for VICI: [Errno 2] No such file or directory: '.\\dataset-cache\\VICI_data.csv'
+2025-11-18 16:42:34,144 - Medium-Cap - INFO - Fetching all data for VICI (none existing)
+2025-11-18 16:42:34,146 - Medium-Cap - INFO - Fetching VICI data [1993-11-16 - 2025-09-30]
+2025-11-18 16:42:35,086 - Medium-Cap - ERROR - Error fetching data for VICI: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:42:35,094 - Medium-Cap - ERROR - Failed to fetch data for VICI
+2025-11-18 16:42:35,100 - Medium-Cap - ERROR - Failed to prepare data for VICI
+2025-11-18 16:42:35,106 - Medium-Cap - INFO - Processing STT with smart caching...
+2025-11-18 16:42:35,110 - Medium-Cap - ERROR - Error checking existing data for STT: [Errno 2] No such file or directory: '.\\dataset-cache\\STT_data.csv'
+2025-11-18 16:42:35,110 - Medium-Cap - INFO - Fetching all data for STT (none existing)
+2025-11-18 16:42:35,122 - Medium-Cap - INFO - Fetching STT data [1993-11-16 - 2025-09-30]
+2025-11-18 16:42:36,266 - Medium-Cap - ERROR - Error fetching data for STT: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:42:36,274 - Medium-Cap - ERROR - Failed to fetch data for STT
+2025-11-18 16:42:36,278 - Medium-Cap - ERROR - Failed to prepare data for STT
+2025-11-18 16:42:36,278 - Medium-Cap - INFO - Processing EQT with smart caching...
+2025-11-18 16:42:36,289 - Medium-Cap - ERROR - Error checking existing data for EQT: [Errno 2] No such file or directory: '.\\dataset-cache\\EQT_data.csv'
+2025-11-18 16:42:36,295 - Medium-Cap - INFO - Fetching all data for EQT (none existing)
+2025-11-18 16:42:36,295 - Medium-Cap - INFO - Fetching EQT data [1993-11-16 - 2025-09-30]
+2025-11-18 16:42:37,215 - Medium-Cap - ERROR - Error fetching data for EQT: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:42:37,224 - Medium-Cap - ERROR - Failed to fetch data for EQT
+2025-11-18 16:42:37,233 - Medium-Cap - ERROR - Failed to prepare data for EQT
+2025-11-18 16:42:37,238 - Medium-Cap - INFO - Processing AMP with smart caching...
+2025-11-18 16:42:37,246 - Medium-Cap - ERROR - Error checking existing data for AMP: [Errno 2] No such file or directory: '.\\dataset-cache\\AMP_data.csv'
+2025-11-18 16:42:37,251 - Medium-Cap - INFO - Fetching all data for AMP (none existing)
+2025-11-18 16:42:37,259 - Medium-Cap - INFO - Fetching AMP data [1993-11-16 - 2025-09-30]
+2025-11-18 16:42:38,433 - Medium-Cap - ERROR - Error fetching data for AMP: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:42:38,442 - Medium-Cap - ERROR - Failed to fetch data for AMP
+2025-11-18 16:42:38,442 - Medium-Cap - ERROR - Failed to prepare data for AMP
+2025-11-18 16:42:38,448 - Medium-Cap - INFO - Processing RMD with smart caching...
+2025-11-18 16:42:38,459 - Medium-Cap - ERROR - Error checking existing data for RMD: [Errno 2] No such file or directory: '.\\dataset-cache\\RMD_data.csv'
+2025-11-18 16:42:38,464 - Medium-Cap - INFO - Fetching all data for RMD (none existing)
+2025-11-18 16:42:38,467 - Medium-Cap - INFO - Fetching RMD data [1993-11-16 - 2025-09-30]
+2025-11-18 16:42:39,232 - Medium-Cap - ERROR - Error fetching data for RMD: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:42:39,244 - Medium-Cap - ERROR - Failed to fetch data for RMD
+2025-11-18 16:42:39,249 - Medium-Cap - ERROR - Failed to prepare data for RMD
+2025-11-18 16:42:39,255 - Medium-Cap - INFO - Processing A with smart caching...
+2025-11-18 16:42:39,257 - Medium-Cap - ERROR - Error checking existing data for A: [Errno 2] No such file or directory: '.\\dataset-cache\\A_data.csv'
+2025-11-18 16:42:39,266 - Medium-Cap - INFO - Fetching all data for A (none existing)
+2025-11-18 16:42:39,271 - Medium-Cap - INFO - Fetching A data [1993-11-16 - 2025-09-30]
+2025-11-18 16:42:40,171 - Medium-Cap - ERROR - Error fetching data for A: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:42:40,180 - Medium-Cap - ERROR - Failed to fetch data for A
+2025-11-18 16:42:40,184 - Medium-Cap - ERROR - Failed to prepare data for A
+2025-11-18 16:42:40,189 - Medium-Cap - INFO - Processing HSY with smart caching...
+2025-11-18 16:42:40,194 - Medium-Cap - ERROR - Error checking existing data for HSY: [Errno 2] No such file or directory: '.\\dataset-cache\\HSY_data.csv'
+2025-11-18 16:42:40,200 - Medium-Cap - INFO - Fetching all data for HSY (none existing)
+2025-11-18 16:42:40,205 - Medium-Cap - INFO - Fetching HSY data [1993-11-16 - 2025-09-30]
+2025-11-18 16:42:41,014 - Medium-Cap - ERROR - Error fetching data for HSY: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:42:41,023 - Medium-Cap - ERROR - Failed to fetch data for HSY
+2025-11-18 16:42:41,028 - Medium-Cap - ERROR - Failed to prepare data for HSY
+2025-11-18 16:42:41,034 - Medium-Cap - INFO - Processing ROK with smart caching...
+2025-11-18 16:42:41,039 - Medium-Cap - ERROR - Error checking existing data for ROK: [Errno 2] No such file or directory: '.\\dataset-cache\\ROK_data.csv'
+2025-11-18 16:42:41,045 - Medium-Cap - INFO - Fetching all data for ROK (none existing)
+2025-11-18 16:42:41,050 - Medium-Cap - INFO - Fetching ROK data [1993-11-16 - 2025-09-30]
+2025-11-18 16:42:41,794 - Medium-Cap - ERROR - Error fetching data for ROK: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:42:41,802 - Medium-Cap - ERROR - Failed to fetch data for ROK
+2025-11-18 16:42:41,808 - Medium-Cap - ERROR - Failed to prepare data for ROK
+2025-11-18 16:42:41,814 - Medium-Cap - INFO - Processing DHI with smart caching...
+2025-11-18 16:42:41,819 - Medium-Cap - ERROR - Error checking existing data for DHI: [Errno 2] No such file or directory: '.\\dataset-cache\\DHI_data.csv'
+2025-11-18 16:42:41,827 - Medium-Cap - INFO - Fetching all data for DHI (none existing)
+2025-11-18 16:42:41,832 - Medium-Cap - INFO - Fetching DHI data [1993-11-16 - 2025-09-30]
+2025-11-18 16:42:42,576 - Medium-Cap - ERROR - Error fetching data for DHI: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:42:42,585 - Medium-Cap - ERROR - Failed to fetch data for DHI
+2025-11-18 16:42:42,588 - Medium-Cap - ERROR - Failed to prepare data for DHI
+2025-11-18 16:42:42,596 - Medium-Cap - INFO - Processing EBAY with smart caching...
+2025-11-18 16:42:42,601 - Medium-Cap - ERROR - Error checking existing data for EBAY: [Errno 2] No such file or directory: '.\\dataset-cache\\EBAY_data.csv'
+2025-11-18 16:42:42,606 - Medium-Cap - INFO - Fetching all data for EBAY (none existing)
+2025-11-18 16:42:42,610 - Medium-Cap - INFO - Fetching EBAY data [1993-11-16 - 2025-09-30]
+2025-11-18 16:42:43,458 - Medium-Cap - ERROR - Error fetching data for EBAY: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:42:43,466 - Medium-Cap - ERROR - Failed to fetch data for EBAY
+2025-11-18 16:42:43,472 - Medium-Cap - ERROR - Failed to prepare data for EBAY
+2025-11-18 16:42:43,477 - Medium-Cap - INFO - Processing VTR with smart caching...
+2025-11-18 16:42:43,482 - Medium-Cap - ERROR - Error checking existing data for VTR: [Errno 2] No such file or directory: '.\\dataset-cache\\VTR_data.csv'
+2025-11-18 16:42:43,489 - Medium-Cap - INFO - Fetching all data for VTR (none existing)
+2025-11-18 16:42:43,494 - Medium-Cap - INFO - Fetching VTR data [1993-11-16 - 2025-09-30]
+2025-11-18 16:42:44,357 - Medium-Cap - ERROR - Error fetching data for VTR: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:42:44,365 - Medium-Cap - ERROR - Failed to fetch data for VTR
+2025-11-18 16:42:44,374 - Medium-Cap - ERROR - Failed to prepare data for VTR
+2025-11-18 16:42:44,382 - Medium-Cap - INFO - Processing VMC with smart caching...
+2025-11-18 16:42:44,390 - Medium-Cap - ERROR - Error checking existing data for VMC: [Errno 2] No such file or directory: '.\\dataset-cache\\VMC_data.csv'
+2025-11-18 16:42:44,394 - Medium-Cap - INFO - Fetching all data for VMC (none existing)
+2025-11-18 16:42:44,400 - Medium-Cap - INFO - Fetching VMC data [1993-11-16 - 2025-09-30]
+2025-11-18 16:42:45,249 - Medium-Cap - ERROR - Error fetching data for VMC: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:42:45,257 - Medium-Cap - ERROR - Failed to fetch data for VMC
+2025-11-18 16:42:45,262 - Medium-Cap - ERROR - Failed to prepare data for VMC
+2025-11-18 16:42:45,266 - Medium-Cap - INFO - Processing GWW with smart caching...
+2025-11-18 16:42:45,273 - Medium-Cap - ERROR - Error checking existing data for GWW: [Errno 2] No such file or directory: '.\\dataset-cache\\GWW_data.csv'
+2025-11-18 16:42:45,278 - Medium-Cap - INFO - Fetching all data for GWW (none existing)
+2025-11-18 16:42:45,284 - Medium-Cap - INFO - Fetching GWW data [1993-11-16 - 2025-09-30]
+2025-11-18 16:42:46,539 - Medium-Cap - ERROR - Error fetching data for GWW: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:42:46,547 - Medium-Cap - ERROR - Failed to fetch data for GWW
+2025-11-18 16:42:46,554 - Medium-Cap - ERROR - Failed to prepare data for GWW
+2025-11-18 16:42:46,560 - Medium-Cap - INFO - Processing LVS with smart caching...
+2025-11-18 16:42:46,567 - Medium-Cap - ERROR - Error checking existing data for LVS: [Errno 2] No such file or directory: '.\\dataset-cache\\LVS_data.csv'
+2025-11-18 16:42:46,572 - Medium-Cap - INFO - Fetching all data for LVS (none existing)
+2025-11-18 16:42:46,578 - Medium-Cap - INFO - Fetching LVS data [1993-11-16 - 2025-09-30]
+2025-11-18 16:42:47,358 - Medium-Cap - ERROR - Error fetching data for LVS: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:42:47,365 - Medium-Cap - ERROR - Failed to fetch data for LVS
+2025-11-18 16:42:47,371 - Medium-Cap - ERROR - Failed to prepare data for LVS
+2025-11-18 16:42:47,375 - Medium-Cap - INFO - Processing OKE with smart caching...
+2025-11-18 16:42:47,378 - Medium-Cap - ERROR - Error checking existing data for OKE: [Errno 2] No such file or directory: '.\\dataset-cache\\OKE_data.csv'
+2025-11-18 16:42:47,387 - Medium-Cap - INFO - Fetching all data for OKE (none existing)
+2025-11-18 16:42:47,389 - Medium-Cap - INFO - Fetching OKE data [1993-11-16 - 2025-09-30]
+2025-11-18 16:42:48,275 - Medium-Cap - ERROR - Error fetching data for OKE: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:42:48,289 - Medium-Cap - ERROR - Failed to fetch data for OKE
+2025-11-18 16:42:48,293 - Medium-Cap - ERROR - Failed to prepare data for OKE
+2025-11-18 16:42:48,299 - Medium-Cap - INFO - Processing D with smart caching...
+2025-11-18 16:42:48,305 - Medium-Cap - ERROR - Error checking existing data for D: [Errno 2] No such file or directory: '.\\dataset-cache\\D_data.csv'
+2025-11-18 16:42:48,307 - Medium-Cap - INFO - Fetching all data for D (none existing)
+2025-11-18 16:42:48,316 - Medium-Cap - INFO - Fetching D data [1993-11-16 - 2025-09-30]
+2025-11-18 16:42:49,090 - Medium-Cap - ERROR - Error fetching data for D: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:42:49,103 - Medium-Cap - ERROR - Failed to fetch data for D
+2025-11-18 16:42:49,107 - Medium-Cap - ERROR - Failed to prepare data for D
+2025-11-18 16:42:49,107 - Medium-Cap - INFO - Processing PSA with smart caching...
+2025-11-18 16:42:49,116 - Medium-Cap - ERROR - Error checking existing data for PSA: [Errno 2] No such file or directory: '.\\dataset-cache\\PSA_data.csv'
+2025-11-18 16:42:49,123 - Medium-Cap - INFO - Fetching all data for PSA (none existing)
+2025-11-18 16:42:49,127 - Medium-Cap - INFO - Fetching PSA data [1993-11-16 - 2025-09-30]
+2025-11-18 16:42:50,639 - Medium-Cap - ERROR - Error fetching data for PSA: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:42:50,644 - Medium-Cap - ERROR - Failed to fetch data for PSA
+2025-11-18 16:42:50,652 - Medium-Cap - ERROR - Failed to prepare data for PSA
+2025-11-18 16:42:50,653 - Medium-Cap - INFO - Processing URI with smart caching...
+2025-11-18 16:42:50,663 - Medium-Cap - ERROR - Error checking existing data for URI: [Errno 2] No such file or directory: '.\\dataset-cache\\URI_data.csv'
+2025-11-18 16:42:50,663 - Medium-Cap - INFO - Fetching all data for URI (none existing)
+2025-11-18 16:42:50,671 - Medium-Cap - INFO - Fetching URI data [1993-11-16 - 2025-09-30]
+2025-11-18 16:42:51,830 - Medium-Cap - ERROR - Error fetching data for URI: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:42:51,839 - Medium-Cap - ERROR - Failed to fetch data for URI
+2025-11-18 16:42:51,845 - Medium-Cap - ERROR - Failed to prepare data for URI
+2025-11-18 16:42:51,852 - Medium-Cap - INFO - Processing CBRE with smart caching...
+2025-11-18 16:42:51,857 - Medium-Cap - ERROR - Error checking existing data for CBRE: [Errno 2] No such file or directory: '.\\dataset-cache\\CBRE_data.csv'
+2025-11-18 16:42:51,859 - Medium-Cap - INFO - Fetching all data for CBRE (none existing)
+2025-11-18 16:42:51,866 - Medium-Cap - INFO - Fetching CBRE data [1993-11-16 - 2025-09-30]
+2025-11-18 16:42:52,777 - Medium-Cap - ERROR - Error fetching data for CBRE: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:42:52,788 - Medium-Cap - ERROR - Failed to fetch data for CBRE
+2025-11-18 16:42:52,794 - Medium-Cap - ERROR - Failed to prepare data for CBRE
+2025-11-18 16:42:52,802 - Medium-Cap - INFO - Processing MPWR with smart caching...
+2025-11-18 16:42:52,809 - Medium-Cap - ERROR - Error checking existing data for MPWR: [Errno 2] No such file or directory: '.\\dataset-cache\\MPWR_data.csv'
+2025-11-18 16:42:52,813 - Medium-Cap - INFO - Fetching all data for MPWR (none existing)
+2025-11-18 16:42:52,820 - Medium-Cap - INFO - Fetching MPWR data [1993-11-16 - 2025-09-30]
+2025-11-18 16:42:54,137 - Medium-Cap - ERROR - Error fetching data for MPWR: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:42:54,145 - Medium-Cap - ERROR - Failed to fetch data for MPWR
+2025-11-18 16:42:54,151 - Medium-Cap - ERROR - Failed to prepare data for MPWR
+2025-11-18 16:42:54,151 - Medium-Cap - INFO - Processing MSCI with smart caching...
+2025-11-18 16:42:54,159 - Medium-Cap - ERROR - Error checking existing data for MSCI: [Errno 2] No such file or directory: '.\\dataset-cache\\MSCI_data.csv'
+2025-11-18 16:42:54,168 - Medium-Cap - INFO - Fetching all data for MSCI (none existing)
+2025-11-18 16:42:54,172 - Medium-Cap - INFO - Fetching MSCI data [1993-11-16 - 2025-09-30]
+2025-11-18 16:42:54,970 - Medium-Cap - ERROR - Error fetching data for MSCI: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:42:54,982 - Medium-Cap - ERROR - Failed to fetch data for MSCI
+2025-11-18 16:42:54,986 - Medium-Cap - ERROR - Failed to prepare data for MSCI
+2025-11-18 16:42:54,992 - Medium-Cap - INFO - Processing NXPI with smart caching...
+2025-11-18 16:42:54,996 - Medium-Cap - ERROR - Error checking existing data for NXPI: [Errno 2] No such file or directory: '.\\dataset-cache\\NXPI_data.csv'
+2025-11-18 16:42:55,003 - Medium-Cap - INFO - Fetching all data for NXPI (none existing)
+2025-11-18 16:42:55,006 - Medium-Cap - INFO - Fetching NXPI data [1993-11-16 - 2025-09-30]
+2025-11-18 16:42:55,806 - Medium-Cap - ERROR - Error fetching data for NXPI: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:42:55,815 - Medium-Cap - ERROR - Failed to fetch data for NXPI
+2025-11-18 16:42:55,821 - Medium-Cap - ERROR - Failed to prepare data for NXPI
+2025-11-18 16:42:55,826 - Medium-Cap - INFO - Processing KMI with smart caching...
+2025-11-18 16:42:55,831 - Medium-Cap - ERROR - Error checking existing data for KMI: [Errno 2] No such file or directory: '.\\dataset-cache\\KMI_data.csv'
+2025-11-18 16:42:55,839 - Medium-Cap - INFO - Fetching all data for KMI (none existing)
+2025-11-18 16:42:55,845 - Medium-Cap - INFO - Fetching KMI data [1993-11-16 - 2025-09-30]
+2025-11-18 16:42:56,696 - Medium-Cap - ERROR - Error fetching data for KMI: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:42:56,702 - Medium-Cap - ERROR - Failed to fetch data for KMI
+2025-11-18 16:42:56,711 - Medium-Cap - ERROR - Failed to prepare data for KMI
+2025-11-18 16:42:56,715 - Medium-Cap - INFO - Processing FDX with smart caching...
+2025-11-18 16:42:56,721 - Medium-Cap - ERROR - Error checking existing data for FDX: [Errno 2] No such file or directory: '.\\dataset-cache\\FDX_data.csv'
+2025-11-18 16:42:56,727 - Medium-Cap - INFO - Fetching all data for FDX (none existing)
+2025-11-18 16:42:56,731 - Medium-Cap - INFO - Fetching FDX data [1993-11-16 - 2025-09-30]
+2025-11-18 16:42:57,671 - Medium-Cap - ERROR - Error fetching data for FDX: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:42:57,676 - Medium-Cap - ERROR - Failed to fetch data for FDX
+2025-11-18 16:42:57,687 - Medium-Cap - ERROR - Failed to prepare data for FDX
+2025-11-18 16:42:57,692 - Medium-Cap - INFO - Processing AFL with smart caching...
+2025-11-18 16:42:57,697 - Medium-Cap - ERROR - Error checking existing data for AFL: [Errno 2] No such file or directory: '.\\dataset-cache\\AFL_data.csv'
+2025-11-18 16:42:57,704 - Medium-Cap - INFO - Fetching all data for AFL (none existing)
+2025-11-18 16:42:57,708 - Medium-Cap - INFO - Fetching AFL data [1993-11-16 - 2025-09-30]
+2025-11-18 16:42:58,472 - Medium-Cap - ERROR - Error fetching data for AFL: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:42:58,482 - Medium-Cap - ERROR - Failed to fetch data for AFL
+2025-11-18 16:42:58,488 - Medium-Cap - ERROR - Failed to prepare data for AFL
+2025-11-18 16:42:58,493 - Medium-Cap - INFO - Processing SRE with smart caching...
+2025-11-18 16:42:58,499 - Medium-Cap - ERROR - Error checking existing data for SRE: [Errno 2] No such file or directory: '.\\dataset-cache\\SRE_data.csv'
+2025-11-18 16:42:58,502 - Medium-Cap - INFO - Fetching all data for SRE (none existing)
+2025-11-18 16:42:58,508 - Medium-Cap - INFO - Fetching SRE data [1993-11-16 - 2025-09-30]
+2025-11-18 16:42:59,348 - Medium-Cap - ERROR - Error fetching data for SRE: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:42:59,353 - Medium-Cap - ERROR - Failed to fetch data for SRE
+2025-11-18 16:42:59,361 - Medium-Cap - ERROR - Failed to prepare data for SRE
+2025-11-18 16:42:59,364 - Medium-Cap - INFO - Processing MPC with smart caching...
+2025-11-18 16:42:59,372 - Medium-Cap - ERROR - Error checking existing data for MPC: [Errno 2] No such file or directory: '.\\dataset-cache\\MPC_data.csv'
+2025-11-18 16:42:59,378 - Medium-Cap - INFO - Fetching all data for MPC (none existing)
+2025-11-18 16:42:59,380 - Medium-Cap - INFO - Fetching MPC data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:00,246 - Medium-Cap - ERROR - Error fetching data for MPC: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:00,249 - Medium-Cap - ERROR - Failed to fetch data for MPC
+2025-11-18 16:43:00,249 - Medium-Cap - ERROR - Failed to prepare data for MPC
+2025-11-18 16:43:00,254 - Medium-Cap - INFO - Processing SPG with smart caching...
+2025-11-18 16:43:00,258 - Medium-Cap - ERROR - Error checking existing data for SPG: [Errno 2] No such file or directory: '.\\dataset-cache\\SPG_data.csv'
+2025-11-18 16:43:00,260 - Medium-Cap - INFO - Fetching all data for SPG (none existing)
+2025-11-18 16:43:00,261 - Medium-Cap - INFO - Fetching SPG data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:01,285 - Medium-Cap - ERROR - Error fetching data for SPG: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:01,294 - Medium-Cap - ERROR - Failed to fetch data for SPG
+2025-11-18 16:43:01,298 - Medium-Cap - ERROR - Failed to prepare data for SPG
+2025-11-18 16:43:01,304 - Medium-Cap - INFO - Processing TFC with smart caching...
+2025-11-18 16:43:01,310 - Medium-Cap - ERROR - Error checking existing data for TFC: [Errno 2] No such file or directory: '.\\dataset-cache\\TFC_data.csv'
+2025-11-18 16:43:01,316 - Medium-Cap - INFO - Fetching all data for TFC (none existing)
+2025-11-18 16:43:01,320 - Medium-Cap - INFO - Fetching TFC data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:02,217 - Medium-Cap - ERROR - Error fetching data for TFC: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:02,228 - Medium-Cap - ERROR - Failed to fetch data for TFC
+2025-11-18 16:43:02,230 - Medium-Cap - ERROR - Failed to prepare data for TFC
+2025-11-18 16:43:02,238 - Medium-Cap - INFO - Processing VST with smart caching...
+2025-11-18 16:43:02,243 - Medium-Cap - ERROR - Error checking existing data for VST: [Errno 2] No such file or directory: '.\\dataset-cache\\VST_data.csv'
+2025-11-18 16:43:02,249 - Medium-Cap - INFO - Fetching all data for VST (none existing)
+2025-11-18 16:43:02,251 - Medium-Cap - INFO - Fetching VST data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:03,016 - Medium-Cap - ERROR - Error fetching data for VST: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:03,027 - Medium-Cap - ERROR - Failed to fetch data for VST
+2025-11-18 16:43:03,030 - Medium-Cap - ERROR - Failed to prepare data for VST
+2025-11-18 16:43:03,037 - Medium-Cap - INFO - Processing PYPL with smart caching...
+2025-11-18 16:43:03,039 - Medium-Cap - ERROR - Error checking existing data for PYPL: [Errno 2] No such file or directory: '.\\dataset-cache\\PYPL_data.csv'
+2025-11-18 16:43:03,048 - Medium-Cap - INFO - Fetching all data for PYPL (none existing)
+2025-11-18 16:43:03,053 - Medium-Cap - INFO - Fetching PYPL data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:03,841 - Medium-Cap - ERROR - Error fetching data for PYPL: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:03,848 - Medium-Cap - ERROR - Failed to fetch data for PYPL
+2025-11-18 16:43:03,854 - Medium-Cap - ERROR - Failed to prepare data for PYPL
+2025-11-18 16:43:03,859 - Medium-Cap - INFO - Processing HLT with smart caching...
+2025-11-18 16:43:03,865 - Medium-Cap - ERROR - Error checking existing data for HLT: [Errno 2] No such file or directory: '.\\dataset-cache\\HLT_data.csv'
+2025-11-18 16:43:03,871 - Medium-Cap - INFO - Fetching all data for HLT (none existing)
+2025-11-18 16:43:03,875 - Medium-Cap - INFO - Fetching HLT data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:04,626 - Medium-Cap - ERROR - Error fetching data for HLT: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:04,638 - Medium-Cap - ERROR - Failed to fetch data for HLT
+2025-11-18 16:43:04,641 - Medium-Cap - ERROR - Failed to prepare data for HLT
+2025-11-18 16:43:04,646 - Medium-Cap - INFO - Successfully prepared data for 0 tickers

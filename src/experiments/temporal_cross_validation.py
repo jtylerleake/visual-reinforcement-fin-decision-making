@@ -2,6 +2,7 @@
 from common.modules import np, pd, List, Dict, random, os, glob, PPO, A2C, DQN
 from src.utils.logging import log_function_call, get_logger
 from src.utils.metrics import compute_performance_metrics, aggregate_cross_validation_results
+from src.utils.results_io import save_results, load_results, get_latest_results
 from src.pipeline.data_pipeline import DataPipeline
 from src.pipeline.environment_pipeline import EnvironmentPipeline
 from src.models.visual_learner import VisualLearner
@@ -161,7 +162,7 @@ class TemporalCrossValidation:
             return {}
     
     @log_function_call
-    def exe_experiment(self) -> Dict:
+    def exe_experiment(self, phase : str = ['training', 'inference']) -> Dict:
         """Execute the cross-validation with temporal walk-through experiment"""
         
         self.logger.h1("Executing Temporal Walk-Forward RL Performance Experiment")
@@ -192,7 +193,7 @@ class TemporalCrossValidation:
             
             # Step 4: execute cross-validation
             self.logger.info("Step 4: Executing cross-validation...")
-            results = self.exe_cross_validation(fold_assignments, frame_bounds, timeseries_data)
+            results = self.exe_cross_validation(fold_assignments, frame_bounds, timeseries_data, phase)
             
             # Step 5: aggregate results
             self.logger.info("Step 5: Aggregating results...")
@@ -210,7 +211,8 @@ class TemporalCrossValidation:
         self, 
         fold_assignments: Dict[int, List[str]], 
         frame_bounds: Dict[str, List[List]],
-        timeseries_data: Dict[str, pd.DataFrame]
+        timeseries_data: Dict[str, pd.DataFrame],
+        phase: str
     ) -> Dict:
         """Cross validaion overhead"""        
         try:
@@ -236,7 +238,8 @@ class TemporalCrossValidation:
                         test_env,
                         frame_bounds,
                         fold_idx, 
-                        window_idx
+                        window_idx,
+                        phase
                     )
                     
                     if window_metrics:
@@ -382,12 +385,13 @@ class TemporalCrossValidation:
     
     @log_function_call
     def train_validate_test(
-        self, 
+        self,
         train_and_val_env,
         test_env,
         frame_bounds: dict,
         fold_idx: int, 
-        window_idx: int
+        window_idx: int,
+        phase: str
     ) -> Dict:
         """Train, validate, and test a model for a fold/window combination"""
         
@@ -399,85 +403,93 @@ class TemporalCrossValidation:
             validation_bounds = frame_bounds['validation'][window_idx]
             evaluation_bounds = frame_bounds['evaluation'][window_idx]
             
-            # Step 1: set the frame bounds for the training environment
-            for ticker, monitor in train_and_val_env.environments.items():
-                env = monitor.env
-                env.frame_bound = (training_bounds[0], training_bounds[1])
-                env._start_tick = training_bounds[0]
-                env._end_tick = training_bounds[1]
-                env._process_data()
-                env.reset()
-                
-            # Step 2: train with checkpoint saving
-            self.logger.info("Training the model...")
-            agent = VisualLearner(train_and_val_env, self.config)
-            
-            # set up checkpoint directory for this fold/window
-            checkpoint_freq = self.config.get('Checkpoint frequency')
             checkpoint_dir = os.path.join(
                 self.config.get('Model save path'),
                 f'fold_{fold_idx+1}_window_{window_idx+1}_checkpoints'
             )
-        
-            agent.train(
-                checkpoint_save_path = checkpoint_dir,
-                checkpoint_freq = checkpoint_freq
-            )
             
-            # Step 3: find all checkpoint files
-            self.logger.info("Searching for model checkpoints")
-            checkpoint_files = sorted(glob.glob(os.path.join(checkpoint_dir, 'checkpoint_*.zip')))
-            if not checkpoint_files:
-                self.logger.warning("No checkpoints found, using final model")
-                checkpoint_files = [None]  # use final model as fallback
-        
-            # Step 4: set the validation environment frame bounds
-            for ticker, monitor in train_and_val_env.environments.items():
-                env = monitor.env
-                env.frame_bound = (validation_bounds[0], validation_bounds[1])
-                env._process_data()
-                env._start_tick = validation_bounds[0]
-                env._end_tick = validation_bounds[1]
-                env.reset()
+            agent = VisualLearner(train_and_val_env, self.config)
             
-            # Step 5: evaluate checkpoints and select best model
-            best_agent = self.select_best_checkpoint(
-                    checkpoint_files = checkpoint_files,
-                    agent = agent,
-                    train_and_val_env = train_and_val_env,
+            if phase == 'training': # >>> run training and save model checkpoints
+            
+                # Step 1: set the frame bounds for the training environment
+                for ticker, monitor in train_and_val_env.environments.items():
+                    env = monitor.env
+                    env.frame_bound = (training_bounds[0], training_bounds[1])
+                    env._start_tick = training_bounds[0]
+                    env._end_tick = training_bounds[1]
+                    env._process_data()
+                    env.reset()
+                    
+                # Step 2: train with checkpoint saving
+                self.logger.info("Training the model...")
+                
+                # set up checkpoint directory for this fold/window
+                checkpoint_freq = self.config.get('Checkpoint frequency')
+            
+                agent.train(
+                    checkpoint_save_path = checkpoint_dir,
+                    checkpoint_freq = checkpoint_freq
                 )
             
-            # Step 6: set the frame bounds for the test environment
-            for ticker, monitor in test_env.environments.items():
-                env = monitor.env
-                env.frame_bound = (evaluation_bounds[0], evaluation_bounds[1])
-                env._start_tick = evaluation_bounds[0]
-                env._end_tick = evaluation_bounds[1]
-                env._process_data()
-                env.reset()
-                
-            # Step 7: Test the best checkpoint
-            self.logger.info("Evaluating best model on test set...")
-            test_results = self.evaluate(best_agent, test_env)
-
-            # Step 8: run benchmark models
-            MACD_results = self.evaluate(MACD(), test_env)
-            SignR_results = self.evaluate(SignR(), test_env)
-            BuyAndHold_results = self.evaluate(BuyAndHold(), test_env)
-            Random_results = self.evaluate(Random(), test_env)
-
-            # Step 8: combine results and return 
-            fold_window_results = {
-                'test results': test_results,
-                'MACD results' : MACD_results,
-                'SignR results' : SignR_results,
-                'Buy and Hold results' : BuyAndHold_results,
-                'Random results' : Random_results,
-            }
+                return None
             
-            self.logger.info(f"""Completed training/validation/test for 
-            fold {fold_idx+1}, window {window_idx+1}""")
-            return fold_window_results
+            if phase == 'inference': # >>> load pre-trained models and run evaluation
+            
+                # Step 3: find all checkpoint files
+                self.logger.info("Searching for model checkpoints")
+                checkpoint_files = sorted(glob.glob(os.path.join(checkpoint_dir, 'checkpoint_*.zip')))
+                if not checkpoint_files:
+                    self.logger.warning("No checkpoints found, using final model")
+                    checkpoint_files = [None]  # use final model as fallback
+            
+                # Step 4: set the validation environment frame bounds
+                for ticker, monitor in train_and_val_env.environments.items():
+                    env = monitor.env
+                    env.frame_bound = (validation_bounds[0], validation_bounds[1])
+                    env._process_data()
+                    env._start_tick = validation_bounds[0]
+                    env._end_tick = validation_bounds[1]
+                    env.reset()
+                
+                # Step 5: evaluate checkpoints and select best model
+                best_agent = self.select_best_checkpoint(
+                        checkpoint_files = checkpoint_files,
+                        agent = agent,
+                        train_and_val_env = train_and_val_env,
+                    )
+                
+                # Step 6: set the frame bounds for the test environment
+                for ticker, monitor in test_env.environments.items():
+                    env = monitor.env
+                    env.frame_bound = (evaluation_bounds[0], evaluation_bounds[1])
+                    env._start_tick = evaluation_bounds[0]
+                    env._end_tick = evaluation_bounds[1]
+                    env._process_data()
+                    env.reset()
+                    
+                # Step 7: Test the best checkpoint
+                self.logger.info("Evaluating best model on test set...")
+                test_results = self.evaluate(best_agent, test_env)
+    
+                # Step 8: run benchmark models
+                MACD_results = self.evaluate(MACD(), test_env)
+                SignR_results = self.evaluate(SignR(), test_env)
+                BuyAndHold_results = self.evaluate(BuyAndHold(), test_env)
+                Random_results = self.evaluate(Random(), test_env)
+    
+                # Step 8: combine results and return 
+                fold_window_results = {
+                    'test results': test_results,
+                    'MACD results' : MACD_results,
+                    'SignR results' : SignR_results,
+                    'Buy and Hold results' : BuyAndHold_results,
+                    'Random results' : Random_results,
+                }
+                
+                self.logger.info(f"""Completed training/validation/test for 
+                fold {fold_idx+1}, window {window_idx+1}""")
+                return fold_window_results
         
         except Exception as e:
             self.logger.error(f"Error during Train/Validate/Test: {e}")
@@ -581,6 +593,23 @@ class TemporalCrossValidation:
             self.logger.error(f"Error evaluating model: {e}")
             return False
     
+    @log_function_call
+    def save_experiment_results(
+        self,
+        results: Dict,
+        filepath: str = None,
+        format: str = 'pickle',
+        compress: bool = True
+    ) -> str:
+        """Save experiment results"""
+        return save_results(
+            results=results,
+            experiment_name=self.experiment_name,
+            filepath=filepath,
+            format=format,
+            compress=compress,
+            run_id=self.run_id
+        )
     
 
     
@@ -591,6 +620,12 @@ if __name__ == "__main__":
     config = load_config(experiment_name)
     
     dev = TemporalCrossValidation(experiment_name, config)
-    results = dev.exe_experiment()
+    results = dev.exe_experiment('inference')
     
+    if results:
+        saved_path = dev.save_experiment_results(results, format='pickle', compress=True)
+        print(f"\nResults saved to: {saved_path}")
+        # print("\nTo load results later, use:")
+        # print(f"  from src.utils.results_io import load_results")
+        # print(f"  results = load_results('{saved_path}')")
     

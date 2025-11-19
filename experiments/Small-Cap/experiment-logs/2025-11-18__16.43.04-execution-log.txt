@@ -1,0 +1,353 @@
+2025-11-18 16:43:04,658 - Small-Cap - INFO - Data manager initialized with directory: .\dataset-cache
+2025-11-18 16:43:04,745 - Small-Cap - INFO - Adjusted fetch date to 1993-11-16
+2025-11-18 16:43:04,749 - Small-Cap - INFO - Processing GNRC with smart caching...
+2025-11-18 16:43:04,753 - Small-Cap - ERROR - Error checking existing data for GNRC: [Errno 2] No such file or directory: '.\\dataset-cache\\GNRC_data.csv'
+2025-11-18 16:43:04,755 - Small-Cap - INFO - Fetching all data for GNRC (none existing)
+2025-11-18 16:43:04,761 - Small-Cap - INFO - Fetching GNRC data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:05,538 - Small-Cap - ERROR - Error fetching data for GNRC: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:05,548 - Small-Cap - ERROR - Failed to fetch data for GNRC
+2025-11-18 16:43:05,550 - Small-Cap - ERROR - Failed to prepare data for GNRC
+2025-11-18 16:43:05,554 - Small-Cap - INFO - Processing MOS with smart caching...
+2025-11-18 16:43:05,562 - Small-Cap - ERROR - Error checking existing data for MOS: [Errno 2] No such file or directory: '.\\dataset-cache\\MOS_data.csv'
+2025-11-18 16:43:05,564 - Small-Cap - INFO - Fetching all data for MOS (none existing)
+2025-11-18 16:43:05,572 - Small-Cap - INFO - Fetching MOS data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:06,349 - Small-Cap - ERROR - Error fetching data for MOS: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:06,358 - Small-Cap - ERROR - Failed to fetch data for MOS
+2025-11-18 16:43:06,366 - Small-Cap - ERROR - Failed to prepare data for MOS
+2025-11-18 16:43:06,366 - Small-Cap - INFO - Processing SWK with smart caching...
+2025-11-18 16:43:06,374 - Small-Cap - ERROR - Error checking existing data for SWK: [Errno 2] No such file or directory: '.\\dataset-cache\\SWK_data.csv'
+2025-11-18 16:43:06,374 - Small-Cap - INFO - Fetching all data for SWK (none existing)
+2025-11-18 16:43:06,384 - Small-Cap - INFO - Fetching SWK data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:07,576 - Small-Cap - ERROR - Error fetching data for SWK: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:07,586 - Small-Cap - ERROR - Failed to fetch data for SWK
+2025-11-18 16:43:07,591 - Small-Cap - ERROR - Failed to prepare data for SWK
+2025-11-18 16:43:07,592 - Small-Cap - INFO - Processing BAX with smart caching...
+2025-11-18 16:43:07,601 - Small-Cap - ERROR - Error checking existing data for BAX: [Errno 2] No such file or directory: '.\\dataset-cache\\BAX_data.csv'
+2025-11-18 16:43:07,604 - Small-Cap - INFO - Fetching all data for BAX (none existing)
+2025-11-18 16:43:07,609 - Small-Cap - INFO - Fetching BAX data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:08,527 - Small-Cap - ERROR - Error fetching data for BAX: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:08,538 - Small-Cap - ERROR - Failed to fetch data for BAX
+2025-11-18 16:43:08,543 - Small-Cap - ERROR - Failed to prepare data for BAX
+2025-11-18 16:43:08,545 - Small-Cap - INFO - Processing TXT with smart caching...
+2025-11-18 16:43:08,555 - Small-Cap - ERROR - Error checking existing data for TXT: [Errno 2] No such file or directory: '.\\dataset-cache\\TXT_data.csv'
+2025-11-18 16:43:08,560 - Small-Cap - INFO - Fetching all data for TXT (none existing)
+2025-11-18 16:43:08,562 - Small-Cap - INFO - Fetching TXT data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:09,304 - Small-Cap - ERROR - Error fetching data for TXT: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:09,310 - Small-Cap - ERROR - Failed to fetch data for TXT
+2025-11-18 16:43:09,319 - Small-Cap - ERROR - Failed to prepare data for TXT
+2025-11-18 16:43:09,325 - Small-Cap - INFO - Processing APA with smart caching...
+2025-11-18 16:43:09,331 - Small-Cap - ERROR - Error checking existing data for APA: [Errno 2] No such file or directory: '.\\dataset-cache\\APA_data.csv'
+2025-11-18 16:43:09,340 - Small-Cap - INFO - Fetching all data for APA (none existing)
+2025-11-18 16:43:09,347 - Small-Cap - INFO - Fetching APA data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:12,064 - Small-Cap - ERROR - Error fetching data for APA: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:12,073 - Small-Cap - ERROR - Failed to fetch data for APA
+2025-11-18 16:43:12,078 - Small-Cap - ERROR - Failed to prepare data for APA
+2025-11-18 16:43:12,080 - Small-Cap - INFO - Processing FRT with smart caching...
+2025-11-18 16:43:12,086 - Small-Cap - ERROR - Error checking existing data for FRT: [Errno 2] No such file or directory: '.\\dataset-cache\\FRT_data.csv'
+2025-11-18 16:43:12,092 - Small-Cap - INFO - Fetching all data for FRT (none existing)
+2025-11-18 16:43:12,094 - Small-Cap - INFO - Fetching FRT data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:12,985 - Small-Cap - ERROR - Error fetching data for FRT: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:12,993 - Small-Cap - ERROR - Failed to fetch data for FRT
+2025-11-18 16:43:12,998 - Small-Cap - ERROR - Failed to prepare data for FRT
+2025-11-18 16:43:13,002 - Small-Cap - INFO - Processing ARE with smart caching...
+2025-11-18 16:43:13,010 - Small-Cap - ERROR - Error checking existing data for ARE: [Errno 2] No such file or directory: '.\\dataset-cache\\ARE_data.csv'
+2025-11-18 16:43:13,010 - Small-Cap - INFO - Fetching all data for ARE (none existing)
+2025-11-18 16:43:13,021 - Small-Cap - INFO - Fetching ARE data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:13,976 - Small-Cap - ERROR - Error fetching data for ARE: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:13,984 - Small-Cap - ERROR - Failed to fetch data for ARE
+2025-11-18 16:43:13,990 - Small-Cap - ERROR - Failed to prepare data for ARE
+2025-11-18 16:43:13,995 - Small-Cap - INFO - Processing EPAM with smart caching...
+2025-11-18 16:43:14,001 - Small-Cap - ERROR - Error checking existing data for EPAM: [Errno 2] No such file or directory: '.\\dataset-cache\\EPAM_data.csv'
+2025-11-18 16:43:14,008 - Small-Cap - INFO - Fetching all data for EPAM (none existing)
+2025-11-18 16:43:14,010 - Small-Cap - INFO - Fetching EPAM data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:14,859 - Small-Cap - ERROR - Error fetching data for EPAM: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:14,867 - Small-Cap - ERROR - Failed to fetch data for EPAM
+2025-11-18 16:43:14,872 - Small-Cap - ERROR - Failed to prepare data for EPAM
+2025-11-18 16:43:14,878 - Small-Cap - INFO - Processing SOLS with smart caching...
+2025-11-18 16:43:14,886 - Small-Cap - ERROR - Error checking existing data for SOLS: [Errno 2] No such file or directory: '.\\dataset-cache\\SOLS_data.csv'
+2025-11-18 16:43:14,892 - Small-Cap - INFO - Fetching all data for SOLS (none existing)
+2025-11-18 16:43:14,896 - Small-Cap - INFO - Fetching SOLS data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:15,750 - Small-Cap - ERROR - Error fetching data for SOLS: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:15,761 - Small-Cap - ERROR - Failed to fetch data for SOLS
+2025-11-18 16:43:15,767 - Small-Cap - ERROR - Failed to prepare data for SOLS
+2025-11-18 16:43:15,770 - Small-Cap - INFO - Processing AIZ with smart caching...
+2025-11-18 16:43:15,778 - Small-Cap - ERROR - Error checking existing data for AIZ: [Errno 2] No such file or directory: '.\\dataset-cache\\AIZ_data.csv'
+2025-11-18 16:43:15,782 - Small-Cap - INFO - Fetching all data for AIZ (none existing)
+2025-11-18 16:43:15,786 - Small-Cap - INFO - Fetching AIZ data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:16,796 - Small-Cap - ERROR - Error fetching data for AIZ: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:16,806 - Small-Cap - ERROR - Failed to fetch data for AIZ
+2025-11-18 16:43:16,810 - Small-Cap - ERROR - Failed to prepare data for AIZ
+2025-11-18 16:43:16,815 - Small-Cap - INFO - Processing BALL with smart caching...
+2025-11-18 16:43:16,821 - Small-Cap - ERROR - Error checking existing data for BALL: [Errno 2] No such file or directory: '.\\dataset-cache\\BALL_data.csv'
+2025-11-18 16:43:16,826 - Small-Cap - INFO - Fetching all data for BALL (none existing)
+2025-11-18 16:43:16,831 - Small-Cap - INFO - Fetching BALL data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:17,550 - Small-Cap - ERROR - Error fetching data for BALL: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:17,556 - Small-Cap - ERROR - Failed to fetch data for BALL
+2025-11-18 16:43:17,561 - Small-Cap - ERROR - Failed to prepare data for BALL
+2025-11-18 16:43:17,565 - Small-Cap - INFO - Processing RVTY with smart caching...
+2025-11-18 16:43:17,569 - Small-Cap - ERROR - Error checking existing data for RVTY: [Errno 2] No such file or directory: '.\\dataset-cache\\RVTY_data.csv'
+2025-11-18 16:43:17,574 - Small-Cap - INFO - Fetching all data for RVTY (none existing)
+2025-11-18 16:43:17,577 - Small-Cap - INFO - Fetching RVTY data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:20,250 - Small-Cap - ERROR - Error fetching data for RVTY: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:20,255 - Small-Cap - ERROR - Failed to fetch data for RVTY
+2025-11-18 16:43:20,258 - Small-Cap - ERROR - Failed to prepare data for RVTY
+2025-11-18 16:43:20,261 - Small-Cap - INFO - Processing FFIV with smart caching...
+2025-11-18 16:43:20,264 - Small-Cap - ERROR - Error checking existing data for FFIV: [Errno 2] No such file or directory: '.\\dataset-cache\\FFIV_data.csv'
+2025-11-18 16:43:20,267 - Small-Cap - INFO - Fetching all data for FFIV (none existing)
+2025-11-18 16:43:20,269 - Small-Cap - INFO - Fetching FFIV data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:21,491 - Small-Cap - ERROR - Error fetching data for FFIV: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:21,501 - Small-Cap - ERROR - Failed to fetch data for FFIV
+2025-11-18 16:43:21,505 - Small-Cap - ERROR - Failed to prepare data for FFIV
+2025-11-18 16:43:21,507 - Small-Cap - INFO - Processing AVY with smart caching...
+2025-11-18 16:43:21,513 - Small-Cap - ERROR - Error checking existing data for AVY: [Errno 2] No such file or directory: '.\\dataset-cache\\AVY_data.csv'
+2025-11-18 16:43:21,519 - Small-Cap - INFO - Fetching all data for AVY (none existing)
+2025-11-18 16:43:21,524 - Small-Cap - INFO - Fetching AVY data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:22,259 - Small-Cap - ERROR - Error fetching data for AVY: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:22,267 - Small-Cap - ERROR - Failed to fetch data for AVY
+2025-11-18 16:43:22,267 - Small-Cap - ERROR - Failed to prepare data for AVY
+2025-11-18 16:43:22,278 - Small-Cap - INFO - Processing DECK with smart caching...
+2025-11-18 16:43:22,283 - Small-Cap - ERROR - Error checking existing data for DECK: [Errno 2] No such file or directory: '.\\dataset-cache\\DECK_data.csv'
+2025-11-18 16:43:22,287 - Small-Cap - INFO - Fetching all data for DECK (none existing)
+2025-11-18 16:43:22,291 - Small-Cap - INFO - Fetching DECK data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:23,150 - Small-Cap - ERROR - Error fetching data for DECK: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:23,158 - Small-Cap - ERROR - Failed to fetch data for DECK
+2025-11-18 16:43:23,162 - Small-Cap - ERROR - Failed to prepare data for DECK
+2025-11-18 16:43:23,166 - Small-Cap - INFO - Processing NDSN with smart caching...
+2025-11-18 16:43:23,173 - Small-Cap - ERROR - Error checking existing data for NDSN: [Errno 2] No such file or directory: '.\\dataset-cache\\NDSN_data.csv'
+2025-11-18 16:43:23,178 - Small-Cap - INFO - Fetching all data for NDSN (none existing)
+2025-11-18 16:43:23,185 - Small-Cap - INFO - Fetching NDSN data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:24,276 - Small-Cap - ERROR - Error fetching data for NDSN: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:24,284 - Small-Cap - ERROR - Failed to fetch data for NDSN
+2025-11-18 16:43:24,295 - Small-Cap - ERROR - Failed to prepare data for NDSN
+2025-11-18 16:43:24,299 - Small-Cap - INFO - Processing PNW with smart caching...
+2025-11-18 16:43:24,303 - Small-Cap - ERROR - Error checking existing data for PNW: [Errno 2] No such file or directory: '.\\dataset-cache\\PNW_data.csv'
+2025-11-18 16:43:24,310 - Small-Cap - INFO - Fetching all data for PNW (none existing)
+2025-11-18 16:43:24,315 - Small-Cap - INFO - Fetching PNW data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:25,673 - Small-Cap - ERROR - Error fetching data for PNW: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:25,681 - Small-Cap - ERROR - Failed to fetch data for PNW
+2025-11-18 16:43:25,690 - Small-Cap - ERROR - Failed to prepare data for PNW
+2025-11-18 16:43:25,692 - Small-Cap - INFO - Processing HAS with smart caching...
+2025-11-18 16:43:25,697 - Small-Cap - ERROR - Error checking existing data for HAS: [Errno 2] No such file or directory: '.\\dataset-cache\\HAS_data.csv'
+2025-11-18 16:43:25,705 - Small-Cap - INFO - Fetching all data for HAS (none existing)
+2025-11-18 16:43:25,707 - Small-Cap - INFO - Fetching HAS data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:26,513 - Small-Cap - ERROR - Error fetching data for HAS: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:26,521 - Small-Cap - ERROR - Failed to fetch data for HAS
+2025-11-18 16:43:26,528 - Small-Cap - ERROR - Failed to prepare data for HAS
+2025-11-18 16:43:26,533 - Small-Cap - INFO - Processing CPT with smart caching...
+2025-11-18 16:43:26,538 - Small-Cap - ERROR - Error checking existing data for CPT: [Errno 2] No such file or directory: '.\\dataset-cache\\CPT_data.csv'
+2025-11-18 16:43:26,538 - Small-Cap - INFO - Fetching all data for CPT (none existing)
+2025-11-18 16:43:26,549 - Small-Cap - INFO - Fetching CPT data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:26,852 - Small-Cap - ERROR - Error fetching data for CPT: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:26,862 - Small-Cap - ERROR - Failed to fetch data for CPT
+2025-11-18 16:43:26,862 - Small-Cap - ERROR - Failed to prepare data for CPT
+2025-11-18 16:43:26,871 - Small-Cap - INFO - Processing FTV with smart caching...
+2025-11-18 16:43:26,876 - Small-Cap - ERROR - Error checking existing data for FTV: [Errno 2] No such file or directory: '.\\dataset-cache\\FTV_data.csv'
+2025-11-18 16:43:26,880 - Small-Cap - INFO - Fetching all data for FTV (none existing)
+2025-11-18 16:43:26,887 - Small-Cap - INFO - Fetching FTV data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:27,416 - Small-Cap - ERROR - Error fetching data for FTV: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:27,423 - Small-Cap - ERROR - Failed to fetch data for FTV
+2025-11-18 16:43:27,429 - Small-Cap - ERROR - Failed to prepare data for FTV
+2025-11-18 16:43:27,433 - Small-Cap - INFO - Processing UHS with smart caching...
+2025-11-18 16:43:27,439 - Small-Cap - ERROR - Error checking existing data for UHS: [Errno 2] No such file or directory: '.\\dataset-cache\\UHS_data.csv'
+2025-11-18 16:43:27,446 - Small-Cap - INFO - Fetching all data for UHS (none existing)
+2025-11-18 16:43:27,449 - Small-Cap - INFO - Fetching UHS data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:27,897 - Small-Cap - ERROR - Error fetching data for UHS: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:27,903 - Small-Cap - ERROR - Failed to fetch data for UHS
+2025-11-18 16:43:27,907 - Small-Cap - ERROR - Failed to prepare data for UHS
+2025-11-18 16:43:27,913 - Small-Cap - INFO - Processing COO with smart caching...
+2025-11-18 16:43:27,918 - Small-Cap - ERROR - Error checking existing data for COO: [Errno 2] No such file or directory: '.\\dataset-cache\\COO_data.csv'
+2025-11-18 16:43:27,921 - Small-Cap - INFO - Fetching all data for COO (none existing)
+2025-11-18 16:43:27,927 - Small-Cap - INFO - Fetching COO data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:28,348 - Small-Cap - ERROR - Error fetching data for COO: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:28,360 - Small-Cap - ERROR - Failed to fetch data for COO
+2025-11-18 16:43:28,365 - Small-Cap - ERROR - Failed to prepare data for COO
+2025-11-18 16:43:28,371 - Small-Cap - INFO - Processing ESS with smart caching...
+2025-11-18 16:43:28,374 - Small-Cap - ERROR - Error checking existing data for ESS: [Errno 2] No such file or directory: '.\\dataset-cache\\ESS_data.csv'
+2025-11-18 16:43:28,383 - Small-Cap - INFO - Fetching all data for ESS (none existing)
+2025-11-18 16:43:28,388 - Small-Cap - INFO - Fetching ESS data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:28,899 - Small-Cap - ERROR - Error fetching data for ESS: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:28,907 - Small-Cap - ERROR - Failed to fetch data for ESS
+2025-11-18 16:43:28,915 - Small-Cap - ERROR - Failed to prepare data for ESS
+2025-11-18 16:43:28,919 - Small-Cap - INFO - Processing MAA with smart caching...
+2025-11-18 16:43:28,926 - Small-Cap - ERROR - Error checking existing data for MAA: [Errno 2] No such file or directory: '.\\dataset-cache\\MAA_data.csv'
+2025-11-18 16:43:28,933 - Small-Cap - INFO - Fetching all data for MAA (none existing)
+2025-11-18 16:43:28,936 - Small-Cap - INFO - Fetching MAA data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:29,421 - Small-Cap - ERROR - Error fetching data for MAA: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:29,425 - Small-Cap - ERROR - Failed to fetch data for MAA
+2025-11-18 16:43:29,425 - Small-Cap - ERROR - Failed to prepare data for MAA
+2025-11-18 16:43:29,425 - Small-Cap - INFO - Processing LYB with smart caching...
+2025-11-18 16:43:29,434 - Small-Cap - ERROR - Error checking existing data for LYB: [Errno 2] No such file or directory: '.\\dataset-cache\\LYB_data.csv'
+2025-11-18 16:43:29,436 - Small-Cap - INFO - Fetching all data for LYB (none existing)
+2025-11-18 16:43:29,438 - Small-Cap - INFO - Fetching LYB data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:29,862 - Small-Cap - ERROR - Error fetching data for LYB: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:29,872 - Small-Cap - ERROR - Failed to fetch data for LYB
+2025-11-18 16:43:29,877 - Small-Cap - ERROR - Failed to prepare data for LYB
+2025-11-18 16:43:29,883 - Small-Cap - INFO - Processing NWSA with smart caching...
+2025-11-18 16:43:29,888 - Small-Cap - ERROR - Error checking existing data for NWSA: [Errno 2] No such file or directory: '.\\dataset-cache\\NWSA_data.csv'
+2025-11-18 16:43:29,895 - Small-Cap - INFO - Fetching all data for NWSA (none existing)
+2025-11-18 16:43:29,899 - Small-Cap - INFO - Fetching NWSA data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:30,381 - Small-Cap - ERROR - Error fetching data for NWSA: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:30,393 - Small-Cap - ERROR - Failed to fetch data for NWSA
+2025-11-18 16:43:30,402 - Small-Cap - ERROR - Failed to prepare data for NWSA
+2025-11-18 16:43:30,404 - Small-Cap - INFO - Processing JBHT with smart caching...
+2025-11-18 16:43:30,410 - Small-Cap - ERROR - Error checking existing data for JBHT: [Errno 2] No such file or directory: '.\\dataset-cache\\JBHT_data.csv'
+2025-11-18 16:43:30,418 - Small-Cap - INFO - Fetching all data for JBHT (none existing)
+2025-11-18 16:43:30,420 - Small-Cap - INFO - Fetching JBHT data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:30,823 - Small-Cap - ERROR - Error fetching data for JBHT: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:30,828 - Small-Cap - ERROR - Failed to fetch data for JBHT
+2025-11-18 16:43:30,837 - Small-Cap - ERROR - Failed to prepare data for JBHT
+2025-11-18 16:43:30,843 - Small-Cap - INFO - Processing BBY with smart caching...
+2025-11-18 16:43:30,849 - Small-Cap - ERROR - Error checking existing data for BBY: [Errno 2] No such file or directory: '.\\dataset-cache\\BBY_data.csv'
+2025-11-18 16:43:30,850 - Small-Cap - INFO - Fetching all data for BBY (none existing)
+2025-11-18 16:43:30,860 - Small-Cap - INFO - Fetching BBY data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:31,247 - Small-Cap - ERROR - Error fetching data for BBY: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:31,256 - Small-Cap - ERROR - Failed to fetch data for BBY
+2025-11-18 16:43:31,262 - Small-Cap - ERROR - Failed to prepare data for BBY
+2025-11-18 16:43:31,266 - Small-Cap - INFO - Processing IFF with smart caching...
+2025-11-18 16:43:31,268 - Small-Cap - ERROR - Error checking existing data for IFF: [Errno 2] No such file or directory: '.\\dataset-cache\\IFF_data.csv'
+2025-11-18 16:43:31,277 - Small-Cap - INFO - Fetching all data for IFF (none existing)
+2025-11-18 16:43:31,282 - Small-Cap - INFO - Fetching IFF data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:31,741 - Small-Cap - ERROR - Error fetching data for IFF: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:31,751 - Small-Cap - ERROR - Failed to fetch data for IFF
+2025-11-18 16:43:31,760 - Small-Cap - ERROR - Failed to prepare data for IFF
+2025-11-18 16:43:31,760 - Small-Cap - INFO - Processing WST with smart caching...
+2025-11-18 16:43:31,768 - Small-Cap - ERROR - Error checking existing data for WST: [Errno 2] No such file or directory: '.\\dataset-cache\\WST_data.csv'
+2025-11-18 16:43:31,774 - Small-Cap - INFO - Fetching all data for WST (none existing)
+2025-11-18 16:43:31,776 - Small-Cap - INFO - Fetching WST data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:32,184 - Small-Cap - ERROR - Error fetching data for WST: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:32,191 - Small-Cap - ERROR - Failed to fetch data for WST
+2025-11-18 16:43:32,196 - Small-Cap - ERROR - Failed to prepare data for WST
+2025-11-18 16:43:32,201 - Small-Cap - INFO - Processing IP with smart caching...
+2025-11-18 16:43:32,207 - Small-Cap - ERROR - Error checking existing data for IP: [Errno 2] No such file or directory: '.\\dataset-cache\\IP_data.csv'
+2025-11-18 16:43:32,207 - Small-Cap - INFO - Fetching all data for IP (none existing)
+2025-11-18 16:43:32,229 - Small-Cap - INFO - Fetching IP data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:32,687 - Small-Cap - ERROR - Error fetching data for IP: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:32,695 - Small-Cap - ERROR - Failed to fetch data for IP
+2025-11-18 16:43:32,695 - Small-Cap - ERROR - Failed to prepare data for IP
+2025-11-18 16:43:32,703 - Small-Cap - INFO - Processing LNT with smart caching...
+2025-11-18 16:43:32,708 - Small-Cap - ERROR - Error checking existing data for LNT: [Errno 2] No such file or directory: '.\\dataset-cache\\LNT_data.csv'
+2025-11-18 16:43:32,713 - Small-Cap - INFO - Fetching all data for LNT (none existing)
+2025-11-18 16:43:32,717 - Small-Cap - INFO - Fetching LNT data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:33,135 - Small-Cap - ERROR - Error fetching data for LNT: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:33,143 - Small-Cap - ERROR - Failed to fetch data for LNT
+2025-11-18 16:43:33,146 - Small-Cap - ERROR - Failed to prepare data for LNT
+2025-11-18 16:43:33,154 - Small-Cap - INFO - Processing NVR with smart caching...
+2025-11-18 16:43:33,160 - Small-Cap - ERROR - Error checking existing data for NVR: [Errno 2] No such file or directory: '.\\dataset-cache\\NVR_data.csv'
+2025-11-18 16:43:33,160 - Small-Cap - INFO - Fetching all data for NVR (none existing)
+2025-11-18 16:43:33,169 - Small-Cap - INFO - Fetching NVR data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:33,614 - Small-Cap - ERROR - Error fetching data for NVR: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:33,622 - Small-Cap - ERROR - Failed to fetch data for NVR
+2025-11-18 16:43:33,628 - Small-Cap - ERROR - Failed to prepare data for NVR
+2025-11-18 16:43:33,633 - Small-Cap - INFO - Processing CHRW with smart caching...
+2025-11-18 16:43:33,634 - Small-Cap - ERROR - Error checking existing data for CHRW: [Errno 2] No such file or directory: '.\\dataset-cache\\CHRW_data.csv'
+2025-11-18 16:43:33,642 - Small-Cap - INFO - Fetching all data for CHRW (none existing)
+2025-11-18 16:43:33,650 - Small-Cap - INFO - Fetching CHRW data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:34,072 - Small-Cap - ERROR - Error fetching data for CHRW: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:34,080 - Small-Cap - ERROR - Failed to fetch data for CHRW
+2025-11-18 16:43:34,084 - Small-Cap - ERROR - Failed to prepare data for CHRW
+2025-11-18 16:43:34,090 - Small-Cap - INFO - Processing DRI with smart caching...
+2025-11-18 16:43:34,096 - Small-Cap - ERROR - Error checking existing data for DRI: [Errno 2] No such file or directory: '.\\dataset-cache\\DRI_data.csv'
+2025-11-18 16:43:34,101 - Small-Cap - INFO - Fetching all data for DRI (none existing)
+2025-11-18 16:43:34,106 - Small-Cap - INFO - Fetching DRI data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:34,521 - Small-Cap - ERROR - Error fetching data for DRI: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:34,526 - Small-Cap - ERROR - Failed to fetch data for DRI
+2025-11-18 16:43:34,535 - Small-Cap - ERROR - Failed to prepare data for DRI
+2025-11-18 16:43:34,540 - Small-Cap - INFO - Processing TYL with smart caching...
+2025-11-18 16:43:34,544 - Small-Cap - ERROR - Error checking existing data for TYL: [Errno 2] No such file or directory: '.\\dataset-cache\\TYL_data.csv'
+2025-11-18 16:43:34,551 - Small-Cap - INFO - Fetching all data for TYL (none existing)
+2025-11-18 16:43:34,557 - Small-Cap - INFO - Fetching TYL data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:34,965 - Small-Cap - ERROR - Error fetching data for TYL: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:34,976 - Small-Cap - ERROR - Failed to fetch data for TYL
+2025-11-18 16:43:34,981 - Small-Cap - ERROR - Failed to prepare data for TYL
+2025-11-18 16:43:34,985 - Small-Cap - INFO - Processing PTC with smart caching...
+2025-11-18 16:43:34,992 - Small-Cap - ERROR - Error checking existing data for PTC: [Errno 2] No such file or directory: '.\\dataset-cache\\PTC_data.csv'
+2025-11-18 16:43:34,997 - Small-Cap - INFO - Fetching all data for PTC (none existing)
+2025-11-18 16:43:34,999 - Small-Cap - INFO - Fetching PTC data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:35,400 - Small-Cap - ERROR - Error fetching data for PTC: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:35,410 - Small-Cap - ERROR - Failed to fetch data for PTC
+2025-11-18 16:43:35,412 - Small-Cap - ERROR - Failed to prepare data for PTC
+2025-11-18 16:43:35,420 - Small-Cap - INFO - Processing INCY with smart caching...
+2025-11-18 16:43:35,425 - Small-Cap - ERROR - Error checking existing data for INCY: [Errno 2] No such file or directory: '.\\dataset-cache\\INCY_data.csv'
+2025-11-18 16:43:35,430 - Small-Cap - INFO - Fetching all data for INCY (none existing)
+2025-11-18 16:43:35,437 - Small-Cap - INFO - Fetching INCY data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:35,860 - Small-Cap - ERROR - Error fetching data for INCY: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:35,868 - Small-Cap - ERROR - Failed to fetch data for INCY
+2025-11-18 16:43:35,870 - Small-Cap - ERROR - Failed to prepare data for INCY
+2025-11-18 16:43:35,878 - Small-Cap - INFO - Processing TRMB with smart caching...
+2025-11-18 16:43:35,879 - Small-Cap - ERROR - Error checking existing data for TRMB: [Errno 2] No such file or directory: '.\\dataset-cache\\TRMB_data.csv'
+2025-11-18 16:43:35,889 - Small-Cap - INFO - Fetching all data for TRMB (none existing)
+2025-11-18 16:43:35,894 - Small-Cap - INFO - Fetching TRMB data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:36,309 - Small-Cap - ERROR - Error fetching data for TRMB: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:36,314 - Small-Cap - ERROR - Failed to fetch data for TRMB
+2025-11-18 16:43:36,322 - Small-Cap - ERROR - Failed to prepare data for TRMB
+2025-11-18 16:43:36,330 - Small-Cap - INFO - Processing PHM with smart caching...
+2025-11-18 16:43:36,335 - Small-Cap - ERROR - Error checking existing data for PHM: [Errno 2] No such file or directory: '.\\dataset-cache\\PHM_data.csv'
+2025-11-18 16:43:36,341 - Small-Cap - INFO - Fetching all data for PHM (none existing)
+2025-11-18 16:43:36,346 - Small-Cap - INFO - Fetching PHM data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:36,792 - Small-Cap - ERROR - Error fetching data for PHM: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:36,799 - Small-Cap - ERROR - Failed to fetch data for PHM
+2025-11-18 16:43:36,805 - Small-Cap - ERROR - Failed to prepare data for PHM
+2025-11-18 16:43:36,810 - Small-Cap - INFO - Processing NTAP with smart caching...
+2025-11-18 16:43:36,814 - Small-Cap - ERROR - Error checking existing data for NTAP: [Errno 2] No such file or directory: '.\\dataset-cache\\NTAP_data.csv'
+2025-11-18 16:43:36,814 - Small-Cap - INFO - Fetching all data for NTAP (none existing)
+2025-11-18 16:43:36,825 - Small-Cap - INFO - Fetching NTAP data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:37,282 - Small-Cap - ERROR - Error fetching data for NTAP: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:37,297 - Small-Cap - ERROR - Failed to fetch data for NTAP
+2025-11-18 16:43:37,301 - Small-Cap - ERROR - Failed to prepare data for NTAP
+2025-11-18 16:43:37,306 - Small-Cap - INFO - Processing CFG with smart caching...
+2025-11-18 16:43:37,311 - Small-Cap - ERROR - Error checking existing data for CFG: [Errno 2] No such file or directory: '.\\dataset-cache\\CFG_data.csv'
+2025-11-18 16:43:37,315 - Small-Cap - INFO - Fetching all data for CFG (none existing)
+2025-11-18 16:43:37,321 - Small-Cap - INFO - Fetching CFG data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:37,753 - Small-Cap - ERROR - Error fetching data for CFG: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:37,763 - Small-Cap - ERROR - Failed to fetch data for CFG
+2025-11-18 16:43:37,768 - Small-Cap - ERROR - Failed to prepare data for CFG
+2025-11-18 16:43:37,773 - Small-Cap - INFO - Processing SMCI with smart caching...
+2025-11-18 16:43:37,777 - Small-Cap - ERROR - Error checking existing data for SMCI: [Errno 2] No such file or directory: '.\\dataset-cache\\SMCI_data.csv'
+2025-11-18 16:43:37,782 - Small-Cap - INFO - Fetching all data for SMCI (none existing)
+2025-11-18 16:43:37,787 - Small-Cap - INFO - Fetching SMCI data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:38,221 - Small-Cap - ERROR - Error fetching data for SMCI: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:38,229 - Small-Cap - ERROR - Failed to fetch data for SMCI
+2025-11-18 16:43:38,234 - Small-Cap - ERROR - Failed to prepare data for SMCI
+2025-11-18 16:43:38,236 - Small-Cap - INFO - Processing HPQ with smart caching...
+2025-11-18 16:43:38,244 - Small-Cap - ERROR - Error checking existing data for HPQ: [Errno 2] No such file or directory: '.\\dataset-cache\\HPQ_data.csv'
+2025-11-18 16:43:38,248 - Small-Cap - INFO - Fetching all data for HPQ (none existing)
+2025-11-18 16:43:38,255 - Small-Cap - INFO - Fetching HPQ data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:38,675 - Small-Cap - ERROR - Error fetching data for HPQ: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:38,685 - Small-Cap - ERROR - Failed to fetch data for HPQ
+2025-11-18 16:43:38,691 - Small-Cap - ERROR - Failed to prepare data for HPQ
+2025-11-18 16:43:38,698 - Small-Cap - INFO - Processing WAT with smart caching...
+2025-11-18 16:43:38,703 - Small-Cap - ERROR - Error checking existing data for WAT: [Errno 2] No such file or directory: '.\\dataset-cache\\WAT_data.csv'
+2025-11-18 16:43:38,708 - Small-Cap - INFO - Fetching all data for WAT (none existing)
+2025-11-18 16:43:38,714 - Small-Cap - INFO - Fetching WAT data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:39,166 - Small-Cap - ERROR - Error fetching data for WAT: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:39,176 - Small-Cap - ERROR - Failed to fetch data for WAT
+2025-11-18 16:43:39,181 - Small-Cap - ERROR - Failed to prepare data for WAT
+2025-11-18 16:43:39,190 - Small-Cap - INFO - Processing PPG with smart caching...
+2025-11-18 16:43:39,196 - Small-Cap - ERROR - Error checking existing data for PPG: [Errno 2] No such file or directory: '.\\dataset-cache\\PPG_data.csv'
+2025-11-18 16:43:39,198 - Small-Cap - INFO - Fetching all data for PPG (none existing)
+2025-11-18 16:43:39,208 - Small-Cap - INFO - Fetching PPG data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:39,630 - Small-Cap - ERROR - Error fetching data for PPG: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:39,641 - Small-Cap - ERROR - Failed to fetch data for PPG
+2025-11-18 16:43:39,642 - Small-Cap - ERROR - Failed to prepare data for PPG
+2025-11-18 16:43:39,651 - Small-Cap - INFO - Processing LH with smart caching...
+2025-11-18 16:43:39,655 - Small-Cap - ERROR - Error checking existing data for LH: [Errno 2] No such file or directory: '.\\dataset-cache\\LH_data.csv'
+2025-11-18 16:43:39,660 - Small-Cap - INFO - Fetching all data for LH (none existing)
+2025-11-18 16:43:39,664 - Small-Cap - INFO - Fetching LH data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:40,079 - Small-Cap - ERROR - Error fetching data for LH: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:40,087 - Small-Cap - ERROR - Failed to fetch data for LH
+2025-11-18 16:43:40,089 - Small-Cap - ERROR - Failed to prepare data for LH
+2025-11-18 16:43:40,097 - Small-Cap - INFO - Processing NTRS with smart caching...
+2025-11-18 16:43:40,103 - Small-Cap - ERROR - Error checking existing data for NTRS: [Errno 2] No such file or directory: '.\\dataset-cache\\NTRS_data.csv'
+2025-11-18 16:43:40,105 - Small-Cap - INFO - Fetching all data for NTRS (none existing)
+2025-11-18 16:43:40,113 - Small-Cap - INFO - Fetching NTRS data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:40,536 - Small-Cap - ERROR - Error fetching data for NTRS: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:40,544 - Small-Cap - ERROR - Failed to fetch data for NTRS
+2025-11-18 16:43:40,548 - Small-Cap - ERROR - Failed to prepare data for NTRS
+2025-11-18 16:43:40,552 - Small-Cap - INFO - Processing TROW with smart caching...
+2025-11-18 16:43:40,558 - Small-Cap - ERROR - Error checking existing data for TROW: [Errno 2] No such file or directory: '.\\dataset-cache\\TROW_data.csv'
+2025-11-18 16:43:40,558 - Small-Cap - INFO - Fetching all data for TROW (none existing)
+2025-11-18 16:43:40,570 - Small-Cap - INFO - Fetching TROW data [1993-11-16 - 2025-09-30]
+2025-11-18 16:43:41,045 - Small-Cap - ERROR - Error fetching data for TROW: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 16:43:41,054 - Small-Cap - ERROR - Failed to fetch data for TROW
+2025-11-18 16:43:41,059 - Small-Cap - ERROR - Failed to prepare data for TROW
+2025-11-18 16:43:41,064 - Small-Cap - INFO - Successfully prepared data for 0 tickers

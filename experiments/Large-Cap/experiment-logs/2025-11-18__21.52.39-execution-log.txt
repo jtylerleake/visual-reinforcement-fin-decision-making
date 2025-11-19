@@ -1,0 +1,115 @@
+2025-11-18 21:52:39,450 - Large-Cap - INFO - Loaded configuration for experiment: Large-Cap
+2025-11-18 21:52:39,461 - Large-Cap - INFO - Data manager initialized with directory: .\dataset-cache
+2025-11-18 21:52:39,513 - Large-Cap - INFO - Adjusted fetch date to 1993-11-16
+2025-11-18 21:52:39,513 - Large-Cap - INFO - Processing AEP with smart caching...
+2025-11-18 21:52:39,520 - Large-Cap - ERROR - Error checking existing data for AEP: [Errno 2] No such file or directory: '.\\dataset-cache\\AEP_data.csv'
+2025-11-18 21:52:39,523 - Large-Cap - INFO - Fetching all data for AEP (none existing)
+2025-11-18 21:52:39,529 - Large-Cap - INFO - Fetching AEP data [1993-11-16 - 2025-09-30]
+2025-11-18 21:52:41,089 - Large-Cap - ERROR - Error fetching data for AEP: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 21:52:41,108 - Large-Cap - ERROR - Failed to fetch data for AEP
+2025-11-18 21:52:41,116 - Large-Cap - ERROR - Failed to prepare data for AEP
+2025-11-18 21:52:41,122 - Large-Cap - INFO - Processing RCL with smart caching...
+2025-11-18 21:52:41,127 - Large-Cap - ERROR - Error checking existing data for RCL: [Errno 2] No such file or directory: '.\\dataset-cache\\RCL_data.csv'
+2025-11-18 21:52:41,132 - Large-Cap - INFO - Fetching all data for RCL (none existing)
+2025-11-18 21:52:41,132 - Large-Cap - INFO - Fetching RCL data [1993-11-16 - 2025-09-30]
+2025-11-18 21:52:43,614 - Large-Cap - ERROR - Error fetching data for RCL: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 21:52:43,631 - Large-Cap - ERROR - Failed to fetch data for RCL
+2025-11-18 21:52:43,635 - Large-Cap - ERROR - Failed to prepare data for RCL
+2025-11-18 21:52:43,640 - Large-Cap - INFO - Processing RSG with smart caching...
+2025-11-18 21:52:43,645 - Large-Cap - ERROR - Error checking existing data for RSG: [Errno 2] No such file or directory: '.\\dataset-cache\\RSG_data.csv'
+2025-11-18 21:52:43,652 - Large-Cap - INFO - Fetching all data for RSG (none existing)
+2025-11-18 21:52:43,656 - Large-Cap - INFO - Fetching RSG data [1993-11-16 - 2025-09-30]
+2025-11-18 21:52:44,538 - Large-Cap - ERROR - Error fetching data for RSG: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 21:52:44,544 - Large-Cap - ERROR - Failed to fetch data for RSG
+2025-11-18 21:52:44,544 - Large-Cap - ERROR - Failed to prepare data for RSG
+2025-11-18 21:52:44,554 - Large-Cap - INFO - Processing SNPS with smart caching...
+2025-11-18 21:52:45,358 - Large-Cap - INFO - Fetching incremental data for SNPS
+2025-11-18 21:52:45,362 - Large-Cap - INFO - Fetching incremental data for SNPS: (1993-11-16 to 2003-10-31) and (2024-12-30 to 2025-09-30)
+2025-11-18 21:52:45,364 - Large-Cap - INFO - Fetching SNPS data [1993-11-16 - 2003-10-31]
+2025-11-18 21:52:46,224 - Large-Cap - ERROR - Error fetching data for SNPS: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 21:52:46,230 - Large-Cap - WARNING - No price data fetched for SNPS pre_period (1993-11-16 to 2003-10-31)
+2025-11-18 21:52:46,234 - Large-Cap - INFO - Fetching SNPS data [2024-12-30 - 2025-09-30]
+2025-11-18 21:52:46,975 - Large-Cap - ERROR - Error fetching data for SNPS: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 21:52:46,991 - Large-Cap - WARNING - No price data fetched for SNPS post_period (2024-12-30 to 2025-09-30)
+2025-11-18 21:52:46,991 - Large-Cap - WARNING - No new data fetched for SNPS
+2025-11-18 21:52:47,311 - Large-Cap - INFO - Data saved to .\dataset-cache\SNPS_data.csv
+2025-11-18 21:52:47,324 - Large-Cap - INFO - Updated and saved data for SNPS
+2025-11-18 21:52:47,330 - Large-Cap - INFO - Processing AZO with smart caching...
+2025-11-18 21:52:47,475 - Large-Cap - INFO - Fetching incremental data for AZO
+2025-11-18 21:52:47,488 - Large-Cap - INFO - "Fetching incremental data for AZO: (1993-11-16 to 1999-11-01)
+2025-11-18 21:52:47,489 - Large-Cap - INFO - Fetching AZO data [1993-11-16 - 1999-11-01]
+2025-11-18 21:52:48,384 - Large-Cap - ERROR - Error fetching data for AZO: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 21:52:48,395 - Large-Cap - WARNING - No price data fetched for AZO pre_period (1993-11-16 to 1999-11-01)
+2025-11-18 21:52:48,402 - Large-Cap - WARNING - No new data fetched for AZO
+2025-11-18 21:52:48,651 - Large-Cap - INFO - Data saved to .\dataset-cache\AZO_data.csv
+2025-11-18 21:52:48,668 - Large-Cap - INFO - Updated and saved data for AZO
+2025-11-18 21:52:48,677 - Large-Cap - INFO - Processing WMB with smart caching...
+2025-11-18 21:52:48,859 - Large-Cap - INFO - Fetching incremental data for WMB
+2025-11-18 21:52:48,859 - Large-Cap - INFO - "Fetching incremental data for WMB: (1993-11-16 to 1999-11-01)
+2025-11-18 21:52:48,859 - Large-Cap - INFO - Fetching WMB data [1993-11-16 - 1999-11-01]
+2025-11-18 21:52:49,645 - Large-Cap - ERROR - Error fetching data for WMB: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 21:52:49,653 - Large-Cap - WARNING - No price data fetched for WMB pre_period (1993-11-16 to 1999-11-01)
+2025-11-18 21:52:49,658 - Large-Cap - WARNING - No new data fetched for WMB
+2025-11-18 21:52:49,866 - Large-Cap - INFO - Data saved to .\dataset-cache\WMB_data.csv
+2025-11-18 21:52:49,871 - Large-Cap - INFO - Updated and saved data for WMB
+2025-11-18 21:52:49,871 - Large-Cap - INFO - Processing TRV with smart caching...
+2025-11-18 21:52:50,019 - Large-Cap - INFO - Fetching incremental data for TRV
+2025-11-18 21:52:50,023 - Large-Cap - INFO - "Fetching incremental data for TRV: (1993-11-16 to 1999-11-01)
+2025-11-18 21:52:50,028 - Large-Cap - INFO - Fetching TRV data [1993-11-16 - 1999-11-01]
+2025-11-18 21:52:51,085 - Large-Cap - ERROR - Error fetching data for TRV: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 21:52:51,101 - Large-Cap - WARNING - No price data fetched for TRV pre_period (1993-11-16 to 1999-11-01)
+2025-11-18 21:52:51,101 - Large-Cap - WARNING - No new data fetched for TRV
+2025-11-18 21:52:51,340 - Large-Cap - INFO - Data saved to .\dataset-cache\TRV_data.csv
+2025-11-18 21:52:51,340 - Large-Cap - INFO - Updated and saved data for TRV
+2025-11-18 21:52:51,356 - Large-Cap - INFO - Processing EMR with smart caching...
+2025-11-18 21:52:51,483 - Large-Cap - INFO - Fetching incremental data for EMR
+2025-11-18 21:52:51,484 - Large-Cap - INFO - "Fetching incremental data for EMR: (1993-11-16 to 1999-11-01)
+2025-11-18 21:52:51,484 - Large-Cap - INFO - Fetching EMR data [1993-11-16 - 1999-11-01]
+2025-11-18 21:52:52,224 - Large-Cap - ERROR - Error fetching data for EMR: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 21:52:52,239 - Large-Cap - WARNING - No price data fetched for EMR pre_period (1993-11-16 to 1999-11-01)
+2025-11-18 21:52:52,239 - Large-Cap - WARNING - No new data fetched for EMR
+2025-11-18 21:52:52,526 - Large-Cap - INFO - Data saved to .\dataset-cache\EMR_data.csv
+2025-11-18 21:52:52,526 - Large-Cap - INFO - Updated and saved data for EMR
+2025-11-18 21:52:52,542 - Large-Cap - INFO - Processing APO with smart caching...
+2025-11-18 21:52:52,782 - Large-Cap - INFO - Fetching incremental data for APO
+2025-11-18 21:52:52,782 - Large-Cap - INFO - "Fetching incremental data for APO: (1993-11-16 to 2011-03-30)
+2025-11-18 21:52:52,782 - Large-Cap - INFO - Fetching APO data [1993-11-16 - 2011-03-30]
+2025-11-18 21:52:53,629 - Large-Cap - ERROR - Error fetching data for APO: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 21:52:53,637 - Large-Cap - WARNING - No price data fetched for APO pre_period (1993-11-16 to 2011-03-30)
+2025-11-18 21:52:53,646 - Large-Cap - WARNING - No new data fetched for APO
+2025-11-18 21:52:53,851 - Large-Cap - INFO - Data saved to .\dataset-cache\APO_data.csv
+2025-11-18 21:52:53,851 - Large-Cap - INFO - Updated and saved data for APO
+2025-11-18 21:52:53,857 - Large-Cap - INFO - Processing CI with smart caching...
+2025-11-18 21:52:54,468 - Large-Cap - INFO - Fetching incremental data for CI
+2025-11-18 21:52:54,468 - Large-Cap - INFO - "Fetching incremental data for CI: (1993-11-16 to 1999-11-01)
+2025-11-18 21:52:54,468 - Large-Cap - INFO - Fetching CI data [1993-11-16 - 1999-11-01]
+2025-11-18 21:52:55,184 - Large-Cap - ERROR - Error fetching data for CI: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 21:52:55,193 - Large-Cap - WARNING - No price data fetched for CI pre_period (1993-11-16 to 1999-11-01)
+2025-11-18 21:52:55,197 - Large-Cap - WARNING - No new data fetched for CI
+2025-11-18 21:52:55,373 - Large-Cap - INFO - Data saved to .\dataset-cache\CI_data.csv
+2025-11-18 21:52:55,381 - Large-Cap - INFO - Updated and saved data for CI
+2025-11-18 21:52:55,386 - Large-Cap - INFO - Processing KKR with smart caching...
+2025-11-18 21:52:55,646 - Large-Cap - INFO - Fetching incremental data for KKR
+2025-11-18 21:52:55,651 - Large-Cap - INFO - "Fetching incremental data for KKR: (1993-11-16 to 2010-07-15)
+2025-11-18 21:52:55,654 - Large-Cap - INFO - Fetching KKR data [1993-11-16 - 2010-07-15]
+2025-11-18 21:52:56,548 - Large-Cap - ERROR - Error fetching data for KKR: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 21:52:56,557 - Large-Cap - WARNING - No price data fetched for KKR pre_period (1993-11-16 to 2010-07-15)
+2025-11-18 21:52:56,562 - Large-Cap - WARNING - No new data fetched for KKR
+2025-11-18 21:52:56,710 - Large-Cap - INFO - Data saved to .\dataset-cache\KKR_data.csv
+2025-11-18 21:52:56,712 - Large-Cap - INFO - Updated and saved data for KKR
+2025-11-18 21:52:56,716 - Large-Cap - INFO - Processing MMC with smart caching...
+2025-11-18 21:52:56,822 - Large-Cap - INFO - Fetching incremental data for MMC
+2025-11-18 21:52:56,830 - Large-Cap - INFO - "Fetching incremental data for MMC: (1993-11-16 to 1999-11-01)
+2025-11-18 21:52:56,833 - Large-Cap - INFO - Fetching MMC data [1993-11-16 - 1999-11-01]
+2025-11-18 21:52:57,966 - Large-Cap - ERROR - Error fetching data for MMC: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 21:52:57,984 - Large-Cap - WARNING - No price data fetched for MMC pre_period (1993-11-16 to 1999-11-01)
+2025-11-18 21:52:57,986 - Large-Cap - WARNING - No new data fetched for MMC
+2025-11-18 21:52:58,126 - Large-Cap - INFO - Data saved to .\dataset-cache\MMC_data.csv
+2025-11-18 21:52:58,131 - Large-Cap - INFO - Updated and saved data for MMC
+2025-11-18 21:52:58,135 - Large-Cap - INFO - Processing CDNS with smart caching...
+2025-11-18 21:52:58,264 - Large-Cap - INFO - Fetching incremental data for CDNS
+2025-11-18 21:52:58,273 - Large-Cap - INFO - "Fetching incremental data for CDNS: (1993-11-16 to 1999-11-01)
+2025-11-18 21:52:58,275 - Large-Cap - INFO - Fetching CDNS data [1993-11-16 - 1999-11-01]
+2025-11-18 21:52:59,233 - Large-Cap - ERROR - Error fetching data for CDNS: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 21:52:59,240 - Large-Cap - WARNING - No price data fetched for CDNS pre_period (1993-11-16 to 1999-11-01)
+2025-11-18 21:52:59,244 - Large-Cap - WARNING - No new data fetched for CDNS

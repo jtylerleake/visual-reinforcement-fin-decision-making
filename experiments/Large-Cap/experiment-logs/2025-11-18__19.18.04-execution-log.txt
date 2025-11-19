@@ -1,0 +1,405 @@
+2025-11-18 19:18:04,835 - Large-Cap - INFO - Loaded configuration for experiment: Large-Cap
+2025-11-18 19:18:04,839 - Large-Cap - INFO - Data manager initialized with directory: .\dataset-cache
+2025-11-18 19:18:04,840 - Large-Cap - INFO - Using Alpha Vantage API for data fetching
+2025-11-18 19:18:04,911 - Large-Cap - INFO - Adjusted fetch date to 1993-11-16
+2025-11-18 19:18:04,912 - Large-Cap - INFO - Processing AEP with smart caching...
+2025-11-18 19:18:04,918 - Large-Cap - ERROR - Error checking existing data for AEP: [Errno 2] No such file or directory: '.\\dataset-cache\\AEP_data.csv'
+2025-11-18 19:18:04,919 - Large-Cap - INFO - Fetching all data for AEP (none existing)
+2025-11-18 19:18:04,922 - Large-Cap - INFO - Fetching AEP data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 19:18:05,475 - Large-Cap - INFO - Successfully fetched 6518 records for AEP
+2025-11-18 19:18:05,540 - Large-Cap - INFO - Calculated technical indicators for 6518 records
+2025-11-18 19:18:05,578 - Large-Cap - INFO - Data validation passed
+2025-11-18 19:18:05,662 - Large-Cap - INFO - Data saved to .\dataset-cache\AEP_data.csv
+2025-11-18 19:18:05,664 - Large-Cap - INFO - Fetched and saved data for AEP
+2025-11-18 19:18:05,668 - Large-Cap - INFO - Processing RCL with smart caching...
+2025-11-18 19:18:05,971 - Large-Cap - INFO - Fetching incremental data for RCL
+2025-11-18 19:18:05,973 - Large-Cap - INFO - Fetching incremental data for RCL: (1993-11-16 to 2003-10-31) and (2024-12-30 to 2025-09-30)
+2025-11-18 19:18:05,974 - Large-Cap - INFO - Fetching RCL data [1993-11-16 - 2003-10-31] from Alpha Vantage
+2025-11-18 19:18:06,407 - Large-Cap - INFO - Successfully fetched 1006 records for RCL
+2025-11-18 19:18:06,446 - Large-Cap - INFO - Calculated technical indicators for 1006 records
+2025-11-18 19:18:06,460 - Large-Cap - INFO - Fetched 1006 records for RCLpre_period (1993-11-16 to 2003-10-31)
+2025-11-18 19:18:06,463 - Large-Cap - INFO - Fetching RCL data [2024-12-30 - 2025-09-30] from Alpha Vantage
+2025-11-18 19:18:06,777 - Large-Cap - INFO - Successfully fetched 188 records for RCL
+2025-11-18 19:18:06,810 - Large-Cap - INFO - Calculated technical indicators for 188 records
+2025-11-18 19:18:06,824 - Large-Cap - INFO - Fetched 188 records for RCLpost_period (2024-12-30 to 2025-09-30)
+2025-11-18 19:18:06,828 - Large-Cap - INFO - Successfully fetched 1194 records for RCL
+2025-11-18 19:18:06,842 - Large-Cap - INFO - Fetched 1194 new records for RCL
+2025-11-18 19:18:06,878 - Large-Cap - ERROR - Error merging data: Cannot compare tz-naive and tz-aware timestamps
+2025-11-18 19:18:06,979 - Large-Cap - INFO - Data saved to .\dataset-cache\RCL_data.csv
+2025-11-18 19:18:06,980 - Large-Cap - INFO - Updated and saved data for RCL
+2025-11-18 19:18:06,986 - Large-Cap - INFO - Processing RSG with smart caching...
+2025-11-18 19:18:06,988 - Large-Cap - ERROR - Error checking existing data for RSG: [Errno 2] No such file or directory: '.\\dataset-cache\\RSG_data.csv'
+2025-11-18 19:18:06,989 - Large-Cap - INFO - Fetching all data for RSG (none existing)
+2025-11-18 19:18:06,990 - Large-Cap - INFO - Fetching RSG data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 19:18:07,408 - Large-Cap - INFO - Successfully fetched 6518 records for RSG
+2025-11-18 19:18:07,452 - Large-Cap - INFO - Calculated technical indicators for 6518 records
+2025-11-18 19:18:07,486 - Large-Cap - INFO - Data validation passed
+2025-11-18 19:18:07,562 - Large-Cap - INFO - Data saved to .\dataset-cache\RSG_data.csv
+2025-11-18 19:18:07,563 - Large-Cap - INFO - Fetched and saved data for RSG
+2025-11-18 19:18:07,566 - Large-Cap - INFO - Processing SNPS with smart caching...
+2025-11-18 19:18:07,860 - Large-Cap - INFO - Fetching incremental data for SNPS
+2025-11-18 19:18:07,861 - Large-Cap - INFO - Fetching incremental data for SNPS: (1993-11-16 to 2003-10-31) and (2024-12-30 to 2025-09-30)
+2025-11-18 19:18:07,864 - Large-Cap - INFO - Fetching SNPS data [1993-11-16 - 2003-10-31] from Alpha Vantage
+2025-11-18 19:18:08,202 - Large-Cap - INFO - Successfully fetched 1006 records for SNPS
+2025-11-18 19:18:08,241 - Large-Cap - INFO - Calculated technical indicators for 1006 records
+2025-11-18 19:18:08,260 - Large-Cap - INFO - Fetched 1006 records for SNPSpre_period (1993-11-16 to 2003-10-31)
+2025-11-18 19:19:05,923 - Large-Cap - INFO - Fetching SNPS data [2024-12-30 - 2025-09-30] from Alpha Vantage
+2025-11-18 19:19:06,447 - Large-Cap - INFO - Successfully fetched 188 records for SNPS
+2025-11-18 19:19:06,545 - Large-Cap - INFO - Calculated technical indicators for 188 records
+2025-11-18 19:19:06,609 - Large-Cap - INFO - Fetched 188 records for SNPSpost_period (2024-12-30 to 2025-09-30)
+2025-11-18 19:19:06,621 - Large-Cap - INFO - Successfully fetched 1194 records for SNPS
+2025-11-18 19:19:06,681 - Large-Cap - INFO - Fetched 1194 new records for SNPS
+2025-11-18 19:19:06,738 - Large-Cap - ERROR - Error merging data: Cannot compare tz-naive and tz-aware timestamps
+2025-11-18 19:19:06,834 - Large-Cap - INFO - Data saved to .\dataset-cache\SNPS_data.csv
+2025-11-18 19:19:06,836 - Large-Cap - INFO - Updated and saved data for SNPS
+2025-11-18 19:19:06,841 - Large-Cap - INFO - Processing AZO with smart caching...
+2025-11-18 19:19:06,843 - Large-Cap - ERROR - Error checking existing data for AZO: [Errno 2] No such file or directory: '.\\dataset-cache\\AZO_data.csv'
+2025-11-18 19:19:06,844 - Large-Cap - INFO - Fetching all data for AZO (none existing)
+2025-11-18 19:19:06,845 - Large-Cap - INFO - Fetching AZO data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 19:19:07,329 - Large-Cap - INFO - Successfully fetched 6518 records for AZO
+2025-11-18 19:19:07,366 - Large-Cap - INFO - Calculated technical indicators for 6518 records
+2025-11-18 19:19:07,394 - Large-Cap - INFO - Data validation passed
+2025-11-18 19:19:07,470 - Large-Cap - INFO - Data saved to .\dataset-cache\AZO_data.csv
+2025-11-18 19:19:07,472 - Large-Cap - INFO - Fetched and saved data for AZO
+2025-11-18 19:19:07,474 - Large-Cap - INFO - Processing WMB with smart caching...
+2025-11-18 19:19:07,476 - Large-Cap - ERROR - Error checking existing data for WMB: [Errno 2] No such file or directory: '.\\dataset-cache\\WMB_data.csv'
+2025-11-18 19:19:07,477 - Large-Cap - INFO - Fetching all data for WMB (none existing)
+2025-11-18 19:19:07,479 - Large-Cap - INFO - Fetching WMB data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 19:19:07,971 - Large-Cap - INFO - Successfully fetched 6518 records for WMB
+2025-11-18 19:19:08,002 - Large-Cap - INFO - Calculated technical indicators for 6518 records
+2025-11-18 19:19:08,037 - Large-Cap - INFO - Data validation passed
+2025-11-18 19:19:08,111 - Large-Cap - INFO - Data saved to .\dataset-cache\WMB_data.csv
+2025-11-18 19:19:08,113 - Large-Cap - INFO - Fetched and saved data for WMB
+2025-11-18 19:19:08,115 - Large-Cap - INFO - Processing TRV with smart caching...
+2025-11-18 19:19:08,118 - Large-Cap - ERROR - Error checking existing data for TRV: [Errno 2] No such file or directory: '.\\dataset-cache\\TRV_data.csv'
+2025-11-18 19:19:08,119 - Large-Cap - INFO - Fetching all data for TRV (none existing)
+2025-11-18 19:19:08,121 - Large-Cap - INFO - Fetching TRV data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 19:19:08,398 - Large-Cap - INFO - Successfully fetched 6518 records for TRV
+2025-11-18 19:19:08,426 - Large-Cap - INFO - Calculated technical indicators for 6518 records
+2025-11-18 19:19:08,456 - Large-Cap - INFO - Data validation passed
+2025-11-18 19:19:08,526 - Large-Cap - INFO - Data saved to .\dataset-cache\TRV_data.csv
+2025-11-18 19:19:08,527 - Large-Cap - INFO - Fetched and saved data for TRV
+2025-11-18 19:19:08,529 - Large-Cap - INFO - Processing EMR with smart caching...
+2025-11-18 19:19:08,530 - Large-Cap - ERROR - Error checking existing data for EMR: [Errno 2] No such file or directory: '.\\dataset-cache\\EMR_data.csv'
+2025-11-18 19:19:08,533 - Large-Cap - INFO - Fetching all data for EMR (none existing)
+2025-11-18 19:19:08,533 - Large-Cap - INFO - Fetching EMR data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 19:19:08,913 - Large-Cap - INFO - Successfully fetched 6518 records for EMR
+2025-11-18 19:19:08,944 - Large-Cap - INFO - Calculated technical indicators for 6518 records
+2025-11-18 19:19:08,975 - Large-Cap - INFO - Data validation passed
+2025-11-18 19:19:09,044 - Large-Cap - INFO - Data saved to .\dataset-cache\EMR_data.csv
+2025-11-18 19:19:09,045 - Large-Cap - INFO - Fetched and saved data for EMR
+2025-11-18 19:19:09,047 - Large-Cap - INFO - Processing APO with smart caching...
+2025-11-18 19:19:09,049 - Large-Cap - ERROR - Error checking existing data for APO: [Errno 2] No such file or directory: '.\\dataset-cache\\APO_data.csv'
+2025-11-18 19:19:09,050 - Large-Cap - INFO - Fetching all data for APO (none existing)
+2025-11-18 19:20:06,924 - Large-Cap - INFO - Fetching APO data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 19:20:07,398 - Large-Cap - INFO - Successfully fetched 3648 records for APO
+2025-11-18 19:20:07,584 - Large-Cap - INFO - Calculated technical indicators for 3648 records
+2025-11-18 19:20:07,751 - Large-Cap - INFO - Data validation passed
+2025-11-18 19:20:07,928 - Large-Cap - INFO - Data saved to .\dataset-cache\APO_data.csv
+2025-11-18 19:20:07,931 - Large-Cap - INFO - Fetched and saved data for APO
+2025-11-18 19:20:07,933 - Large-Cap - INFO - Processing CI with smart caching...
+2025-11-18 19:20:07,938 - Large-Cap - ERROR - Error checking existing data for CI: [Errno 2] No such file or directory: '.\\dataset-cache\\CI_data.csv'
+2025-11-18 19:20:07,941 - Large-Cap - INFO - Fetching all data for CI (none existing)
+2025-11-18 19:20:07,943 - Large-Cap - INFO - Fetching CI data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 19:20:08,491 - Large-Cap - INFO - Successfully fetched 6518 records for CI
+2025-11-18 19:20:08,567 - Large-Cap - INFO - Calculated technical indicators for 6518 records
+2025-11-18 19:20:08,626 - Large-Cap - INFO - Data validation passed
+2025-11-18 19:20:08,741 - Large-Cap - INFO - Data saved to .\dataset-cache\CI_data.csv
+2025-11-18 19:20:08,743 - Large-Cap - INFO - Fetched and saved data for CI
+2025-11-18 19:20:08,746 - Large-Cap - INFO - Processing KKR with smart caching...
+2025-11-18 19:20:08,770 - Large-Cap - ERROR - Error checking existing data for KKR: [Errno 2] No such file or directory: '.\\dataset-cache\\KKR_data.csv'
+2025-11-18 19:20:08,771 - Large-Cap - INFO - Fetching all data for KKR (none existing)
+2025-11-18 19:20:08,774 - Large-Cap - INFO - Fetching KKR data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 19:20:09,047 - Large-Cap - INFO - Successfully fetched 3827 records for KKR
+2025-11-18 19:20:09,097 - Large-Cap - INFO - Calculated technical indicators for 3827 records
+2025-11-18 19:20:09,138 - Large-Cap - INFO - Data validation passed
+2025-11-18 19:20:09,219 - Large-Cap - INFO - Data saved to .\dataset-cache\KKR_data.csv
+2025-11-18 19:20:09,221 - Large-Cap - INFO - Fetched and saved data for KKR
+2025-11-18 19:20:09,223 - Large-Cap - INFO - Processing MMC with smart caching...
+2025-11-18 19:20:09,226 - Large-Cap - ERROR - Error checking existing data for MMC: [Errno 2] No such file or directory: '.\\dataset-cache\\MMC_data.csv'
+2025-11-18 19:20:09,227 - Large-Cap - INFO - Fetching all data for MMC (none existing)
+2025-11-18 19:20:09,230 - Large-Cap - INFO - Fetching MMC data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 19:20:09,544 - Large-Cap - INFO - Successfully fetched 6518 records for MMC
+2025-11-18 19:20:09,581 - Large-Cap - INFO - Calculated technical indicators for 6518 records
+2025-11-18 19:20:09,615 - Large-Cap - INFO - Data validation passed
+2025-11-18 19:20:09,699 - Large-Cap - INFO - Data saved to .\dataset-cache\MMC_data.csv
+2025-11-18 19:20:09,699 - Large-Cap - INFO - Fetched and saved data for MMC
+2025-11-18 19:20:09,705 - Large-Cap - INFO - Processing CDNS with smart caching...
+2025-11-18 19:20:09,708 - Large-Cap - ERROR - Error checking existing data for CDNS: [Errno 2] No such file or directory: '.\\dataset-cache\\CDNS_data.csv'
+2025-11-18 19:20:09,709 - Large-Cap - INFO - Fetching all data for CDNS (none existing)
+2025-11-18 19:20:09,711 - Large-Cap - INFO - Fetching CDNS data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 19:20:10,071 - Large-Cap - INFO - Successfully fetched 6518 records for CDNS
+2025-11-18 19:20:10,101 - Large-Cap - INFO - Calculated technical indicators for 6518 records
+2025-11-18 19:20:10,131 - Large-Cap - INFO - Data validation passed
+2025-11-18 19:20:10,206 - Large-Cap - INFO - Data saved to .\dataset-cache\CDNS_data.csv
+2025-11-18 19:20:10,207 - Large-Cap - INFO - Fetched and saved data for CDNS
+2025-11-18 19:20:10,210 - Large-Cap - INFO - Processing NEM with smart caching...
+2025-11-18 19:20:10,211 - Large-Cap - ERROR - Error checking existing data for NEM: [Errno 2] No such file or directory: '.\\dataset-cache\\NEM_data.csv'
+2025-11-18 19:20:10,213 - Large-Cap - INFO - Fetching all data for NEM (none existing)
+2025-11-18 19:21:07,925 - Large-Cap - INFO - Fetching NEM data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 19:21:08,447 - Large-Cap - INFO - Successfully fetched 6518 records for NEM
+2025-11-18 19:21:08,477 - Large-Cap - INFO - Calculated technical indicators for 6518 records
+2025-11-18 19:21:08,506 - Large-Cap - INFO - Data validation passed
+2025-11-18 19:21:08,578 - Large-Cap - INFO - Data saved to .\dataset-cache\NEM_data.csv
+2025-11-18 19:21:08,580 - Large-Cap - INFO - Fetched and saved data for NEM
+2025-11-18 19:21:08,582 - Large-Cap - INFO - Processing CME with smart caching...
+2025-11-18 19:21:08,586 - Large-Cap - ERROR - Error checking existing data for CME: [Errno 2] No such file or directory: '.\\dataset-cache\\CME_data.csv'
+2025-11-18 19:21:08,587 - Large-Cap - INFO - Fetching all data for CME (none existing)
+2025-11-18 19:21:08,588 - Large-Cap - INFO - Fetching CME data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 19:21:08,931 - Large-Cap - INFO - Successfully fetched 5740 records for CME
+2025-11-18 19:21:08,979 - Large-Cap - INFO - Calculated technical indicators for 5740 records
+2025-11-18 19:21:09,027 - Large-Cap - INFO - Data validation passed
+2025-11-18 19:21:09,097 - Large-Cap - INFO - Data saved to .\dataset-cache\CME_data.csv
+2025-11-18 19:21:09,098 - Large-Cap - INFO - Fetched and saved data for CME
+2025-11-18 19:21:09,101 - Large-Cap - INFO - Processing ORLY with smart caching...
+2025-11-18 19:21:09,104 - Large-Cap - ERROR - Error checking existing data for ORLY: [Errno 2] No such file or directory: '.\\dataset-cache\\ORLY_data.csv'
+2025-11-18 19:21:09,106 - Large-Cap - INFO - Fetching all data for ORLY (none existing)
+2025-11-18 19:21:09,107 - Large-Cap - INFO - Fetching ORLY data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 19:21:09,483 - Large-Cap - INFO - Successfully fetched 6518 records for ORLY
+2025-11-18 19:21:09,554 - Large-Cap - INFO - Calculated technical indicators for 6518 records
+2025-11-18 19:21:09,629 - Large-Cap - INFO - Data validation passed
+2025-11-18 19:21:09,729 - Large-Cap - INFO - Data saved to .\dataset-cache\ORLY_data.csv
+2025-11-18 19:21:09,731 - Large-Cap - INFO - Fetched and saved data for ORLY
+2025-11-18 19:21:09,734 - Large-Cap - INFO - Processing AMT with smart caching...
+2025-11-18 19:21:09,736 - Large-Cap - ERROR - Error checking existing data for AMT: [Errno 2] No such file or directory: '.\\dataset-cache\\AMT_data.csv'
+2025-11-18 19:21:09,737 - Large-Cap - INFO - Fetching all data for AMT (none existing)
+2025-11-18 19:21:09,739 - Large-Cap - INFO - Fetching AMT data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 19:21:10,167 - Large-Cap - INFO - Successfully fetched 6518 records for AMT
+2025-11-18 19:21:10,218 - Large-Cap - INFO - Calculated technical indicators for 6518 records
+2025-11-18 19:21:10,269 - Large-Cap - INFO - Data validation passed
+2025-11-18 19:21:10,384 - Large-Cap - INFO - Data saved to .\dataset-cache\AMT_data.csv
+2025-11-18 19:21:10,385 - Large-Cap - INFO - Fetched and saved data for AMT
+2025-11-18 19:21:10,389 - Large-Cap - INFO - Processing GD with smart caching...
+2025-11-18 19:21:10,393 - Large-Cap - ERROR - Error checking existing data for GD: [Errno 2] No such file or directory: '.\\dataset-cache\\GD_data.csv'
+2025-11-18 19:21:10,395 - Large-Cap - INFO - Fetching all data for GD (none existing)
+2025-11-18 19:21:10,397 - Large-Cap - INFO - Fetching GD data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 19:21:10,781 - Large-Cap - INFO - Successfully fetched 6518 records for GD
+2025-11-18 19:21:10,809 - Large-Cap - INFO - Calculated technical indicators for 6518 records
+2025-11-18 19:21:17,116 - Large-Cap - INFO - Data validation passed
+2025-11-18 19:21:17,207 - Large-Cap - INFO - Data saved to .\dataset-cache\GD_data.csv
+2025-11-18 19:21:17,209 - Large-Cap - INFO - Fetched and saved data for GD
+2025-11-18 19:21:17,213 - Large-Cap - INFO - Processing TT with smart caching...
+2025-11-18 19:21:17,215 - Large-Cap - ERROR - Error checking existing data for TT: [Errno 2] No such file or directory: '.\\dataset-cache\\TT_data.csv'
+2025-11-18 19:21:17,217 - Large-Cap - INFO - Fetching all data for TT (none existing)
+2025-11-18 19:22:08,926 - Large-Cap - INFO - Fetching TT data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 19:22:09,711 - Large-Cap - INFO - Successfully fetched 6518 records for TT
+2025-11-18 19:22:09,818 - Large-Cap - INFO - Calculated technical indicators for 6518 records
+2025-11-18 19:22:09,943 - Large-Cap - INFO - Data validation passed
+2025-11-18 19:22:10,179 - Large-Cap - INFO - Data saved to .\dataset-cache\TT_data.csv
+2025-11-18 19:22:10,181 - Large-Cap - INFO - Fetched and saved data for TT
+2025-11-18 19:22:10,183 - Large-Cap - INFO - Processing SO with smart caching...
+2025-11-18 19:22:10,184 - Large-Cap - ERROR - Error checking existing data for SO: [Errno 2] No such file or directory: '.\\dataset-cache\\SO_data.csv'
+2025-11-18 19:22:10,187 - Large-Cap - INFO - Fetching all data for SO (none existing)
+2025-11-18 19:22:10,188 - Large-Cap - INFO - Fetching SO data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 19:22:10,524 - Large-Cap - INFO - Successfully fetched 6518 records for SO
+2025-11-18 19:22:10,578 - Large-Cap - INFO - Calculated technical indicators for 6518 records
+2025-11-18 19:22:10,629 - Large-Cap - INFO - Data validation passed
+2025-11-18 19:22:10,725 - Large-Cap - INFO - Data saved to .\dataset-cache\SO_data.csv
+2025-11-18 19:22:10,727 - Large-Cap - INFO - Fetched and saved data for SO
+2025-11-18 19:22:10,730 - Large-Cap - INFO - Processing HON with smart caching...
+2025-11-18 19:22:10,732 - Large-Cap - ERROR - Error checking existing data for HON: [Errno 2] No such file or directory: '.\\dataset-cache\\HON_data.csv'
+2025-11-18 19:22:10,734 - Large-Cap - INFO - Fetching all data for HON (none existing)
+2025-11-18 19:22:10,735 - Large-Cap - INFO - Fetching HON data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 19:22:11,307 - Large-Cap - INFO - Successfully fetched 6518 records for HON
+2025-11-18 19:22:11,389 - Large-Cap - INFO - Calculated technical indicators for 6518 records
+2025-11-18 19:22:11,461 - Large-Cap - INFO - Data validation passed
+2025-11-18 19:22:11,595 - Large-Cap - INFO - Data saved to .\dataset-cache\HON_data.csv
+2025-11-18 19:22:11,596 - Large-Cap - INFO - Fetched and saved data for HON
+2025-11-18 19:22:11,599 - Large-Cap - INFO - Processing SYK with smart caching...
+2025-11-18 19:22:11,602 - Large-Cap - ERROR - Error checking existing data for SYK: [Errno 2] No such file or directory: '.\\dataset-cache\\SYK_data.csv'
+2025-11-18 19:22:11,604 - Large-Cap - INFO - Fetching all data for SYK (none existing)
+2025-11-18 19:22:11,606 - Large-Cap - INFO - Fetching SYK data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 19:22:12,038 - Large-Cap - INFO - Successfully fetched 6518 records for SYK
+2025-11-18 19:22:12,159 - Large-Cap - INFO - Calculated technical indicators for 6518 records
+2025-11-18 19:22:12,301 - Large-Cap - INFO - Data validation passed
+2025-11-18 19:22:12,438 - Large-Cap - INFO - Data saved to .\dataset-cache\SYK_data.csv
+2025-11-18 19:22:12,440 - Large-Cap - INFO - Fetched and saved data for SYK
+2025-11-18 19:22:12,443 - Large-Cap - INFO - Processing WELL with smart caching...
+2025-11-18 19:22:12,444 - Large-Cap - ERROR - Error checking existing data for WELL: [Errno 2] No such file or directory: '.\\dataset-cache\\WELL_data.csv'
+2025-11-18 19:22:12,445 - Large-Cap - INFO - Fetching all data for WELL (none existing)
+2025-11-18 19:22:12,446 - Large-Cap - INFO - Fetching WELL data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 19:22:12,885 - Large-Cap - INFO - Successfully fetched 6211 records for WELL
+2025-11-18 19:22:12,997 - Large-Cap - INFO - Calculated technical indicators for 6211 records
+2025-11-18 19:22:13,131 - Large-Cap - INFO - Data validation passed
+2025-11-18 19:22:13,328 - Large-Cap - INFO - Data saved to .\dataset-cache\WELL_data.csv
+2025-11-18 19:22:13,331 - Large-Cap - INFO - Fetched and saved data for WELL
+2025-11-18 19:22:13,336 - Large-Cap - INFO - Processing PANW with smart caching...
+2025-11-18 19:22:13,339 - Large-Cap - ERROR - Error checking existing data for PANW: [Errno 2] No such file or directory: '.\\dataset-cache\\PANW_data.csv'
+2025-11-18 19:22:13,342 - Large-Cap - INFO - Fetching all data for PANW (none existing)
+2025-11-18 19:23:09,927 - Large-Cap - INFO - Fetching PANW data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 19:23:10,455 - Large-Cap - INFO - Successfully fetched 3318 records for PANW
+2025-11-18 19:23:10,517 - Large-Cap - INFO - Calculated technical indicators for 3318 records
+2025-11-18 19:23:10,580 - Large-Cap - INFO - Data validation passed
+2025-11-18 19:23:10,676 - Large-Cap - INFO - Data saved to .\dataset-cache\PANW_data.csv
+2025-11-18 19:23:10,679 - Large-Cap - INFO - Fetched and saved data for PANW
+2025-11-18 19:23:10,683 - Large-Cap - INFO - Processing DHR with smart caching...
+2025-11-18 19:23:10,686 - Large-Cap - ERROR - Error checking existing data for DHR: [Errno 2] No such file or directory: '.\\dataset-cache\\DHR_data.csv'
+2025-11-18 19:23:10,689 - Large-Cap - INFO - Fetching all data for DHR (none existing)
+2025-11-18 19:23:10,690 - Large-Cap - INFO - Fetching DHR data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 19:23:10,812 - Large-Cap - ERROR - Error fetching data for DHR: We have detected your API key as Y9EJACE06U0N9CNV and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.
+2025-11-18 19:23:10,815 - Large-Cap - ERROR - Failed to fetch data for DHR
+2025-11-18 19:23:10,819 - Large-Cap - ERROR - Failed to prepare data for DHR
+2025-11-18 19:23:10,821 - Large-Cap - INFO - Processing HCA with smart caching...
+2025-11-18 19:23:10,823 - Large-Cap - ERROR - Error checking existing data for HCA: [Errno 2] No such file or directory: '.\\dataset-cache\\HCA_data.csv'
+2025-11-18 19:23:10,825 - Large-Cap - INFO - Fetching all data for HCA (none existing)
+2025-11-18 19:23:10,825 - Large-Cap - INFO - Fetching HCA data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 19:23:10,943 - Large-Cap - ERROR - Error fetching data for HCA: We have detected your API key as Y9EJACE06U0N9CNV and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.
+2025-11-18 19:23:10,948 - Large-Cap - ERROR - Failed to fetch data for HCA
+2025-11-18 19:23:10,949 - Large-Cap - ERROR - Failed to prepare data for HCA
+2025-11-18 19:23:10,950 - Large-Cap - INFO - Processing GILD with smart caching...
+2025-11-18 19:23:10,951 - Large-Cap - ERROR - Error checking existing data for GILD: [Errno 2] No such file or directory: '.\\dataset-cache\\GILD_data.csv'
+2025-11-18 19:23:10,954 - Large-Cap - INFO - Fetching all data for GILD (none existing)
+2025-11-18 19:23:12,607 - Large-Cap - INFO - Fetching GILD data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 19:23:12,891 - Large-Cap - ERROR - Error fetching data for GILD: We have detected your API key as Y9EJACE06U0N9CNV and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.
+2025-11-18 19:23:12,906 - Large-Cap - ERROR - Failed to fetch data for GILD
+2025-11-18 19:23:12,913 - Large-Cap - ERROR - Failed to prepare data for GILD
+2025-11-18 19:23:12,919 - Large-Cap - INFO - Processing TXN with smart caching...
+2025-11-18 19:23:12,927 - Large-Cap - ERROR - Error checking existing data for TXN: [Errno 2] No such file or directory: '.\\dataset-cache\\TXN_data.csv'
+2025-11-18 19:23:12,935 - Large-Cap - INFO - Fetching all data for TXN (none existing)
+2025-11-18 19:23:12,941 - Large-Cap - INFO - Fetching TXN data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 19:23:13,183 - Large-Cap - ERROR - Error fetching data for TXN: We have detected your API key as Y9EJACE06U0N9CNV and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.
+2025-11-18 19:23:13,189 - Large-Cap - ERROR - Failed to fetch data for TXN
+2025-11-18 19:23:13,190 - Large-Cap - ERROR - Failed to prepare data for TXN
+2025-11-18 19:23:13,191 - Large-Cap - INFO - Processing PLD with smart caching...
+2025-11-18 19:23:13,194 - Large-Cap - ERROR - Error checking existing data for PLD: [Errno 2] No such file or directory: '.\\dataset-cache\\PLD_data.csv'
+2025-11-18 19:23:13,194 - Large-Cap - INFO - Fetching all data for PLD (none existing)
+2025-11-18 19:24:10,927 - Large-Cap - INFO - Fetching PLD data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 19:24:11,083 - Large-Cap - ERROR - Error fetching data for PLD: We have detected your API key as Y9EJACE06U0N9CNV and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.
+2025-11-18 19:24:11,088 - Large-Cap - ERROR - Failed to fetch data for PLD
+2025-11-18 19:24:11,090 - Large-Cap - ERROR - Failed to prepare data for PLD
+2025-11-18 19:24:11,090 - Large-Cap - INFO - Processing GEV with smart caching...
+2025-11-18 19:24:11,093 - Large-Cap - ERROR - Error checking existing data for GEV: [Errno 2] No such file or directory: '.\\dataset-cache\\GEV_data.csv'
+2025-11-18 19:24:11,093 - Large-Cap - INFO - Fetching all data for GEV (none existing)
+2025-11-18 19:24:11,096 - Large-Cap - INFO - Fetching GEV data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 19:24:11,207 - Large-Cap - ERROR - Error fetching data for GEV: We have detected your API key as Y9EJACE06U0N9CNV and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.
+2025-11-18 19:24:11,218 - Large-Cap - ERROR - Failed to fetch data for GEV
+2025-11-18 19:24:11,223 - Large-Cap - ERROR - Failed to prepare data for GEV
+2025-11-18 19:24:11,230 - Large-Cap - INFO - Processing GS with smart caching...
+2025-11-18 19:24:11,240 - Large-Cap - ERROR - Error checking existing data for GS: [Errno 2] No such file or directory: '.\\dataset-cache\\GS_data.csv'
+2025-11-18 19:24:11,248 - Large-Cap - INFO - Fetching all data for GS (none existing)
+2025-11-18 19:24:11,254 - Large-Cap - INFO - Fetching GS data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 19:24:11,555 - Large-Cap - ERROR - Error fetching data for GS: We have detected your API key as Y9EJACE06U0N9CNV and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.
+2025-11-18 19:24:11,568 - Large-Cap - ERROR - Failed to fetch data for GS
+2025-11-18 19:24:11,576 - Large-Cap - ERROR - Failed to prepare data for GS
+2025-11-18 19:24:11,582 - Large-Cap - INFO - Processing DIS with smart caching...
+2025-11-18 19:24:11,590 - Large-Cap - ERROR - Error checking existing data for DIS: [Errno 2] No such file or directory: '.\\dataset-cache\\DIS_data.csv'
+2025-11-18 19:24:11,597 - Large-Cap - INFO - Fetching all data for DIS (none existing)
+2025-11-18 19:24:13,608 - Large-Cap - INFO - Fetching DIS data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 19:24:13,711 - Large-Cap - ERROR - Error fetching data for DIS: We have detected your API key as Y9EJACE06U0N9CNV and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.
+2025-11-18 19:24:13,720 - Large-Cap - ERROR - Failed to fetch data for DIS
+2025-11-18 19:24:13,722 - Large-Cap - ERROR - Failed to prepare data for DIS
+2025-11-18 19:24:13,725 - Large-Cap - INFO - Processing ABT with smart caching...
+2025-11-18 19:24:13,727 - Large-Cap - ERROR - Error checking existing data for ABT: [Errno 2] No such file or directory: '.\\dataset-cache\\ABT_data.csv'
+2025-11-18 19:24:13,731 - Large-Cap - INFO - Fetching all data for ABT (none existing)
+2025-11-18 19:24:13,733 - Large-Cap - INFO - Fetching ABT data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 19:24:13,890 - Large-Cap - ERROR - Error fetching data for ABT: We have detected your API key as Y9EJACE06U0N9CNV and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.
+2025-11-18 19:24:13,909 - Large-Cap - ERROR - Failed to fetch data for ABT
+2025-11-18 19:24:13,914 - Large-Cap - ERROR - Failed to prepare data for ABT
+2025-11-18 19:24:13,922 - Large-Cap - INFO - Processing PM with smart caching...
+2025-11-18 19:24:13,927 - Large-Cap - ERROR - Error checking existing data for PM: [Errno 2] No such file or directory: '.\\dataset-cache\\PM_data.csv'
+2025-11-18 19:24:13,935 - Large-Cap - INFO - Fetching all data for PM (none existing)
+2025-11-18 19:25:11,930 - Large-Cap - INFO - Fetching PM data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 19:25:12,135 - Large-Cap - ERROR - Error fetching data for PM: We have detected your API key as Y9EJACE06U0N9CNV and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.
+2025-11-18 19:25:12,152 - Large-Cap - ERROR - Failed to fetch data for PM
+2025-11-18 19:25:12,159 - Large-Cap - ERROR - Failed to prepare data for PM
+2025-11-18 19:25:12,167 - Large-Cap - INFO - Processing AMAT with smart caching...
+2025-11-18 19:25:12,176 - Large-Cap - ERROR - Error checking existing data for AMAT: [Errno 2] No such file or directory: '.\\dataset-cache\\AMAT_data.csv'
+2025-11-18 19:25:12,185 - Large-Cap - INFO - Fetching all data for AMAT (none existing)
+2025-11-18 19:25:12,192 - Large-Cap - INFO - Fetching AMAT data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 19:25:12,354 - Large-Cap - ERROR - Error fetching data for AMAT: We have detected your API key as Y9EJACE06U0N9CNV and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.
+2025-11-18 19:25:12,359 - Large-Cap - ERROR - Failed to fetch data for AMAT
+2025-11-18 19:25:12,361 - Large-Cap - ERROR - Failed to prepare data for AMAT
+2025-11-18 19:25:12,364 - Large-Cap - INFO - Processing TMO with smart caching...
+2025-11-18 19:25:12,367 - Large-Cap - ERROR - Error checking existing data for TMO: [Errno 2] No such file or directory: '.\\dataset-cache\\TMO_data.csv'
+2025-11-18 19:25:12,368 - Large-Cap - INFO - Fetching all data for TMO (none existing)
+2025-11-18 19:25:12,370 - Large-Cap - INFO - Fetching TMO data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 19:25:12,488 - Large-Cap - ERROR - Error fetching data for TMO: We have detected your API key as Y9EJACE06U0N9CNV and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.
+2025-11-18 19:25:12,501 - Large-Cap - ERROR - Failed to fetch data for TMO
+2025-11-18 19:25:12,507 - Large-Cap - ERROR - Failed to prepare data for TMO
+2025-11-18 19:25:12,512 - Large-Cap - INFO - Processing T with smart caching...
+2025-11-18 19:25:12,521 - Large-Cap - ERROR - Error checking existing data for T: [Errno 2] No such file or directory: '.\\dataset-cache\\T_data.csv'
+2025-11-18 19:25:12,529 - Large-Cap - INFO - Fetching all data for T (none existing)
+2025-11-18 19:25:14,608 - Large-Cap - INFO - Fetching T data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 19:25:14,828 - Large-Cap - ERROR - Error fetching data for T: We have detected your API key as Y9EJACE06U0N9CNV and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.
+2025-11-18 19:25:14,836 - Large-Cap - ERROR - Failed to fetch data for T
+2025-11-18 19:25:14,841 - Large-Cap - ERROR - Failed to prepare data for T
+2025-11-18 19:25:14,845 - Large-Cap - INFO - Processing AMGN with smart caching...
+2025-11-18 19:25:14,850 - Large-Cap - ERROR - Error checking existing data for AMGN: [Errno 2] No such file or directory: '.\\dataset-cache\\AMGN_data.csv'
+2025-11-18 19:25:14,854 - Large-Cap - INFO - Fetching all data for AMGN (none existing)
+2025-11-18 19:25:14,859 - Large-Cap - INFO - Fetching AMGN data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 19:25:14,976 - Large-Cap - ERROR - Error fetching data for AMGN: We have detected your API key as Y9EJACE06U0N9CNV and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.
+2025-11-18 19:25:14,981 - Large-Cap - ERROR - Failed to fetch data for AMGN
+2025-11-18 19:25:14,982 - Large-Cap - ERROR - Failed to prepare data for AMGN
+2025-11-18 19:25:14,984 - Large-Cap - INFO - Processing CAT with smart caching...
+2025-11-18 19:25:14,989 - Large-Cap - ERROR - Error checking existing data for CAT: [Errno 2] No such file or directory: '.\\dataset-cache\\CAT_data.csv'
+2025-11-18 19:25:14,995 - Large-Cap - INFO - Fetching all data for CAT (none existing)
+2025-11-18 19:26:12,930 - Large-Cap - INFO - Fetching CAT data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 19:26:13,038 - Large-Cap - ERROR - Error fetching data for CAT: We have detected your API key as Y9EJACE06U0N9CNV and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.
+2025-11-18 19:26:13,044 - Large-Cap - ERROR - Failed to fetch data for CAT
+2025-11-18 19:26:13,045 - Large-Cap - ERROR - Failed to prepare data for CAT
+2025-11-18 19:26:13,047 - Large-Cap - INFO - Processing LIN with smart caching...
+2025-11-18 19:26:13,049 - Large-Cap - ERROR - Error checking existing data for LIN: [Errno 2] No such file or directory: '.\\dataset-cache\\LIN_data.csv'
+2025-11-18 19:26:13,049 - Large-Cap - INFO - Fetching all data for LIN (none existing)
+2025-11-18 19:26:13,050 - Large-Cap - INFO - Fetching LIN data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 19:26:13,153 - Large-Cap - ERROR - Error fetching data for LIN: We have detected your API key as Y9EJACE06U0N9CNV and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.
+2025-11-18 19:26:13,157 - Large-Cap - ERROR - Failed to fetch data for LIN
+2025-11-18 19:26:13,158 - Large-Cap - ERROR - Failed to prepare data for LIN
+2025-11-18 19:26:13,161 - Large-Cap - INFO - Processing BRK.B with smart caching...
+2025-11-18 19:26:13,163 - Large-Cap - ERROR - Error checking existing data for BRK.B: [Errno 2] No such file or directory: '.\\dataset-cache\\BRK.B_data.csv'
+2025-11-18 19:26:13,164 - Large-Cap - INFO - Fetching all data for BRK.B (none existing)
+2025-11-18 19:26:13,165 - Large-Cap - INFO - Fetching BRK.B data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 19:26:13,334 - Large-Cap - ERROR - Error fetching data for BRK.B: We have detected your API key as Y9EJACE06U0N9CNV and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.
+2025-11-18 19:26:13,346 - Large-Cap - ERROR - Failed to fetch data for BRK.B
+2025-11-18 19:26:13,351 - Large-Cap - ERROR - Failed to prepare data for BRK.B
+2025-11-18 19:26:13,355 - Large-Cap - INFO - Processing NFLX with smart caching...
+2025-11-18 19:26:13,362 - Large-Cap - ERROR - Error checking existing data for NFLX: [Errno 2] No such file or directory: '.\\dataset-cache\\NFLX_data.csv'
+2025-11-18 19:26:13,367 - Large-Cap - INFO - Fetching all data for NFLX (none existing)
+2025-11-18 19:26:15,609 - Large-Cap - INFO - Fetching NFLX data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 19:26:15,768 - Large-Cap - ERROR - Error fetching data for NFLX: We have detected your API key as Y9EJACE06U0N9CNV and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.
+2025-11-18 19:26:15,772 - Large-Cap - ERROR - Failed to fetch data for NFLX
+2025-11-18 19:26:15,773 - Large-Cap - ERROR - Failed to prepare data for NFLX
+2025-11-18 19:26:15,774 - Large-Cap - INFO - Processing META with smart caching...
+2025-11-18 19:26:15,777 - Large-Cap - ERROR - Error checking existing data for META: [Errno 2] No such file or directory: '.\\dataset-cache\\META_data.csv'
+2025-11-18 19:26:15,778 - Large-Cap - INFO - Fetching all data for META (none existing)
+2025-11-18 19:26:15,778 - Large-Cap - INFO - Fetching META data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 19:26:15,878 - Large-Cap - ERROR - Error fetching data for META: We have detected your API key as Y9EJACE06U0N9CNV and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.
+2025-11-18 19:26:15,884 - Large-Cap - ERROR - Failed to fetch data for META
+2025-11-18 19:26:15,886 - Large-Cap - ERROR - Failed to prepare data for META
+2025-11-18 19:26:15,888 - Large-Cap - INFO - Processing ORCL with smart caching...
+2025-11-18 19:26:15,893 - Large-Cap - ERROR - Error checking existing data for ORCL: [Errno 2] No such file or directory: '.\\dataset-cache\\ORCL_data.csv'
+2025-11-18 19:26:15,895 - Large-Cap - INFO - Fetching all data for ORCL (none existing)
+2025-11-18 19:27:13,930 - Large-Cap - INFO - Fetching ORCL data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 19:27:14,088 - Large-Cap - ERROR - Error fetching data for ORCL: We have detected your API key as Y9EJACE06U0N9CNV and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.
+2025-11-18 19:27:14,101 - Large-Cap - ERROR - Failed to fetch data for ORCL
+2025-11-18 19:27:14,107 - Large-Cap - ERROR - Failed to prepare data for ORCL
+2025-11-18 19:27:14,113 - Large-Cap - INFO - Processing MU with smart caching...
+2025-11-18 19:27:14,120 - Large-Cap - ERROR - Error checking existing data for MU: [Errno 2] No such file or directory: '.\\dataset-cache\\MU_data.csv'
+2025-11-18 19:27:14,128 - Large-Cap - INFO - Fetching all data for MU (none existing)
+2025-11-18 19:27:14,136 - Large-Cap - INFO - Fetching MU data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 19:27:14,310 - Large-Cap - ERROR - Error fetching data for MU: We have detected your API key as Y9EJACE06U0N9CNV and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.
+2025-11-18 19:27:14,324 - Large-Cap - ERROR - Failed to fetch data for MU
+2025-11-18 19:27:14,328 - Large-Cap - ERROR - Failed to prepare data for MU
+2025-11-18 19:27:14,336 - Large-Cap - INFO - Processing WMT with smart caching...
+2025-11-18 19:27:14,343 - Large-Cap - ERROR - Error checking existing data for WMT: [Errno 2] No such file or directory: '.\\dataset-cache\\WMT_data.csv'
+2025-11-18 19:27:14,348 - Large-Cap - INFO - Fetching all data for WMT (none existing)
+2025-11-18 19:27:14,354 - Large-Cap - INFO - Fetching WMT data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 19:27:14,539 - Large-Cap - ERROR - Error fetching data for WMT: We have detected your API key as Y9EJACE06U0N9CNV and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.
+2025-11-18 19:27:14,543 - Large-Cap - ERROR - Failed to fetch data for WMT
+2025-11-18 19:27:14,544 - Large-Cap - ERROR - Failed to prepare data for WMT
+2025-11-18 19:27:14,546 - Large-Cap - INFO - Processing ABBV with smart caching...
+2025-11-18 19:27:14,547 - Large-Cap - ERROR - Error checking existing data for ABBV: [Errno 2] No such file or directory: '.\\dataset-cache\\ABBV_data.csv'
+2025-11-18 19:27:14,548 - Large-Cap - INFO - Fetching all data for ABBV (none existing)
+2025-11-18 19:27:16,610 - Large-Cap - INFO - Fetching ABBV data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 19:27:16,811 - Large-Cap - ERROR - Error fetching data for ABBV: We have detected your API key as Y9EJACE06U0N9CNV and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.
+2025-11-18 19:27:16,815 - Large-Cap - ERROR - Failed to fetch data for ABBV
+2025-11-18 19:27:16,816 - Large-Cap - ERROR - Failed to prepare data for ABBV
+2025-11-18 19:27:16,817 - Large-Cap - INFO - Processing WFC with smart caching...
+2025-11-18 19:27:16,818 - Large-Cap - ERROR - Error checking existing data for WFC: [Errno 2] No such file or directory: '.\\dataset-cache\\WFC_data.csv'
+2025-11-18 19:27:16,820 - Large-Cap - INFO - Fetching all data for WFC (none existing)
+2025-11-18 19:27:16,821 - Large-Cap - INFO - Fetching WFC data [1993-11-16 - 2025-09-30] from Alpha Vantage
+2025-11-18 19:27:16,926 - Large-Cap - ERROR - Error fetching data for WFC: We have detected your API key as Y9EJACE06U0N9CNV and our standard API rate limit is 25 requests per day. Please subscribe to any of the premium plans at https://www.alphavantage.co/premium/ to instantly remove all daily rate limits.
+2025-11-18 19:27:16,935 - Large-Cap - ERROR - Failed to fetch data for WFC
+2025-11-18 19:27:16,938 - Large-Cap - ERROR - Failed to prepare data for WFC
+2025-11-18 19:27:16,942 - Large-Cap - INFO - Processing AAPL with smart caching...
+2025-11-18 19:27:16,946 - Large-Cap - ERROR - Error checking existing data for AAPL: [Errno 2] No such file or directory: '.\\dataset-cache\\AAPL_data.csv'
+2025-11-18 19:27:16,950 - Large-Cap - INFO - Fetching all data for AAPL (none existing)

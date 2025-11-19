@@ -1,0 +1,135 @@
+2025-11-18 19:16:24,965 - Development - INFO - Initialized GAF Pipeline with 8 tickers
+2025-11-18 19:16:24,970 - Development - INFO - Initialized GAF Pipeline with 2 tickers
+2025-11-18 19:16:24,972 - Development - INFO - Building GAF pipeline (data already loaded)...
+2025-11-18 19:16:24,974 - Development - INFO - Step 1: Building GAF dataset...
+2025-11-18 19:16:24,978 - Development - INFO - Building GAF dataset
+2025-11-18 19:16:24,980 - Development - INFO - Pre-fitting GAF transformer...
+2025-11-18 19:16:24,982 - Development - INFO - GAF transformer pre-fitted successfully
+2025-11-18 19:16:24,985 - Development - INFO - Processing GAF transformation for ADI
+2025-11-18 19:16:24,995 - Development - INFO - Performing GAF transformation on 11976 windows...
+2025-11-18 19:16:25,111 - Development - INFO - Created 1497 GAF sequences
+2025-11-18 19:16:25,116 - Development - INFO - Created 1497 GAF sequences for ADI
+2025-11-18 19:16:25,118 - Development - INFO - Processing GAF transformation for AMZN
+2025-11-18 19:16:25,130 - Development - INFO - Performing GAF transformation on 11976 windows...
+2025-11-18 19:16:25,239 - Development - INFO - Created 1497 GAF sequences
+2025-11-18 19:16:25,245 - Development - INFO - Created 1497 GAF sequences for AMZN
+2025-11-18 19:16:25,247 - Development - INFO - Processing GAF transformation for ABBV
+2025-11-18 19:16:25,256 - Development - INFO - Performing GAF transformation on 11976 windows...
+2025-11-18 19:16:25,355 - Development - INFO - Created 1497 GAF sequences
+2025-11-18 19:16:25,361 - Development - INFO - Created 1497 GAF sequences for ABBV
+2025-11-18 19:16:25,363 - Development - INFO - Processing GAF transformation for ADP
+2025-11-18 19:16:25,372 - Development - INFO - Performing GAF transformation on 11976 windows...
+2025-11-18 19:16:25,470 - Development - INFO - Created 1497 GAF sequences
+2025-11-18 19:16:25,476 - Development - INFO - Created 1497 GAF sequences for ADP
+2025-11-18 19:16:25,477 - Development - INFO - Processing GAF transformation for AMAT
+2025-11-18 19:16:25,487 - Development - INFO - Performing GAF transformation on 11976 windows...
+2025-11-18 19:16:25,583 - Development - INFO - Created 1497 GAF sequences
+2025-11-18 19:16:25,587 - Development - INFO - Created 1497 GAF sequences for AMAT
+2025-11-18 19:16:25,591 - Development - INFO - Processing GAF transformation for ABT
+2025-11-18 19:16:25,599 - Development - INFO - Performing GAF transformation on 11976 windows...
+2025-11-18 19:16:25,694 - Development - INFO - Created 1497 GAF sequences
+2025-11-18 19:16:25,700 - Development - INFO - Created 1497 GAF sequences for ABT
+2025-11-18 19:16:25,702 - Development - INFO - Processing GAF transformation for A
+2025-11-18 19:16:25,710 - Development - INFO - Performing GAF transformation on 11976 windows...
+2025-11-18 19:16:25,810 - Development - INFO - Created 1497 GAF sequences
+2025-11-18 19:16:25,814 - Development - INFO - Created 1497 GAF sequences for A
+2025-11-18 19:16:25,816 - Development - INFO - Processing GAF transformation for AAPL
+2025-11-18 19:16:25,825 - Development - INFO - Performing GAF transformation on 11976 windows...
+2025-11-18 19:16:25,936 - Development - INFO - Created 1497 GAF sequences
+2025-11-18 19:16:25,942 - Development - INFO - Created 1497 GAF sequences for AAPL
+2025-11-18 19:16:25,945 - Development - INFO - Successfully created GAF data for 8 tickers
+2025-11-18 19:16:25,947 - Development - INFO - Step 2: Creating trading environments...
+2025-11-18 19:16:25,950 - Development - INFO - Creating individual trading environments
+2025-11-18 19:16:25,953 - Development - INFO - Creating environment for ADI
+2025-11-18 19:16:25,971 - Development - INFO - Created environment for ADI
+2025-11-18 19:16:25,972 - Development - INFO - Creating environment for AMZN
+2025-11-18 19:16:25,989 - Development - INFO - Created environment for AMZN
+2025-11-18 19:16:25,992 - Development - INFO - Creating environment for ABBV
+2025-11-18 19:16:26,011 - Development - INFO - Created environment for ABBV
+2025-11-18 19:16:26,014 - Development - INFO - Creating environment for ADP
+2025-11-18 19:16:26,034 - Development - INFO - Created environment for ADP
+2025-11-18 19:16:26,036 - Development - INFO - Creating environment for AMAT
+2025-11-18 19:16:26,055 - Development - INFO - Created environment for AMAT
+2025-11-18 19:16:26,057 - Development - INFO - Creating environment for ABT
+2025-11-18 19:16:26,079 - Development - INFO - Created environment for ABT
+2025-11-18 19:16:26,083 - Development - INFO - Creating environment for A
+2025-11-18 19:16:26,103 - Development - INFO - Created environment for A
+2025-11-18 19:16:26,106 - Development - INFO - Creating environment for AAPL
+2025-11-18 19:16:26,129 - Development - INFO - Created environment for AAPL
+2025-11-18 19:16:26,132 - Development - INFO - Successfully created 8 environments
+2025-11-18 19:16:26,135 - Development - INFO - Step 3: Creating vectorized environment...
+2025-11-18 19:16:26,137 - Development - INFO - Creating vectorized environment with 8 single stock environments
+2025-11-18 19:16:26,143 - Development - INFO - Successfully created vectorized environment with 8 environments
+2025-11-18 19:16:26,146 - Development - INFO - GAF pipeline built successfully
+2025-11-18 19:16:26,149 - Development - INFO - Successfully created training environment with 8 environments
+2025-11-18 19:16:26,153 - Development - INFO - Building GAF pipeline (data already loaded)...
+2025-11-18 19:16:26,156 - Development - INFO - Step 1: Building GAF dataset...
+2025-11-18 19:16:26,161 - Development - INFO - Building GAF dataset
+2025-11-18 19:16:26,164 - Development - INFO - Pre-fitting GAF transformer...
+2025-11-18 19:16:26,167 - Development - INFO - GAF transformer pre-fitted successfully
+2025-11-18 19:16:26,172 - Development - INFO - Processing GAF transformation for ACN
+2025-11-18 19:16:26,182 - Development - INFO - Performing GAF transformation on 11976 windows...
+2025-11-18 19:16:26,310 - Development - INFO - Created 1497 GAF sequences
+2025-11-18 19:16:26,317 - Development - INFO - Created 1497 GAF sequences for ACN
+2025-11-18 19:16:26,321 - Development - INFO - Processing GAF transformation for ADBE
+2025-11-18 19:16:26,332 - Development - INFO - Performing GAF transformation on 11976 windows...
+2025-11-18 19:16:26,484 - Development - INFO - Created 1497 GAF sequences
+2025-11-18 19:16:26,493 - Development - INFO - Created 1497 GAF sequences for ADBE
+2025-11-18 19:16:26,496 - Development - INFO - Successfully created GAF data for 2 tickers
+2025-11-18 19:16:26,500 - Development - INFO - Step 2: Creating trading environments...
+2025-11-18 19:16:26,503 - Development - INFO - Creating individual trading environments
+2025-11-18 19:16:26,506 - Development - INFO - Creating environment for ACN
+2025-11-18 19:16:26,529 - Development - INFO - Created environment for ACN
+2025-11-18 19:16:26,533 - Development - INFO - Creating environment for ADBE
+2025-11-18 19:16:26,562 - Development - INFO - Created environment for ADBE
+2025-11-18 19:16:26,567 - Development - INFO - Successfully created 2 environments
+2025-11-18 19:16:26,570 - Development - INFO - Step 3: Creating vectorized environment...
+2025-11-18 19:16:26,573 - Development - INFO - Creating vectorized environment with 2 single stock environments
+2025-11-18 19:16:26,576 - Development - INFO - Successfully created vectorized environment with 2 environments
+2025-11-18 19:16:26,579 - Development - INFO - GAF pipeline built successfully
+2025-11-18 19:16:26,582 - Development - INFO - Successfully created training environment with 2 environments
+2025-11-18 19:16:26,636 - Development - INFO - Training window 1 in fold 3
+2025-11-18 19:16:26,640 - Development - INFO - Training model for fold 3, window 1
+2025-11-18 19:16:26,892 - Development - INFO - Searching for model checkpoints
+2025-11-18 19:16:26,913 - Development - INFO - Evaluating checkpoints on validation set...
+2025-11-18 19:16:26,921 - Development - INFO - Evaluating checkpoint 800_steps...
+2025-11-18 19:16:31,788 - Development - INFO - Evaluation complete with performance metrics
+2025-11-18 19:16:31,795 - Development - INFO - Best checkpoint: experiments\Development\models\fold_3_window_1_checkpoints\checkpoint_800_steps.zip with validation score: -0.0013
+2025-11-18 19:16:31,812 - Development - INFO - Evaluating best model on test set...
+2025-11-18 19:16:34,533 - Development - INFO - Evaluation complete with performance metrics
+2025-11-18 19:16:34,666 - Development - INFO - Evaluation complete with performance metrics
+2025-11-18 19:16:34,783 - Development - INFO - Evaluation complete with performance metrics
+2025-11-18 19:16:34,816 - Development - INFO - Evaluation complete with performance metrics
+2025-11-18 19:16:34,859 - Development - INFO - Evaluation complete with performance metrics
+2025-11-18 19:16:34,866 - Development - INFO - Completed training/validation/test for fold 3, window 1
+2025-11-18 19:16:34,882 - Development - INFO - Completed fold 3, window 1
+2025-11-18 19:16:34,886 - Development - INFO - Training window 2 in fold 3
+2025-11-18 19:16:34,890 - Development - INFO - Training model for fold 3, window 2
+2025-11-18 19:16:35,058 - Development - INFO - Searching for model checkpoints
+2025-11-18 19:16:35,073 - Development - INFO - Evaluating checkpoints on validation set...
+2025-11-18 19:16:35,078 - Development - INFO - Evaluating checkpoint 800_steps...
+2025-11-18 19:16:40,140 - Development - INFO - Evaluation complete with performance metrics
+2025-11-18 19:16:40,148 - Development - INFO - Best checkpoint: experiments\Development\models\fold_3_window_2_checkpoints\checkpoint_800_steps.zip with validation score: -0.0094
+2025-11-18 19:16:40,165 - Development - INFO - Evaluating best model on test set...
+2025-11-18 19:16:43,839 - Development - INFO - Evaluation complete with performance metrics
+2025-11-18 19:16:43,986 - Development - INFO - Evaluation complete with performance metrics
+2025-11-18 19:16:44,073 - Development - INFO - Evaluation complete with performance metrics
+2025-11-18 19:16:44,103 - Development - INFO - Evaluation complete with performance metrics
+2025-11-18 19:16:44,135 - Development - INFO - Evaluation complete with performance metrics
+2025-11-18 19:16:44,140 - Development - INFO - Completed training/validation/test for fold 3, window 2
+2025-11-18 19:16:44,154 - Development - INFO - Completed fold 3, window 2
+2025-11-18 19:16:44,158 - Development - INFO - Training window 3 in fold 3
+2025-11-18 19:16:44,163 - Development - INFO - Training model for fold 3, window 3
+2025-11-18 19:16:44,245 - Development - INFO - Searching for model checkpoints
+2025-11-18 19:16:44,256 - Development - INFO - Evaluating checkpoints on validation set...
+2025-11-18 19:16:44,260 - Development - INFO - Evaluating checkpoint 800_steps...
+2025-11-18 19:16:46,284 - Development - INFO - Evaluation complete with performance metrics
+2025-11-18 19:16:46,288 - Development - INFO - Best checkpoint: experiments\Development\models\fold_3_window_3_checkpoints\checkpoint_800_steps.zip with validation score: -0.0755
+2025-11-18 19:16:46,298 - Development - INFO - Evaluating best model on test set...
+2025-11-18 19:16:48,035 - Development - INFO - Evaluation complete with performance metrics
+2025-11-18 19:16:48,103 - Development - INFO - Evaluation complete with performance metrics
+2025-11-18 19:16:48,155 - Development - INFO - Evaluation complete with performance metrics
+2025-11-18 19:16:48,171 - Development - INFO - Evaluation complete with performance metrics
+2025-11-18 19:16:48,187 - Development - INFO - Evaluation complete with performance metrics
+2025-11-18 19:16:48,191 - Development - INFO - Completed training/validation/test for fold 3, window 3
+2025-11-18 19:16:48,199 - Development - INFO - Completed fold 3, window 3

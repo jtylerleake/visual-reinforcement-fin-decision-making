@@ -1,0 +1,1 @@
+2025-11-18 16:56:38,724 - Small-Cap - INFO - Loaded configuration for experiment: Small-Cap

@@ -1,0 +1,50 @@
+2025-11-18 18:32:03,799 - Development - INFO - Data manager initialized with directory: .\dataset-cache
+2025-11-18 18:32:03,899 - Development - INFO - Adjusted fetch date to 2009-11-16
+2025-11-18 18:32:03,901 - Development - INFO - Processing A with smart caching...
+2025-11-18 18:32:04,315 - Development - INFO - Using existing data for A
+2025-11-18 18:32:04,317 - Development - INFO - Loaded existing data for A
+2025-11-18 18:32:04,326 - Development - INFO - Processing AAPL with smart caching...
+2025-11-18 18:32:04,660 - Development - INFO - Using existing data for AAPL
+2025-11-18 18:32:04,673 - Development - INFO - Loaded existing data for AAPL
+2025-11-18 18:32:04,679 - Development - INFO - Processing ABBV with smart caching...
+2025-11-18 18:32:04,945 - Development - INFO - Fetching incremental data for ABBV
+2025-11-18 18:32:04,947 - Development - INFO - "Fetching incremental data for ABBV: (2009-11-16 to 2013-01-02)
+2025-11-18 18:32:04,949 - Development - INFO - Fetching ABBV data [2009-11-16 - 2013-01-02]
+2025-11-18 18:32:07,453 - Development - ERROR - Error fetching data for ABBV: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 18:32:07,476 - Development - WARNING - No price data fetched for ABBV pre_period (2009-11-16 to 2013-01-02)
+2025-11-18 18:32:07,487 - Development - WARNING - No new data fetched for ABBV
+2025-11-18 18:32:07,690 - Development - INFO - Data saved to .\dataset-cache\ABBV_data.csv
+2025-11-18 18:32:07,693 - Development - INFO - Updated and saved data for ABBV
+2025-11-18 18:32:07,701 - Development - INFO - Processing ABNB with smart caching...
+2025-11-18 18:32:07,901 - Development - INFO - Fetching incremental data for ABNB
+2025-11-18 18:32:07,904 - Development - INFO - "Fetching incremental data for ABNB: (2009-11-16 to 2020-12-10)
+2025-11-18 18:32:07,906 - Development - INFO - Fetching ABNB data [2009-11-16 - 2020-12-10]
+2025-11-18 18:32:08,749 - Development - ERROR - Error fetching data for ABNB: Too Many Requests. Rate limited. Try after a while.
+2025-11-18 18:32:08,770 - Development - WARNING - No price data fetched for ABNB pre_period (2009-11-16 to 2020-12-10)
+2025-11-18 18:32:08,782 - Development - WARNING - No new data fetched for ABNB
+2025-11-18 18:32:08,922 - Development - INFO - Data saved to .\dataset-cache\ABNB_data.csv
+2025-11-18 18:32:08,924 - Development - INFO - Updated and saved data for ABNB
+2025-11-18 18:32:08,929 - Development - INFO - Processing ABT with smart caching...
+2025-11-18 18:32:09,267 - Development - INFO - Using existing data for ABT
+2025-11-18 18:32:09,269 - Development - INFO - Loaded existing data for ABT
+2025-11-18 18:32:09,276 - Development - INFO - Processing ACN with smart caching...
+2025-11-18 18:32:09,612 - Development - INFO - Using existing data for ACN
+2025-11-18 18:32:09,614 - Development - INFO - Loaded existing data for ACN
+2025-11-18 18:32:09,619 - Development - INFO - Processing ADBE with smart caching...
+2025-11-18 18:32:09,991 - Development - INFO - Using existing data for ADBE
+2025-11-18 18:32:09,993 - Development - INFO - Loaded existing data for ADBE
+2025-11-18 18:32:09,999 - Development - INFO - Processing ADI with smart caching...
+2025-11-18 18:32:10,338 - Development - INFO - Using existing data for ADI
+2025-11-18 18:32:10,340 - Development - INFO - Loaded existing data for ADI
+2025-11-18 18:32:10,345 - Development - INFO - Processing ADP with smart caching...
+2025-11-18 18:32:10,671 - Development - INFO - Using existing data for ADP
+2025-11-18 18:32:10,673 - Development - INFO - Loaded existing data for ADP
+2025-11-18 18:32:10,678 - Development - INFO - Processing AMAT with smart caching...
+2025-11-18 18:32:11,988 - Development - INFO - Using existing data for AMAT
+2025-11-18 18:32:11,990 - Development - INFO - Loaded existing data for AMAT
+2025-11-18 18:32:11,996 - Development - INFO - Successfully prepared data for 10 tickers
+2025-11-18 18:32:12,433 - Development - INFO - Step 2: Creating fold assignments...
+2025-11-18 18:32:12,435 - Development - INFO - Randomly assigned 10 stocks to 5 folds
+2025-11-18 18:32:12,437 - Development - INFO - Step 3: Creating temporal window frame bounds...
+2025-11-18 18:32:12,845 - Development - INFO - Created frame bounds for 5 walk-throughs
+2025-11-18 18:32:12,847 - Development - INFO - Step 4: Executing cross-validation...

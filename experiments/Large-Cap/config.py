@@ -17,22 +17,22 @@ EXPERIMENT_CONFIG = {
     'RL model': 'PPO', 
     'RL policy': 'CnnPolicy', 
     'Lookback window': 7,   # observation space lookback period
-    'Rollout steps' : 104,
-    'Batch size': 8,
+    'Rollout steps' : 2048,
+    'Batch size': 64,
     'Deterministic' : True,
-    'Training epochs': 5, # total timesteps for training
+    'Training epochs': 1000, # total timesteps for training
     'Learning rate': 0.001,
     
     'Checkpoint frequency': 100,
-    'Model save path': os.path.join('experiments', experiment_name, 'models'), # model storage
+    'Model save path': f".\experiments\{experiment_name}\models", # model storage
     
     # ----------------------------------------------------------------
     # EXPERIMENT CONFIGURATION
     # ----------------------------------------------------------------
     
     # Time Series Date and Frequency Attributes
-    'Start date': '2015-01-01',
-    'End date': '2020-12-30',
+    'Start date': '1994-01-01',
+    'End date': '2025-09-30',
     'Update frequency': '1d',
     
     # K-Fold Cross Validation Parameters
@@ -43,7 +43,7 @@ EXPERIMENT_CONFIG = {
     # note: the modulus of training ratio and walk throughs must equal 
     # zero in order to get uniform training window sizes
     
-    'Walk throughs': 3,         # # of walk-forwards per K-fold
+    'Walk throughs': 5,         # # of walk-forwards per K-fold
     'Evaluation ratio' : 0.20,  # % data allocated to evaluation
     'Validation ratio' : 0.05,  # % data allocated to validation
     'Training ratio' : 0.75,    # % data allocated to training
@@ -62,6 +62,6 @@ EXPERIMENT_CONFIG = {
     'RSI periods': 14,
 
     # Stocks
-    'Tickers' : ['A', 'AAPL', 'ABBV', 'AMZN', 'ABT', 'ACN', 'ADBE', 'ADI', 'ADP', 'AMAT']
+    'Tickers' : ['AEP', 'RCL', 'RSG', 'SNPS', 'AZO', 'WMB', 'TRV', 'EMR', 'APO', 'CI', 'KKR', 'MMC', 'CDNS', 'NEM', 'CME', 'ORLY', 'AMT', 'GD', 'TT', 'SO', 'HON', 'SYK', 'WELL', 'PANW', 'DHR', 'HCA', 'GILD', 'TXN', 'PLD', 'GEV', 'GS', 'DIS', 'ABT', 'PM', 'AMAT', 'TMO', 'T', 'AMGN', 'CAT', 'LIN', 'BRK.B', 'NFLX', 'META', 'ORCL', 'MU', 'WMT', 'ABBV', 'WFC', 'AAPL', 'TSLA']
        
 }

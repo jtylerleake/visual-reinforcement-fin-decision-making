@@ -17,22 +17,22 @@ EXPERIMENT_CONFIG = {
     'RL model': 'PPO', 
     'RL policy': 'CnnPolicy', 
     'Lookback window': 7,   # observation space lookback period
-    'Rollout steps' : 104,
-    'Batch size': 8,
+    'Rollout steps' : 2048,
+    'Batch size': 64,
     'Deterministic' : True,
-    'Training epochs': 5, # total timesteps for training
+    'Training epochs': 1000, # total timesteps for training
     'Learning rate': 0.001,
     
     'Checkpoint frequency': 100,
-    'Model save path': os.path.join('experiments', experiment_name, 'models'), # model storage
+    'Model save path': f".\experiments\{experiment_name}\models", # model storage
     
     # ----------------------------------------------------------------
     # EXPERIMENT CONFIGURATION
     # ----------------------------------------------------------------
     
     # Time Series Date and Frequency Attributes
-    'Start date': '2015-01-01',
-    'End date': '2020-12-30',
+    'Start date': '1994-01-01',
+    'End date': '2025-09-30',
     'Update frequency': '1d',
     
     # K-Fold Cross Validation Parameters
@@ -43,7 +43,7 @@ EXPERIMENT_CONFIG = {
     # note: the modulus of training ratio and walk throughs must equal 
     # zero in order to get uniform training window sizes
     
-    'Walk throughs': 3,         # # of walk-forwards per K-fold
+    'Walk throughs': 5,         # # of walk-forwards per K-fold
     'Evaluation ratio' : 0.20,  # % data allocated to evaluation
     'Validation ratio' : 0.05,  # % data allocated to validation
     'Training ratio' : 0.75,    # % data allocated to training
@@ -62,6 +62,6 @@ EXPERIMENT_CONFIG = {
     'RSI periods': 14,
 
     # Stocks
-    'Tickers' : ['A', 'AAPL', 'ABBV', 'AMZN', 'ABT', 'ACN', 'ADBE', 'ADI', 'ADP', 'AMAT']
+    'Tickers' : ['GNRC', 'MOS', 'SWK', 'BAX', 'TXT', 'APA', 'FRT', 'ARE', 'EPAM', 'SOLS', 'AIZ', 'BALL', 'RVTY', 'FFIV', 'AVY', 'DECK', 'NDSN', 'PNW', 'HAS', 'CPT', 'FTV', 'UHS', 'COO', 'ESS', 'MAA', 'LYB', 'NWSA', 'JBHT', 'BBY', 'IFF', 'WST', 'IP', 'LNT', 'NVR', 'CHRW', 'DRI', 'TYL', 'PTC', 'INCY', 'TRMB', 'PHM', 'NTAP', 'CFG', 'SMCI', 'HPQ', 'WAT', 'PPG', 'LH', 'NTRS', 'TROW']
        
 }
