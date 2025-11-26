@@ -16,6 +16,7 @@ EXPERIMENT_CONFIG = {
     # RL Models
     'Lookback window': 7,   # observation space lookback period
     'Deterministic' : True,
+    'Training epochs' : 10, 
 
     # Checkpoint variables
     'Checkpoint frequency': 100,

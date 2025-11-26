@@ -14,20 +14,9 @@ EXPERIMENT_CONFIG = {
     # ----------------------------------------------------------------
     
     # RL Models
-    'Rollout steps' : 2048,
-    'Batch size': 64,
-    'Training epochs': 1000,  # total timesteps for training
     'Lookback window': 7,   # observation space lookback period
     'Deterministic' : True,
-    'Learning rate': 0.001,
-    'Gamma': 0.99, 
-    'GAE lambda': 0.95,     
-    'Clip range': 0.2,      
-    'Entropy coefficient': 0.0,       
-    'VF coefficient': 0.5,      
-    'Max grad norm': 0.5,     
-    'Epochs': 10,         
-    'Feature dim': 256, 
+    'Training epochs' : 10,
     
     # Checkpoint variables
     'Checkpoint frequency': 100,
