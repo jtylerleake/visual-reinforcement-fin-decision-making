@@ -1,0 +1,20 @@
+{
+    "experiment_name": "Mini",
+    "agent_type": "visual",
+    "best_value": -0.3055927904639019,
+    "best_trial_number": 1,
+    "best_hyperparameters": {
+        "Learning rate": 0.0004803451981619835,
+        "Batch size": 64,
+        "Rollout steps": 1280,
+        "Gamma": 0.9455662787843444,
+        "GAE lambda": 0.9075020500047098,
+        "Clip range": 0.22685009929852115,
+        "Entropy coefficient": 0.003963669759659864,
+        "VF coefficient": 0.2625257871626315,
+        "Max grad norm": 0.9177826027374991,
+        "Epochs": 3,
+        "Feature dim": 256
+    },
+    "n_trials": 2
+}

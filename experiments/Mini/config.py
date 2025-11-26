@@ -68,6 +68,7 @@ EXPERIMENT_CONFIG = {
     # Technical Indicator Features
     'SMA periods': 20,
     'RSI periods': 14,
-    
-    'Tickers' : ['AZO', 'CI', 'EMR', 'RCL', 'AEP', 'TRV', 'WMB', 'PWR', 'AMT', 'CDNS']
+
+    # Stocks
+    'Tickers' : ['BIIB', 'BRO', 'FE', 'PPL', 'STE', 'ADM', 'CSGP', 'EL', 'NUE', 'RJF']
 }

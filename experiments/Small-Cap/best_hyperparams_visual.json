@@ -1,0 +1,20 @@
+{
+    "experiment_name": "Small-Cap",
+    "agent_type": "visual",
+    "best_value": 1.7134250312983434e-05,
+    "best_trial_number": 31,
+    "best_hyperparameters": {
+        "Learning rate": 0.006411989123196969,
+        "Batch size": 256,
+        "Rollout steps": 4096,
+        "Gamma": 0.9302533598825136,
+        "GAE lambda": 0.9117136519309937,
+        "Clip range": 0.1989187331282529,
+        "Entropy coefficient": 1.0849278368344497e-08,
+        "VF coefficient": 0.8916664120437997,
+        "Max grad norm": 0.4868062316899426,
+        "Epochs": 10,
+        "Feature dim": 512
+    },
+    "n_trials": 50
+}
