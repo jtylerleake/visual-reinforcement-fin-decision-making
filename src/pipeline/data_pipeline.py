@@ -5,7 +5,7 @@ from common.modules import USFederalHolidayCalendar
 from src.utils.logging import log_function_call, log_execution_time, get_logger
 
 REQUIRED_COLUMNS = ['Open', 'High', 'Low', 'Close', 'Volume']
-DATA_DIR = ".\\dataset"
+DATA_DIR = "./dataset"
 
 
 class DataPipeline: 
