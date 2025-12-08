@@ -115,17 +115,28 @@ class TemporalCrossValidation:
         # generate bounds for each walk-through
         train_bounds, val_bounds, eval_bounds = [], [], []
         walk_start = 0
+        max_index = num_sequences - 1  # Maximum valid index (0-indexed)
         
         for _ in range(self.walk_throughs):
-            train_end = walk_start + train_window_size
-            val_start = train_end + 1
-            val_end = val_start + val_window_size
-            test_start = val_end + 1
-            test_end = test_start + test_window_size - 1
+            train_end = min(walk_start + train_window_size, max_index)
+            val_start = min(train_end + 1, max_index)
+            val_end = min(val_start + val_window_size, max_index)
+            test_start = min(val_end + 1, max_index)
+            test_end = min(test_start + test_window_size - 1, max_index)
+            
+            # Ensure bounds are valid (start <= end)
+            train_end = max(train_end, walk_start)
+            val_end = max(val_end, val_start)
+            test_end = max(test_end, test_start)
+            
             train_bounds.append([walk_start, train_end])
             val_bounds.append([val_start, val_end])
             eval_bounds.append([test_start, test_end])
             walk_start = train_end + 1
+            
+            # Break if we've reached the end of available data
+            if walk_start > max_index:
+                break
         
         self.logger.info(f"Created frame bounds for {self.walk_throughs} walk-throughs")
         return {'training': train_bounds, 'validation': val_bounds, 'evaluation': eval_bounds}
@@ -306,58 +317,7 @@ class TemporalCrossValidation:
             env_dict = getattr(environment, f'{modality}_environments', {})
             
             if vec_env is None or not env_dict:
-                # Fallback to sequential if vectorized env not available
-                self.logger.warning("Vectorized environment not available, falling back to sequential evaluation")
-                for stock, monitor in env_dict.items():
-                    portfolio_factors = []
-                    episode_reward = 0
-                    actions = []
-                    env = monitor.env
-                    obs, info = env.reset()
-                    obs = obs[0] if isinstance(obs, tuple) else obs
-                    portfolio_factors.append(info.get('total_profit', 1.0))
-                    done = False
-                    step_count = 0
-                    
-                    while not done:
-                        obs_batch = np.expand_dims(obs, axis=0) if len(obs.shape) == 3 else obs
-                        action, _ = strategy.model.predict(obs_batch, deterministic=self.deterministic)
-                        
-                        if isinstance(action, np.ndarray):
-                            action = int(action.item()) if action.ndim == 0 else int(action[0])
-                        elif isinstance(action, list):
-                            action = int(action[0]) if len(action) > 0 else 0
-                        else:
-                            action = int(action)
-                        actions.append(action)
-                        
-                        obs, reward, terminated, truncated, info = env.step(action)
-                        done = terminated or truncated
-                        
-                        portfolio_factors.append(info.get('total_profit', 1.0))
-                        episode_reward += reward
-                        step_count += 1
-                    
-                    unique_actions, action_counts = np.unique(actions, return_counts=True)
-                    metrics = get_performance_metrics(
-                        portfolio_factors = portfolio_factors,
-                        start_date = self.config.get('Start date'),
-                        end_date = self.config.get('End date'),
-                        sig_figs = 4
-                    )
-                    stock_metrics[stock] = {
-                        'portfolio factors': portfolio_factors,
-                        'episode reward': episode_reward,
-                        'actions': actions,
-                        'action distribution': dict(zip(unique_actions.tolist(), action_counts.tolist())),
-                        'num steps': step_count,
-                        'cumulative return': metrics['cumulative return'],
-                        'annualized return': metrics['annualized cumulative return'],
-                        'sharpe ratio': metrics['sharpe ratio'],
-                        'sortino ratio': metrics['sortino ratio'],
-                        'max drawdown': metrics['max drawdown'],
-                    }
-                return stock_metrics
+                raise NotImplementedError
             
             # Get stock names in the same order as vectorized environment
             stock_names = list(env_dict.keys())
@@ -433,10 +393,10 @@ class TemporalCrossValidation:
                 
                 # Step all environments in parallel (vectorized)
                 step_results = vec_env.step(full_actions)
-                obs_batch, rewards, terminated, truncated, infos = step_results
+                obs_batch, rewards, terminated, infos = step_results
                 
                 # Update done states
-                new_dones = terminated | truncated
+                new_dones = terminated 
                 dones = dones | new_dones
                 
                 # Update tracking for all stocks

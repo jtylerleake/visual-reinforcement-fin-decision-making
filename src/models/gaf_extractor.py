@@ -37,17 +37,17 @@ class GAFExtractor(BaseFeaturesExtractor):
         # The architecture is designed to handle small GAF images (typically 14x14)
         self.cnn = nn.Sequential(
             # First convolutional layer
-            nn.Conv2d(channels, 32, kernel_size=3, stride=1, padding=1),
+            nn.Conv2d(channels, 32, kernel_size=5, stride=1, padding=2),
             nn.ReLU(),
             nn.BatchNorm2d(32),
             
             # Second convolutional layer
-            nn.Conv2d(32, 64, kernel_size=3, stride=1, padding=1),
+            nn.Conv2d(32, 64, kernel_size=5, stride=1, padding=2),
             nn.ReLU(),
             nn.BatchNorm2d(64),
             
             # Third convolutional layer with pooling
-            nn.Conv2d(64, 128, kernel_size=3, stride=1, padding=1),
+            nn.Conv2d(64, 128, kernel_size=5, stride=1, padding=2),
             nn.ReLU(),
             nn.BatchNorm2d(128),
             nn.AdaptiveAvgPool2d((4, 4)),  # Adaptive pooling to handle different input sizes

@@ -12,42 +12,42 @@ EXPERIMENT_CONFIG = {
     # Model and results save paths
     'Visual agent save path': f"./experiments/{experiment_name}/visual_models",
     'Numeric agent save path': f"./experiments/{experiment_name}/numeric_models", 
-    'Results save path': f"./experiments/{experiment_name}/aggregated_results", 
+    'Results save path': f"./experiments/{experiment_name}/aggregated_statistics", 
     'Portfolio factors save path': f"./experiments/{experiment_name}/portfolio_factors", 
     
     # -------------------------------------------------------------------------
     # Hyperparameters (hardcoded from hyperparam tuning)
     # -------------------------------------------------------------------------
     
-    'Lookback window': 7,
+    'Lookback window': 21, 
     'Deterministic' : True,
     'Checkpoint frequency': 100,
     
     'Visual agent hyperparameters': {
-        'Learning rate': 0.0073613462973597015,
+        'Learning rate': 0.00736,
         'Batch size': 128,
         'Rollout steps': 2304,
-        'Gamma': 0.9497942586147119,
-        'GAE lambda': 0.8658769234738106,
-        'Clip range': 0.1114813972649783,
-        'Entropy coefficient': 3.901094178742899e-05,
-        'VF coefficient': 0.5624017982876938,
-        'Max grad norm': 0.7039004968856596,
+        'Gamma': 0.94979,
+        'GAE lambda': 0.86588,
+        'Clip range': 0.11148,
+        'Entropy coefficient': 0.00004,
+        'VF coefficient': 0.56240,
+        'Max grad norm': 0.70390,
         'Epochs': 8,
-        'Feature dim': 128
+        'Feature dim': 128,
     },
     
     'Numeric agent hyperparameters': {
-        'Learning rate': 0.0072252971345909064,
+        'Learning rate': 0.00723,
         'Batch size': 128,
         'Rollout steps': 2816,
-        'Gamma': 0.9808761602671783,
-        'GAE lambda': 0.9569102268142909,
-        'Clip range': 0.24330636188599397,
-        'Entropy coefficient': 1.1895982634836095e-07,
-        'VF coefficient': 0.35513761478796224,
-        'Max grad norm': 0.8303937212647076,
-        'Epochs': 8
+        'Gamma': 0.98088,
+        'GAE lambda': 0.95691,
+        'Clip range': 0.24331,
+        'Entropy coefficient': 0.00000,
+        'VF coefficient': 0.35514,
+        'Max grad norm': 0.83039,
+        'Epochs': 8,
     },
     
     # -------------------------------------------------------------------------

@@ -19,35 +19,37 @@ EXPERIMENT_CONFIG = {
     # Hyperparameters (hardcoded from hyperparam tuning)
     # -------------------------------------------------------------------------
     
-    'Lookback window': 7,
+    'Lookback window': 21,
     'Deterministic' : True,
     'Checkpoint frequency': 100,
 
     'Visual agent hyperparameters': {
-        'Learning rate': 0.0004803451981619835,
+        'Learning rate': 0.00048,
         'Batch size': 64,
         'Rollout steps': 1280,
-        'Gamma': 0.9455662787843444,
-        'GAE lambda': 0.9075020500047098,
-        'Clip range': 0.22685009929852115,
-        'Entropy coefficient': 0.003963669759659864,
-        'VF coefficient': 0.2625257871626315,
-        'Max grad norm': 0.9177826027374991,
+        'Gamma': 0.94557,
+        'GAE lambda': 0.90750,
+        'Clip range': 0.22685,
+        'Entropy coefficient': 0.00396,
+        'VF coefficient': 0.26253,
+        'Max grad norm': 0.91778,
         'Epochs': 3,
-        'Feature dim': 256
+        'Feature dim': 256,
+        'Lookback window': 7
     },
     
     'Numeric agent hyperparameters': {
-        'Learning rate': 0.001,
+        'Learning rate': 0.00100,
         'Batch size': 64,
         'Rollout steps': 2048,
-        'Gamma': 0.99,
-        'GAE lambda': 0.95,
-        'Clip range': 0.2,
-        'Entropy coefficient': 0.0,
-        'VF coefficient': 0.5,
-        'Max grad norm': 0.5,
-        'Epochs': 10
+        'Gamma': 0.99000,
+        'GAE lambda': 0.95000,
+        'Clip range': 0.20000,
+        'Entropy coefficient': 0.00000,
+        'VF coefficient': 0.50000,
+        'Max grad norm': 0.50000,
+        'Epochs': 10,
+        'Lookback window': 7
     },
     
     # -------------------------------------------------------------------------

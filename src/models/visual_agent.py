@@ -84,7 +84,8 @@ class VisualAgent(BaseStrategy):
     ) -> bool: 
         """Train the model with optional checkpoint saving"""
         
-        epochs = self.config.get('Training epochs')
+        epochs = self._get_hyperparameter('Epochs')
+        
         callbacks = []
         
         if checkpoint_save_path and checkpoint_freq:

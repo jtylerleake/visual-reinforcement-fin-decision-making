@@ -42,11 +42,26 @@ def compute_stats(values) -> Dict[str, float]:
         'min': 0.0,
         'max': 0.0
         }
+    # Convert to numpy array and filter out any NaN/Inf values
+    values_array = np.array(values, dtype=np.float64)
+    values_array = values_array[~np.isnan(values_array) & ~np.isinf(values_array)]
+    
+    if len(values_array) == 0:
+        return {
+            'mean': 0.0,
+            'std': 0.0,
+            'min': 0.0,
+            'max': 0.0
+        }
+    
+    # For std, need at least 2 values to avoid degrees of freedom warning
+    std_val = float(np.std(values_array)) if len(values_array) > 1 else 0.0
+    
     return {
-        'mean': float(np.mean(values)),
-        'std':  float(np.std(values)),
-        'min':  float(np.min(values)),
-        'max':  float(np.max(values))
+        'mean': float(np.mean(values_array)),
+        'std': std_val,
+        'min': float(np.min(values_array)),
+        'max': float(np.max(values_array))
     }
 
 
@@ -128,19 +143,50 @@ def get_performance_metrics(
 
     # return figures for metric calculation
     portfolio_factors = np.array(portfolio_factors, dtype=np.float64)
+    
+    # Check if we have enough data points
+    if len(portfolio_factors) < 2:
+        # Return default values if insufficient data
+        return {
+            'cumulative return': 0.0,
+            'annualized cumulative return': 0.0,
+            'sharpe ratio': 0.0,
+            'sortino ratio': 0.0,
+            'max drawdown': 0.0
+        }
+    
     interval_returns = np.diff(portfolio_factors) / portfolio_factors[:-1]
-    interval_returns = interval_returns[~np.isnan(interval_returns)]
+    interval_returns = interval_returns[~np.isnan(interval_returns) & ~np.isinf(interval_returns)]
+    
+    # Check if we have any valid returns
+    if len(interval_returns) == 0:
+        return {
+            'cumulative return': 0.0,
+            'annualized cumulative return': 0.0,
+            'sharpe ratio': 0.0,
+            'sortino ratio': 0.0,
+            'max drawdown': 0.0
+        }
+    
     excess_returns = interval_returns - risk_free_rate
     downside_returns = excess_returns[interval_returns < 0]
     
-    # compute mean and std metrics
-    std_interval_returns = np.std(interval_returns)
-    std_downside_returns = np.std(downside_returns)
-    avg_excess_return = np.mean(excess_returns)
+    # compute mean and std metrics with proper empty array handling
+    std_interval_returns = np.std(interval_returns) if len(interval_returns) > 1 else 0.0
+    std_downside_returns = np.std(downside_returns) if len(downside_returns) > 1 else 0.0
+    avg_excess_return = np.mean(excess_returns) if len(excess_returns) > 0 else 0.0
 
     # cumulative and annualized return
-    cumulative_return = (portfolio_factors[-1] - portfolio_factors[0]) / portfolio_factors[0]
-    annualized_return = (1 + cumulative_return) ** annualization_factor - 1
+    if portfolio_factors[0] != 0:
+        cumulative_return = (portfolio_factors[-1] - portfolio_factors[0]) / portfolio_factors[0]
+    else:
+        cumulative_return = 0.0
+    
+    # Preserve original annualization formula, but add safety check
+    if annualization_factor > 0:
+        annualized_return = (1 + cumulative_return) ** annualization_factor - 1
+    else:
+        annualized_return = 0.0
 
     # sharpe ratio
     if std_interval_returns > 0:

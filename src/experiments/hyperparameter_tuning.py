@@ -3,7 +3,6 @@ from common.modules import np, random, os, json, Dict, List
 import optuna
 from src.utils.configurations import load_config
 from src.utils.logging import get_logger
-from src.utils.metrics import compute_performance_metrics
 from src.pipeline.data_pipeline import DataPipeline
 from src.pipeline.environment_pipeline import EnvironmentPipeline
 from src.models.visual_agent import VisualAgent
@@ -135,14 +134,14 @@ def objective(trial, config: Dict, train_env, val_env, agent_type: str = 'visual
     # Suggest hyperparameters
     learning_rate = trial.suggest_float('Learning rate', 1e-5, 1e-2, log=True)
     batch_size = trial.suggest_categorical('Batch size', [32, 64, 128, 256])
-    n_steps = trial.suggest_int('Rollout steps', 512, 4096, step=256)
+    n_steps = trial.suggest_int('Rollout steps', 512, 2048, step=256)
     gamma = trial.suggest_float('Gamma', 0.9, 0.999)
     gae_lambda = trial.suggest_float('GAE lambda', 0.8, 0.99)
     clip_range = trial.suggest_float('Clip range', 0.1, 0.3)
     ent_coef = trial.suggest_float('Entropy coefficient', 1e-8, 0.1, log=True)
     vf_coef = trial.suggest_float('VF coefficient', 0.1, 1.0)
     max_grad_norm = trial.suggest_float('Max grad norm', 0.3, 1.0)
-    n_epochs = trial.suggest_int('Epochs', 3, 20)
+    n_epochs = trial.suggest_int('Epochs', 5, 20)
     
     # Visual agent specific
     if agent_type == 'visual':
@@ -152,18 +151,38 @@ def objective(trial, config: Dict, train_env, val_env, agent_type: str = 'visual
     
     # Create modified config with suggested hyperparameters
     trial_config = config.copy()
-    trial_config['Learning rate'] = learning_rate
-    trial_config['Batch size'] = batch_size
-    trial_config['Rollout steps'] = n_steps
-    trial_config['Gamma'] = gamma
-    trial_config['GAE lambda'] = gae_lambda
-    trial_config['Clip range'] = clip_range
-    trial_config['Entropy coefficient'] = ent_coef
-    trial_config['VF coefficient'] = vf_coef
-    trial_config['Max grad norm'] = max_grad_norm
-    trial_config['Epochs'] = n_epochs
+    
+    # Initialize agent-specific hyperparameter dict if it doesn't exist
+    agent_key = 'Visual agent hyperparameters' if agent_type == 'visual' else 'Numeric agent hyperparameters'
+    if agent_key not in trial_config:
+        trial_config[agent_key] = {}
+    
+    # Set hyperparameters in both general config and agent-specific config
+    # (agents check agent-specific first, then fall back to general)
+    hyperparams = {
+        'Learning rate': learning_rate,
+        'Batch size': batch_size,
+        'Rollout steps': n_steps,
+        'Gamma': gamma,
+        'GAE lambda': gae_lambda,
+        'Clip range': clip_range,
+        'Entropy coefficient': ent_coef,
+        'VF coefficient': vf_coef,
+        'Max grad norm': max_grad_norm,
+        'Epochs': n_epochs
+    }
+    
     if features_dim is not None:
-        trial_config['Feature dim'] = features_dim
+        hyperparams['Feature dim'] = features_dim
+    
+    # Set in both places
+    for key, value in hyperparams.items():
+        trial_config[key] = value
+        trial_config[agent_key][key] = value
+    
+    # Set Training epochs for the train() method (use a reasonable value for tuning)
+    # This is the total timesteps for training - using rollout steps * a multiplier
+    trial_config['Training epochs'] = n_steps * 10  # Train for 10 rollouts worth of steps
     
     # Create and train agent
     try:
@@ -304,22 +323,4 @@ def run_hyperparameter_tuning(
     logger.info(f"Best hyperparameters saved to {output_file}")
     
     return output_data
-
-
-if __name__ == "__main__":
-    
-    # Example usage - modify as needed
-    experiment_name = "Mini"
-    agent_type = "visual"  # or "numeric"
-    n_trials = 2
-    
-    results = run_hyperparameter_tuning(
-        experiment_name=experiment_name,
-        agent_type=agent_type,
-        n_trials=n_trials
-    )
-    
-    print(f"\nHyperparameter tuning completed!")
-    print(f"Best cumulative return: {results['best_value']:.4f}")
-    print(f"Best hyperparameters saved to: experiments/{experiment_name}/best_hyperparams_{agent_type}.json")
 
